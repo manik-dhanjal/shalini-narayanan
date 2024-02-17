@@ -3,10 +3,6 @@ import { NavStyles } from './navbar.styles';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 
-export function Logo() {
-  return <StaticImage src="@images/logo.png" alt="A dinosaur" />;
-}
-
 const Navbar = () => {
   return (
     <NavStyles>

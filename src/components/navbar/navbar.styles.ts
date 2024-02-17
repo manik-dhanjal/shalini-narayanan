@@ -4,11 +4,11 @@ export const NavStyles = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 3.5rem;
   max-width: 1440px;
   margin: auto;
   background-color: #fff;
-  z-index: 1;
+  z-index: 1000;
   position: sticky;
   top: 0;
   // main nav menu
