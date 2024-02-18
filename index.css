@@ -37,6 +37,7 @@ body {
     margin-bottom: 0;
     line-height: 1;
     font-weight: 700;
+    text-align: center;
   }
   
   .dot {
@@ -53,7 +54,9 @@ body {
   
   .icons {
     text-align: center;
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .icons i {
@@ -62,7 +65,7 @@ body {
     height: 15px;
     width: 15px;
     padding: 13px;
-    margin: 0 10px;
+    margin: 0 0px;
     border-radius: 50px;
     border: 2px solid #fff;
     transition: all 200ms ease;
@@ -79,3 +82,9 @@ body {
     text-decoration: none;
     
   }
+
+@media screen and (max-width:800px){
+  .wrapper {
+    width: calc(100% - 30px);
+  }
+}
