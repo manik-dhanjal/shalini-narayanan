@@ -1,14 +1,16 @@
+import type { PageProps } from 'gatsby';
 import * as React from 'react';
+import Layout from '../components/layout/layout.component';
+import AboutPage from '../components/pages/about-page/about-page.components';
 
-const AboutPage = () => {
+const About: React.FC<PageProps> = () => {
   return (
-    <main>
-      <h1>About Me</h1>
-      <p>Hi there! I'm the proud creator of this site, which I built with Gatsby.</p>
-    </main>
+    <Layout>
+      <AboutPage />
+    </Layout>
   );
 };
 
-export const Head = () => <title>About Me</title>;
+// export const Head = () =>  <title>About Me</title>;
 
-export default AboutPage;
+export default About;

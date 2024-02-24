@@ -1,6 +1,53 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 const LayoutStyles = styled.div`
+  // common css
+  .sub-title {
+    font-family: lora;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #0c0c0c;
+    margin-bottom: 0.8rem;
+  }
+  .primary-title {
+    font-family: lora;
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: #0c0c0c;
+    margin-bottom: 2rem;
+  }
+  .align-center {
+    text-align: center;
+  }
+  .underline {
+    position: relative;
+    margin-bottom: 2.5rem;
+    &:after {
+      content: '';
+      width: 5rem;
+      height: 1px;
+      background-color: #0c0c0c;
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .secondary-title {
+    font-family: lora;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #0c0c0c;
+    margin-bottom: 1.1rem;
+  }
+  .paragraph {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-family: lato;
+    font-weight: 400;
+    color: #5f5f5f;
+  }
+
   main {
     max-width: 1440px;
     margin: auto;
