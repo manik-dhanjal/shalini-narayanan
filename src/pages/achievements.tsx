@@ -11,6 +11,6 @@ const Achievements: React.FC<PageProps> = () => {
   );
 };
 
-// export const Head = () =>  <title>About Me</title>;
+export const Head = () => <title>Achievements</title>;
 
 export default Achievements;

@@ -53,6 +53,19 @@ const LayoutStyles = styled.div`
     margin: auto;
     padding: 0rem 3.5rem;
   }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+      /*  transform: rotate3d(3, 2, 1, 5deg); */
+      /*  transform: rotateX(360deg);  */
+      /*  transform: rotateY(360deg); */
+      /*  transform: rotateZ(0deg); */
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 `;
 
 export const GlobalStyles = createGlobalStyle`

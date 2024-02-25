@@ -11,6 +11,6 @@ const About: React.FC<PageProps> = () => {
   );
 };
 
-// export const Head = () =>  <title>About Me</title>;
+export const Head = () => <title>About Me</title>;
 
 export default About;

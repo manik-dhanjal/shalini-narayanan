@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import Navbar from '../shared/navbar/navbar.component';
 import Footer from '../shared/footer/footer.component';
 import LayoutStyles, { GlobalStyles } from './layout.styles';
