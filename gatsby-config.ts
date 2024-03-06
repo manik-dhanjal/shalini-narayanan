@@ -45,6 +45,21 @@ const config: GatsbyConfig = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: 'http://cms.shalininarayanan.in/graphql',
+        // Specify the URL of the WordPress source
+        baseUrl: `cms.shalininarayanan.in`,
+        //TODO: change protocol to HTTPS
+        protocol: `http`,
+        // Indicates if a site is hosted on WordPress.com
+        hostingWPCOM: false,
+        useACF: true,
+        // Specify which URL structures to fetch
+        includedRoutes: ['**/posts', '**/tags', '**/categories'],
+      },
+    },
   ],
 };
 
