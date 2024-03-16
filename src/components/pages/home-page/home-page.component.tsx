@@ -9,8 +9,7 @@ import trainerIcon from '../../../images/trainer-icon.png';
 import Slider, { Settings } from 'react-slick';
 import { StaticImage } from 'gatsby-plugin-image';
 import CardSlider from '../../shared/card-slider/card-slider.component';
-import demoImg from '../../../images/demo-img.png';
-import { CardType } from '../../shared/card-slider/card-slider.interface';
+import { getAllDigitalShowcases } from '../../../wp-queries/digitalShowcase.wp-queries';
 
 function HealthFactorSlider() {
   const settings: Settings = {
@@ -55,38 +54,8 @@ function HealthFactorSlider() {
   );
 }
 
-const cards = [
-  {
-    title:
-      'Interview with Drs. Sunetra Sen Narayan and Shalini Narayanan netra Sen Narayan and Shalini Narayana netra Sen Narayan and Shalini Narayana',
-    desc: "Penn State students interviewed Dr. Sunetra Sen Narayan and Dr. Shalini Narayanan on their research about social media's impact on Indian society, featured in their book 'India Connected.'",
-    img: demoImg,
-    link: 'https://www.youtube.com/watch?v=y-IMwTl3ES4&ab_channel=CivilsdailyIAS',
-    type: CardType.YOUTUBE,
-  },
-  {
-    title: 'Interview with Drs. Sunetra Sen Narayan and Shalini Narayanan',
-    desc: "Penn State students interviewed Dr. Sunetra Sen Narayan and Dr. Shalini Narayanan on their research about social media's impact on Indian society, featured in their book 'India Connected.'",
-    img: demoImg,
-    link: 'https://www.youtube.com/watch?v=y-IMwTl3ES4&ab_channel=CivilsdailyIAS',
-    type: CardType.YOUTUBE,
-  },
-  {
-    title: 'Interview with Drs. Sunetra Sen Narayan and Shalini Narayanan',
-    desc: "Penn State students interviewed Dr. Sunetra Sen Narayan and Dr. Shalini Narayanan on their research about social media's impact on Indian society, featured in their book 'India Connected.'",
-    img: demoImg,
-    link: 'https://www.youtube.com/watch?v=y-IMwTl3ES4&ab_channel=CivilsdailyIAS',
-    type: CardType.YOUTUBE,
-  },
-  {
-    title: 'Interview with Drs. Sunetra Sen Narayan and Shalini Narayanan',
-    desc: "Penn State students interviewed Dr. Sunetra Sen Narayan and Dr. Shalini Narayanan on their research about social media's impact on Indian society, featured in their book 'India Connected.'",
-    img: demoImg,
-    link: 'https://www.youtube.com/watch?v=y-IMwTl3ES4&ab_channel=CivilsdailyIAS',
-    type: CardType.YOUTUBE,
-  },
-];
 const HomePage: React.FC = () => {
+  const digitalShowcases = getAllDigitalShowcases();
   return (
     <HomePageStyles>
       {/*Intro Banner  */}
@@ -207,7 +176,7 @@ const HomePage: React.FC = () => {
       <div className="digital-showcase">
         <p className="sub-title">A Glimpse into My Work</p>
         <h2 className="primary-title">Digital Showcase</h2>
-        <CardSlider cards={cards} />
+        <CardSlider cards={digitalShowcases} />
       </div>
 
       {/* Testimonials */}
@@ -284,5 +253,4 @@ const HomePage: React.FC = () => {
     </HomePageStyles>
   );
 };
-
 export default HomePage;

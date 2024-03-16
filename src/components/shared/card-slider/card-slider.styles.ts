@@ -21,7 +21,6 @@ const CardSliderStyles = styled.div`
     min-width: 30rem;
     .card-img {
       width: 100%;
-      height: 18rem;
       margin-bottom: 1.1rem;
       border-radius: 1rem;
       overflow: hidden;
