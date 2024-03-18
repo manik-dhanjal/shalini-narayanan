@@ -2,17 +2,19 @@ import styled from 'styled-components';
 
 const BannerStyles = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
   position: relative;
-  height: calc(100vh - 79px);
+  flex-direction: column;
   .background-text {
     font-family: lora;
     z-index: 1;
     text-align: center;
     margin-top: 7vh;
+    position: relative;
     h1 {
       text-shadow: 0 0.5em #00000010;
-      font-size: 10vw;
+      font-size: clamp(100px, 10vw, 180px);
       letter-spacing: 0.15em;
       line-height: 1.5em;
       font-weight: 500;
@@ -22,19 +24,9 @@ const BannerStyles = styled.div`
       font-weight: 400;
     }
   }
-  .banner-img {
-    position: absolute;
-    top: 52%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 18vw;
-    z-index: 2;
-  }
+
   .social-links {
     list-style: none;
-    position: absolute;
-    left: 0;
-    bottom: 2rem;
     font-size: 1.5rem;
     z-index: 2;
     li {
@@ -67,11 +59,60 @@ const BannerStyles = styled.div`
     }
   }
   .title-sum {
-    position: absolute;
-    right: 0;
-    bottom: 2rem;
     font-size: 1.5rem;
     z-index: 2;
+  }
+  @media screen and (min-width: 780px) {
+    height: calc(100vh - 79px);
+    max-height: clamp(600px, 55vw, 900px);
+    .banner-img {
+      position: absolute;
+      top: 56%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: clamp(150px, 18vw, 350px);
+      z-index: 2;
+    }
+    .social-links {
+      position: absolute;
+      left: 0;
+      bottom: 2rem;
+    }
+    .title-sum {
+      position: absolute;
+      right: 0;
+      bottom: 2rem;
+    }
+  }
+  @media screen and (max-width: 780px) {
+    .background-text {
+      margin-top: 3rem;
+      h1 {
+        font-size: 12.5vw;
+        line-height: 1.2em;
+      }
+      p {
+        font-size: 5vw;
+        margin-bottom: 1vw;
+      }
+    }
+    .banner-img {
+      position: relative;
+      transform: none;
+      left: 0;
+      width: 30%;
+      min-width: 200px;
+      margin-top: -2em;
+    }
+    .title-sum {
+      font-size: 1rem;
+      z-index: 2;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .social-links {
+      display: none;
+    }
   }
 `;
 

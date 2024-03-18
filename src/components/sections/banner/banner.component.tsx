@@ -22,15 +22,15 @@ const Banner = () => {
         <p>Media Academic & Author</p>
         <h1 className="firstname">Dr. Shalini</h1>
         <h1 className="lastname">Narayanan</h1>
+        <StaticImage
+          src="../../../images/banner-img.png"
+          alt="Dr. Shalini Narayanan - Media Academic & Author"
+          placeholder="blurred"
+          layout="constrained"
+          className="banner-img"
+          height={800}
+        />
       </div>
-      <StaticImage
-        src="../../../images/banner-img.png"
-        alt="Dr. Shalini Narayanan - Media Academic & Author"
-        placeholder="blurred"
-        layout="constrained"
-        className="banner-img"
-        height={800}
-      />
       <ul className="social-links">
         <li>
           <Link to="#">

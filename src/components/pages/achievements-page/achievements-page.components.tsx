@@ -23,16 +23,16 @@ const AchievementsPage: React.FC = () => {
       <div className="other-achievements">
         <div className="left-side list">
           {secondaryAchievements
-            .slice(0, Math.floor(secondaryAchievements.length / 2))
+            .slice(0, Math.floor(secondaryAchievements.length / 2) + 1)
             .map((achievement, index) => (
               <AchievementCard {...achievement} key={achievement.title + index} />
             ))}
         </div>
         <div className="divider"></div>
         <div className="right-side list">
-          {allAchievements
+          {secondaryAchievements
             .filter(({ type }) => type === AchievementType.SECONDARY)
-            .slice(Math.floor(secondaryAchievements.length / 2), secondaryAchievements.length)
+            .slice(Math.floor(secondaryAchievements.length / 2) + 1, secondaryAchievements.length)
             .map((achievement, index) => (
               <AchievementCard {...achievement} key={achievement.title + index} />
             ))}

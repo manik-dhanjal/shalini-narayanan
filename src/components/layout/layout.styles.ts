@@ -12,6 +12,14 @@ body{
   margin:0;
   font-family: lato;
 }
+@media screen and (max-width: 1200px){
+  body{
+    font-size: 16px;
+  }
+  html{
+    font-size: 16px;
+  }
+}
 .hindi{
   font-family: hind!important;
 }
@@ -87,6 +95,12 @@ const LayoutStyles = styled.div`
     }
     to {
       transform: rotate(360deg);
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    main {
+      padding: 0rem 2rem;
     }
   }
 `;
