@@ -80,19 +80,22 @@ const Navbar = () => {
         </ul>
 
         <div className="social-links">
-          <Link to="#">
+          <Link to="https://www.linkedin.com/in/shalini-narayanan-2b665014" target="_blank">
             <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
           </Link>
-          <Link to="#">
+          <Link
+            to="https://www.instagram.com/narayananshalini?utm_source=qr&igsh=bWh1NTRqenhvemp5"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faInstagram} className="icon" />
           </Link>
-          <Link to="#">
+          <Link to="https://www.youtube.com/@ittisikahani" target="_blank">
             <FontAwesomeIcon icon={faYoutube} className="icon" />
           </Link>
-          <Link to="#">
+          <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
             <FontAwesomeIcon icon={faFacebookF} className="icon" />
           </Link>
-          <Link to="#">
+          <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
             <FontAwesomeIcon icon={faXTwitter} className="icon" />
           </Link>
         </div>

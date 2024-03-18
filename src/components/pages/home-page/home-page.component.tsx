@@ -102,7 +102,7 @@ const HomePage: React.FC = () => {
 
       {/* Itti Si Kahani Section */}
       <div className="itti-si-kahani">
-        <div className="intro-video">
+        <div className="intro-video desktop">
           <iframe
             width="560"
             height="315"
@@ -116,6 +116,17 @@ const HomePage: React.FC = () => {
         <div className="content">
           <p className="sub-title">Kahaniyan Jo Dil Ko Chhoo Lein</p>
           <h2 className="Itti-Si-Kahani primary-title">Itti Si Kahani</h2>
+          <div className="intro-video mobile">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/6BvM9xwqSOU?si=OY_AmLz-59DBhHj3"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
           <p className="description">
             Itti si Kahani is a simple story that explores big truths about life. It captures small
             moments and evokes various emotions like fear, thrill, romance, compassion, anger, and

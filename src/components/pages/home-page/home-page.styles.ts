@@ -32,7 +32,11 @@ const HomePageStyles = styled.div`
     display: flex;
     gap: 3rem;
     margin: 4.5rem 0;
+
     .content {
+      .intro-video.mobile {
+        display: none;
+      }
       .description {
         margin-bottom: 1.2rem;
         color: #5f5f5f;
@@ -162,6 +166,22 @@ const HomePageStyles = styled.div`
         .testimonial-card:last-of-type {
           margin-bottom: 0;
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .about-wrapper {
+      flex-direction: column;
+      gap: 3rem !important;
+    }
+    .itti-si-kahani {
+      .intro-video.desktop {
+        display: none;
+      }
+      .intro-video.mobile {
+        display: block !important;
+        width: 100%;
       }
     }
   }
