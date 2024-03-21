@@ -95,7 +95,7 @@ const Navbar = () => {
           <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
             <FontAwesomeIcon icon={faFacebookF} className="icon" />
           </Link>
-          <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
+          <Link to="https://twitter.com/shanar68?lang=en" target="_blank">
             <FontAwesomeIcon icon={faXTwitter} className="icon" />
           </Link>
         </div>

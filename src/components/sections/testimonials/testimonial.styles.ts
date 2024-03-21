@@ -16,7 +16,8 @@ export const TestimonialStyles = styled.div`
         }
       }
       .divider {
-        width: 2px;
+        width: 1px;
+        min-width: 1px;
         background-color: #cccccc;
       }
       .right-wrapper {

@@ -39,27 +39,30 @@ const Footer = () => {
           <div className="right-wrapper">
             <ul className="social-links">
               <li className="underline-link">
-                <Link to="#" target="_blank">
+                <Link to="https://www.linkedin.com/in/shalini-narayanan-2b665014" target="_blank">
                   LinkedIn
                 </Link>
               </li>
               <li className="underline-link">
-                <Link to="#" target="_blank">
+                <Link
+                  to="https://www.instagram.com/narayananshalini?utm_source=qr&igsh=bWh1NTRqenhvemp5"
+                  target="_blank"
+                >
                   Instagram
                 </Link>
               </li>
               <li className="underline-link">
-                <Link to="#" target="_blank">
+                <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
                   Facebook
                 </Link>
               </li>
               <li className="underline-link">
-                <Link to="#" target="_blank">
+                <Link to="https://twitter.com/shanar68?lang=en" target="_blank">
                   X (Twitter)
                 </Link>
               </li>
               <li className="underline-link">
-                <Link to="#" target="_blank">
+                <Link to="https://www.youtube.com/@ittisikahani" target="_blank">
                   Youtube
                 </Link>
               </li>
@@ -80,7 +83,7 @@ const Footer = () => {
               <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
                 <FontAwesomeIcon icon={faFacebookF} className="icon" />
               </Link>
-              <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
+              <Link to="https://twitter.com/shanar68?lang=en" target="_blank">
                 <FontAwesomeIcon icon={faXTwitter} className="icon" />
               </Link>
             </div>

@@ -17,6 +17,7 @@ const AchievementPageStyle = styled.div`
     .divider {
       width: 1px;
       background-color: #cccccc;
+      min-width: 1px;
     }
 
     .achievement-card {
@@ -52,6 +53,9 @@ const AchievementPageStyle = styled.div`
     }
     .other-achievements {
       flex-direction: column;
+      .divider {
+        display: none;
+      }
     }
   }
 `;

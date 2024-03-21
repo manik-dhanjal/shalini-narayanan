@@ -23,6 +23,11 @@ const ContactFormStyles = styled.div`
   .input-field-wrapper {
     margin-bottom: 0.5rem;
   }
+  @media screen and (max-width: 400px) {
+    .name-fields-wrapper {
+      gap: 1rem !important;
+    }
+  }
 `;
 
 export default ContactFormStyles;

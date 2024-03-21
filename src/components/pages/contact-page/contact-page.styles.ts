@@ -52,6 +52,30 @@ const ContactPageStyle = styled.div`
       }
     }
   }
+  .mobile {
+    display: none;
+  }
+  @media screen and (max-width: 720px) {
+    .primary-title {
+      margin-bottom: 3rem;
+    }
+    .wrapper {
+      flex-direction: column-reverse;
+      .left,
+      .right {
+        width: 100%;
+      }
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: block;
+        &.contact-img {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
 `;
 
 export default ContactPageStyle;
