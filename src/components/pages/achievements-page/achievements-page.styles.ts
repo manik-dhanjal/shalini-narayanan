@@ -30,6 +30,30 @@ const AchievementPageStyle = styled.div`
       }
     }
   }
+  @media screen and (max-width: 760px) {
+    .main-achievements {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 3rem;
+      align-items: center;
+      gap: 2rem;
+      .img-cards {
+        width: 70%;
+      }
+    }
+    .other-achievements {
+      gap: 1rem;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .main-achievements .img-cards {
+      width: 100%;
+    }
+    .other-achievements {
+      flex-direction: column;
+    }
+  }
 `;
 
 export default AchievementPageStyle;

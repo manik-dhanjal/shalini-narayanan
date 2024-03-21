@@ -12,10 +12,7 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
   className,
 }) => {
   return (
-    <AchievementCardStyles
-      isImgCard={type === AchievementType.PRIMARY}
-      className={`achievement-card ${className}`}
-    >
+    <AchievementCardStyles className={`achievement-card ${className}`}>
       {img && <GatsbyImage alt={title} image={img} />}
       <div className="card-content">
         <p className="card-title">{title}</p>

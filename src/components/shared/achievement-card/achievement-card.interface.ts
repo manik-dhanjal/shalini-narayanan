@@ -4,6 +4,4 @@ export interface AchievementCardProps extends Achievement {
   className?: string;
 }
 
-export interface AchievementStyleProps {
-  isImgCard: boolean;
-}
+export interface AchievementStyleProps {}
