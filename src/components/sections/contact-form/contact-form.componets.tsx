@@ -9,6 +9,12 @@ import InputField from '../../shared/input-field/input-field.components';
 import { InputFieldTypes } from '../../shared/input-field/input-field.enum';
 import { ButtonStatus } from '../../shared/button/button.enums';
 
+const encode = (data: any) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 const ContactForm: React.FC = () => {
   const [btnMessage, setBtnMessage] = useState('Send Message'); // This will be used to show a message if the submission is successful
   const [requestStatus, setRequestStatus] = useState<ButtonStatus>(ButtonStatus.NOT_STARTED);
@@ -20,14 +26,25 @@ const ContactForm: React.FC = () => {
       lastName: '',
       message: '',
     },
-    onSubmit: () => {
+    onSubmit: async (values) => {
       setBtnMessage('Sending Message');
       setRequestStatus(ButtonStatus.LOADING);
-      setTimeout(() => {
+      try {
+        const resp = await fetch('https://shalininarayanan.in/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode({
+            'form-name': 'contact',
+            ...values,
+          }),
+        });
+        console.log(resp);
+        setRequestStatus(ButtonStatus.SUCCESS);
+        setBtnMessage('successfully sent form');
+      } catch (e) {
         setRequestStatus(ButtonStatus.ERROR);
-        setBtnMessage('Message Not Sent');
-        setAlertMessage('successfully sent form');
-      }, 1000);
+        setBtnMessage('Error Occured');
+      }
     },
     validationSchema: yup.object({
       firstName: yup.string().trim().required('First Name is required'),
@@ -39,7 +56,12 @@ const ContactForm: React.FC = () => {
 
   return (
     <ContactFormStyles>
-      <form className="w-50" onSubmit={formik.handleSubmit}>
+      <form
+        className="w-50"
+        onSubmit={formik.handleSubmit}
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
         <div className="name-fields">
           <label htmlFor="firstName">
             Name <span className="required">*</span>
