@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
       setBtnMessage('Sending Message');
       setRequestStatus(ButtonStatus.LOADING);
       try {
-        const resp = await fetch('https://shalininarayanan.in/', {
+        const resp = await fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: encode({
@@ -40,7 +40,7 @@ const ContactForm: React.FC = () => {
         });
         console.log(resp);
         setRequestStatus(ButtonStatus.SUCCESS);
-        setBtnMessage('successfully sent form');
+        setBtnMessage('successfully sent message');
       } catch (e) {
         setRequestStatus(ButtonStatus.ERROR);
         setBtnMessage('Error Occured');
@@ -56,12 +56,8 @@ const ContactForm: React.FC = () => {
 
   return (
     <ContactFormStyles>
-      <form
-        className="w-50"
-        onSubmit={formik.handleSubmit}
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
+      <form className="w-50" onSubmit={formik.handleSubmit} data-netlify="true" name="contact">
+        <input type="hidden" name="form-name" value="contact" />
         <div className="name-fields">
           <label htmlFor="firstName">
             Name <span className="required">*</span>
