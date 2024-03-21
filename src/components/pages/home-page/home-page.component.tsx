@@ -10,6 +10,7 @@ import Slider, { Settings } from 'react-slick';
 import { StaticImage } from 'gatsby-plugin-image';
 import CardSlider from '../../shared/card-slider/card-slider.component';
 import { getAllDigitalShowcases } from '../../../wp-queries/digitalShowcase.wp-queries';
+import Testimonials from '../../sections/testimonials/testimonial.components';
 
 function HealthFactorSlider() {
   const settings: Settings = {
@@ -23,6 +24,23 @@ function HealthFactorSlider() {
     appendDots: (dots) => <ul className="slick-pagination"> {dots} </ul>,
     customPaging: () => <div className="slick-pag-item"></div>,
     arrows: false,
+    centerPadding: '40px',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <Slider {...settings} className="health-factor-slide">
@@ -30,7 +48,7 @@ function HealthFactorSlider() {
         <StaticImage
           src="../../../images/health-factor-2.png"
           alt="The Health Factor - summary image"
-          width={600}
+          width={800}
           placeholder="blurred"
         />
       </div>
@@ -38,7 +56,7 @@ function HealthFactorSlider() {
         <StaticImage
           src="../../../images/health-factor-1.png"
           alt="The Health Factor - group photo 1"
-          width={600}
+          width={800}
           placeholder="blurred"
         />
       </div>
@@ -46,7 +64,7 @@ function HealthFactorSlider() {
         <StaticImage
           src="../../../images/health-factor-3.png"
           alt="The Health Factor - group photo 2"
-          width={600}
+          width={800}
           placeholder="blurred"
         />
       </div>
@@ -66,7 +84,7 @@ const HomePage: React.FC = () => {
         <p className="sub-title">A Closer Look</p>
         <div className="about-wrapper">
           <div className="about-left-wrapper">
-            <h2 className="primary-title">About</h2>
+            <h2 className="primary-title">About Me</h2>
             <p className="about-desc">
               Shalini Narayanan, D.Phil., is a Media Academic and Trainer with nearly three decades
               of experience in the government and non-government sectors. She was part of the Indian
@@ -140,7 +158,7 @@ const HomePage: React.FC = () => {
       {/* The Health Factor */}
       <div className="health-factor">
         <div className="wrapper-left">
-          <h3 className="secondary-title">The Health Factor</h3>
+          <h3 className="secondary-title desktop">The Health Factor</h3>
           <p className="desc">
             The seminar on health misinformation highlighted the global concern exacerbated by
             digital media, suggesting "pre-bunking" as a more effective strategy. The spread of
@@ -156,6 +174,7 @@ const HomePage: React.FC = () => {
         <div className="wrapper-right">
           <HealthFactorSlider />
         </div>
+        <h3 className="secondary-title mobile">The Health Factor</h3>
       </div>
 
       {/* Latest Book - The WhatsApp India Story */}
@@ -190,77 +209,10 @@ const HomePage: React.FC = () => {
         <CardSlider cards={digitalShowcases} />
       </div>
 
-      {/* Testimonials */}
-      <div className="testimonials">
-        <p className="sub-title align-center">What Folks Are Saying!</p>
-        <h2 className="primary-title align-center">Testimonials</h2>
-        <div className="wrapper">
-          <div className="left-wrapper">
-            <div className="testimonial-card">
-              <p className="desc">
-                Dr. Shalini Narayanan is a communication maestro! Her in-depth knowledge combined
-                with her professional experience and engaging teaching style made complex concepts
-                accessible and truly captivating for our students. My students emerged from her
-                class not only with sharpened communication skills, but also with a newfound
-                confidence and a deeper appreciation for the power of effective communication.
-              </p>
-              <p className="name">
-                - Professor (Dr.) Anand Pradhan, Indian Institute of Mass Communication, New Delhi
-              </p>
-            </div>
-            <div className="testimonial-card">
-              <p className="desc">
-                Your stories are so vivid yet subtle in their message that one finds them simply
-                unputdownable. Who won't relate to the incidents, playfulness, banters with the
-                generous use of dialects that lend the stories credibility and authenticity? You are
-                in fact a master storyteller with an above average command of the craft.
-              </p>
-              <p className="name">
-                - Shashi Kumar Sinha, Former Indian Information Service officer
-              </p>
-            </div>
-          </div>
-          <div className="divider" />
-          <div className="right-wrapper">
-            <div className="testimonial-card">
-              <p className="desc">
-                I was delighted to host Dr. Shalini Narayan and her co-author Dr. Sunerta Narayan at
-                Penn State University in 2017 on an invitation from the Bellisario College of
-                Communications and the Penn State Center for Global Studies. Dr. Narayanan's
-                interactions with students and faculty, and her visits to classes were highly
-                informative and enlightening. She is not only an insightful observer and theorist of
-                Indian media and telecommunications but also a versatile practitioner and inspiring
-                communicator.
-              </p>
-              <p className="name">
-                - Professor (Dr.) Krishna Jayakar, Pennsylvannia State University, USA
-              </p>
-            </div>
-            <div className="testimonial-card">
-              <p className="desc">
-                A well crafted compilation of essays that not only describe the journey of the
-                author in search of herself, but also are an honest look at Indian society. The
-                author has avoided the tendency of social commentators to be judgmental and to
-                sermonise Her writing empathises not only with the subjects but also the readers.
-                The humour is sharp but not nasty. A book worth reading.
-              </p>
-              <p className="name">- Vivek Thaokar's review of 'Looking for Myself'</p>
-            </div>
-          </div>
-        </div>
-        <div className="testimonial-card">
-          <p className="desc hindi">
-            श्रीमति शालिनी नारायणन जी ने पाठ्यक्रम निदेशक, भारतीय सूचना सेवा, भारतीय जनसंचार संस्थान
-            के तौर पर सन् 2010 में मेरे भारतीय सूचना सेवा(समूह-ब) के पूरे पाठ्यक्रम को बेहद नियोजित
-            और प्रभावी तरीके से संचालित किया। उन्होंने अपने कार्यकाल में 150 से अधिक परिवीक्षाधीन
-            अधिकारियों को प्रशिक्षित किया। वे संचार जगत की एक प्रखर अध्येता हैं और संभवतः इसी ज्ञान
-            पिपासा के कारण एक प्रशंसनीय उम्दा अधिकारी होते हुए भी उन्होंने संचार शिक्षा, अनुसंधान और
-            अन्वेषण के क्षेत्र का वरण किया। शालिनी मैडम मेरी गुरु भी हैं और मैं अकिंचन भाव के साथ
-            उन्हें हार्दिक शुभकामनाएं प्रेषित करता हूं।
-          </p>
-          <p className="name">- Durganath Swarnakar, IIS (Group B) officer</p>
-        </div>
-      </div>
+      {/* Testimonial */}
+      <Testimonials />
+
+      {/* end */}
     </HomePageStyles>
   );
 };

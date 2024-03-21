@@ -103,6 +103,19 @@ const LayoutStyles = styled.div`
       padding: 0rem 2rem;
     }
   }
+  @media screen and (max-width: 500px) {
+    main {
+      padding: 0rem 1rem;
+    }
+    .sub-title {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .primary-title {
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+    }
+  }
 `;
 
 export default LayoutStyles;

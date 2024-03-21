@@ -49,6 +49,12 @@ const HomePageStyles = styled.div`
     display: flex;
     margin: 4.5rem 0;
     gap: 4rem;
+    .mobile {
+      display: none;
+    }
+    .desktop {
+      display: block;
+    }
     /* for content section of health factor */
     .wrapper-left {
       width: 60%;
@@ -128,44 +134,13 @@ const HomePageStyles = styled.div`
   .digital-showcase {
     margin: 4.5rem 0;
   }
-
-  // testimonials
-  .testimonials {
-    margin: 4.5rem 0;
-    .testimonial-card {
-      margin-bottom: 2rem;
-      .name {
-        font-size: 1rem;
-        text-align: right;
-        font-size: 1rem;
+  @media screen and (max-width: 1200px) {
+    .latest-release {
+      .book-img {
       }
-      .desc {
-        margin-bottom: 1rem;
-        color: #5f5f5f;
-        font-size: 1rem;
-        line-height: 1.4rem;
-      }
-    }
-
-    .wrapper {
-      display: flex;
-      margin-bottom: 2rem;
-      gap: 2rem;
-      .left-wrapper {
-        width: 50%;
-        .testimonial-card:last-of-type {
-          margin-bottom: 0;
-        }
-      }
-      .divider {
-        width: 2px;
-        background-color: #cccccc;
-      }
-      .right-wrapper {
-        width: 50%;
-        .testimonial-card:last-of-type {
-          margin-bottom: 0;
-        }
+      .content {
+        margin-top: 160px;
+        margin-left: 190px;
       }
     }
   }
@@ -174,6 +149,10 @@ const HomePageStyles = styled.div`
     .about-wrapper {
       flex-direction: column;
       gap: 3rem !important;
+      .about-right-wrapper {
+        width: 100%;
+        min-width: 100%;
+      }
     }
     .itti-si-kahani {
       .intro-video.desktop {
@@ -182,6 +161,61 @@ const HomePageStyles = styled.div`
       .intro-video.mobile {
         display: block !important;
         width: 100%;
+        margin-bottom: 1rem;
+        iframe {
+          width: 100%;
+        }
+      }
+    }
+    .health-factor {
+      flex-direction: column-reverse;
+      gap: 0;
+      h3 {
+        margin-bottom: 1.5rem;
+      }
+      .wrapper-left,
+      .wrapper-right {
+        width: 100%;
+      }
+      .wrapper-right {
+        margin-bottom: 2rem;
+      }
+      .mobile {
+        display: block;
+      }
+      .desktop {
+        display: none;
+      }
+      .health-factor-slide {
+        padding: 0 0.5rem;
+      }
+    }
+    .latest-release {
+      .book-img {
+        width: 240px;
+        left: -3%;
+      }
+      .content {
+        margin-top: 230px;
+        margin-left: 60px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .about-wrapper {
+      .about-right-wrapper {
+        display: none;
+      }
+    }
+    .latest-release {
+      .book-img {
+        width: 200px;
+        left: -3%;
+      }
+      .content {
+        margin-top: 200px;
+        margin-left: 40px;
       }
     }
   }

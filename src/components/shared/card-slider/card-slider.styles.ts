@@ -64,6 +64,21 @@ const CardSliderStyles = styled.div`
       text-overflow: ellipsis;
     }
   }
+  @media screen and (max-width: 600px) {
+    .slides-wrapper {
+      display: flex;
+      gap: 1rem;
+    }
+    .card {
+      min-width: 20rem;
+      .card-title {
+        font-size: 1.1rem;
+      }
+      .card-desc {
+        font-size: 0.9rem;
+      }
+    }
+  }
 `;
 
 export default CardSliderStyles;
