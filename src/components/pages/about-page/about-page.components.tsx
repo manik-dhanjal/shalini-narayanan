@@ -7,6 +7,9 @@ const AboutPage: React.FC = () => {
   return (
     <AboutStyles>
       <div className="summary">
+        <h2 className="primary-title tablet">
+          About Dr. Shalini <br /> Narayanan
+        </h2>
         <StaticImage
           src="../../../images/shalinis-about-page-img.png"
           sizes="600"
@@ -15,7 +18,7 @@ const AboutPage: React.FC = () => {
           className="shalinis-img"
         />
         <div className="content">
-          <h2 className="primary-title">
+          <h2 className="primary-title desktop">
             About Dr. Shalini <br /> Narayanan
           </h2>
           <Button className="cv-btn">Curriculum Vitae (CV)</Button>
