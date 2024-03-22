@@ -1,11 +1,12 @@
 import React from 'react';
 import AcademicTeachingPageStyles from './academic-teaching-page.styles';
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage, IGatsbyImageData, StaticImage } from 'gatsby-plugin-image';
 import CardSlider from '../../shared/card-slider/card-slider.component';
 import { CardType } from '../../shared/card-slider/card-slider.interface';
 import demoImg from '../../../images/media-spotlight-demo.png';
 import { getAllAcademicTeaching } from '../../../wp-queries/academic-teaching.wp-queries';
 import { AcademicTeaching } from './academic-teaching.interface';
+import { getAllAcademicPapers } from '../../../wp-queries/academic-papers.wp-queries';
 const cards = [
   {
     title: 'Workshop at NAAA Creating Memories and Skillful Scenarios!',
@@ -38,6 +39,16 @@ const cards = [
 ];
 const AcademicTeachingPage: React.FC = () => {
   const academicTeaching = getAllAcademicTeaching();
+  const academicPapers = getAllAcademicPapers();
+  const academicPapersForCards = academicPapers.map((academicPaper) => {
+    return {
+      title: academicPaper.title,
+      desc: academicPaper.description,
+      img: academicPaper.img as IGatsbyImageData,
+      link: academicPaper.link,
+      type: academicPaper.isDownloable ? CardType.DOWNLOADABLE : CardType.OTHER,
+    };
+  });
   return (
     <AcademicTeachingPageStyles>
       <h2 className="primary-title underline align-center">Academic Teaching</h2>
@@ -76,7 +87,7 @@ const AcademicTeachingPage: React.FC = () => {
       </div>
       <div className="media-spotlight">
         <h3 className="primary-title">Academic Papers</h3>
-        {/* <CardSlider cards={cards} /> */}
+        <CardSlider cards={academicPapersForCards} />
       </div>
     </AcademicTeachingPageStyles>
   );

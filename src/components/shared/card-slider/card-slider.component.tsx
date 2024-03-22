@@ -3,6 +3,8 @@ import CardSliderStyles from './card-slider.styles';
 import { Card, CardSliderProps, CardType } from './card-slider.interface';
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
   console.log(cards);
@@ -11,7 +13,11 @@ const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
       <div className="slides-wrapper">
         {cards.map((card: Card, index: number) => (
           <div className="card" key={`${card.title}-${index}`}>
-            <Link to={card.link} target="_blank">
+            <Link
+              to={card.link}
+              target="_blank"
+              download={card.type === CardType.DOWNLOADABLE ? `${card.title}` : null}
+            >
               <div className="card-img">
                 <GatsbyImage image={card.img} alt={card.title} />
                 {card.type === CardType.YOUTUBE && (
@@ -22,6 +28,11 @@ const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
                     placeholder="blurred"
                     className="youtube-logo"
                   />
+                )}
+                {card.type === CardType.DOWNLOADABLE && (
+                  <div className="download-icon">
+                    <FontAwesomeIcon icon={faFileArrowDown} className="icon" />
+                  </div>
                 )}
               </div>
               <h4 className="card-title">{card.title}</h4>

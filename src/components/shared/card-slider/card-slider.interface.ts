@@ -15,4 +15,5 @@ export interface Card {
 export enum CardType {
   YOUTUBE = 'youtube',
   OTHER = 'other',
+  DOWNLOADABLE = 'downloadable',
 }

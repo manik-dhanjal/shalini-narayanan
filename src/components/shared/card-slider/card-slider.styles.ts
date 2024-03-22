@@ -39,6 +39,21 @@ const CardSliderStyles = styled.div`
         height: 100%;
       }
     }
+    .download-icon {
+      position: absolute;
+      top: 0;
+      left: 0%;
+      background-color: #5f5f5f20;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .icon {
+        font-size: 4rem;
+        color: white;
+      }
+    }
     .card-title {
       color: #0c0c0c;
       font-size: 1.2rem;
@@ -71,6 +86,11 @@ const CardSliderStyles = styled.div`
     }
     .card {
       min-width: 20rem;
+      .download-icon {
+        .icon {
+          font-size: 3rem;
+        }
+      }
       .card-title {
         font-size: 1.1rem;
       }

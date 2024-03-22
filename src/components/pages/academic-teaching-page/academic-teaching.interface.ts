@@ -5,3 +5,11 @@ export interface AcademicTeaching {
   description: string;
   img: IGatsbyImageData | null;
 }
+
+export interface AcademicPaper {
+  title: string;
+  description: string;
+  img: IGatsbyImageData | null;
+  isDownloable: boolean;
+  link: string;
+}
