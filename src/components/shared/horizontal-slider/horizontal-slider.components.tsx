@@ -7,9 +7,16 @@ const HorizontalSlider: React.FC<HorizontalSliderProps> = ({ cards }) => {
   return (
     <HorizontalSliderStyles>
       <div className="slider-wrapper">
-        {cards.map((card, index) => (
-          <FullWidthCard {...card} key={card.title + index} />
-        ))}
+        <div className="left">
+          {cards.slice(0, cards.length / 2).map((card, index) => (
+            <FullWidthCard {...card} key={card.title + index} />
+          ))}
+        </div>
+        <div className="right">
+          {cards.slice(cards.length / 2, cards.length).map((card, index) => (
+            <FullWidthCard {...card} key={card.title + index} />
+          ))}
+        </div>
       </div>
     </HorizontalSliderStyles>
   );

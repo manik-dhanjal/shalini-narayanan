@@ -40,6 +40,30 @@ const TrainingServicesPageStyles = styled.div`
       margin-bottom: 2rem !important;
     }
   }
+  @media screen and (max-width: 720px) {
+    .content .service-card {
+      flex-direction: column !important;
+      gap: 1.5rem;
+      .card-img {
+        width: 100%;
+      }
+      .card-content {
+        width: 100%;
+        h3 {
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    .youtube-video iframe {
+      height: 350px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .youtube-video iframe {
+      height: 300px;
+    }
+  }
 `;
 
 export default TrainingServicesPageStyles;

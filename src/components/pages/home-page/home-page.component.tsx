@@ -11,6 +11,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import CardSlider from '../../shared/card-slider/card-slider.component';
 import { getAllDigitalShowcases } from '../../../wp-queries/digitalShowcase.wp-queries';
 import Testimonials from '../../sections/testimonials/testimonial.components';
+import { navigate } from 'gatsby';
 
 function HealthFactorSlider() {
   const settings: Settings = {
@@ -96,7 +97,7 @@ const HomePage: React.FC = () => {
               Indian Institute of Mass Communication, New Delhi, she headed two departments and
               conducted research.
             </p>
-            <Button>Read More</Button>
+            <Button onClick={() => navigate('/about')}>Read More</Button>
           </div>
           <div className="about-right-wrapper">
             <Card
@@ -151,7 +152,9 @@ const HomePage: React.FC = () => {
             curiosity. The stories also touch on some deep questions, leaving you with more to
             ponder.
           </p>
-          <Button isUnderlined>Visit</Button>
+          <Button isUnderlined onClick={() => navigate('https://www.youtube.com/@ittisikahani')}>
+            Visit
+          </Button>
         </div>
       </div>
 

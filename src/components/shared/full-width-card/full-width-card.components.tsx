@@ -17,9 +17,10 @@ const FullWidthCard: React.FC<FullWidthCardProps> = ({
       <StaticImage
         src="../../../images/placeholder-img.png"
         alt={title}
-        width={600}
+        width={700}
         placeholder="blurred"
         className="card-img"
+        objectFit="contain"
       />
       <div className="card-content">
         <h3 className="card-title">{title}</h3>

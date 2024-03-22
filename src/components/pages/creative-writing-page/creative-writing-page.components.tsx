@@ -39,6 +39,22 @@ const cards: FullWidthCardProps[] = [
     imgSrc: '../../placeholder',
     link: '',
   },
+  {
+    title: 'The WhatsApp India Story: Inside the Digital Maya Sphere',
+    category: 'Book',
+    desc: `WhatsApp is used by over half a billion people in India today in all fields – in business, corporate and informal sectors, in government, for education and among friends, families and acquaintances. This book critically explores the social messaging app’s rapid expansion in India and its growing influence and looks at whether, as a form of horizontal communication, it poses a challenge to more traditional structures of communication.`,
+    btnText: 'Get Now',
+    imgSrc: '../../placeholder',
+    link: '',
+  },
+  {
+    title: 'Government Information Dissemination Structures and Processes in Disasters',
+    category: 'Book',
+    desc: `A chapter on Government Information Dissemination Structures and Processes in Disasters published in International Handbook of Disaster Research (Springer) in August, 2022.`,
+    btnText: 'Read Now',
+    imgSrc: '../../placeholder',
+    link: '',
+  },
 ];
 const CreativeWritingPage: React.FC = () => {
   const options = ['one', 'two', 'three'];
@@ -61,7 +77,7 @@ const CreativeWritingPage: React.FC = () => {
         />
       </div>
       <HorizontalSlider cards={cards} />
-      <Pagination currentPage={currentPage} totalPages={10} handleChange={handlePaginationChange} />
+      {/* <Pagination currentPage={currentPage} totalPages={10} handleChange={handlePaginationChange} /> */}
     </CreativeWritingPageStyles>
   );
 };

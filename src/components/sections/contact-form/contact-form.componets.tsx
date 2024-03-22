@@ -15,10 +15,10 @@ const encode = (data: any) => {
     .join('&');
 };
 
+// use local storage to limit the submissions
 const ContactForm: React.FC = () => {
   const [btnMessage, setBtnMessage] = useState('Send Message'); // This will be used to show a message if the submission is successful
   const [requestStatus, setRequestStatus] = useState<ButtonStatus>(ButtonStatus.NOT_STARTED);
-  const [alertMessage, setAlertMessage] = useState<string>('Alert Message');
   const formik = useFormik({
     initialValues: {
       email: '',

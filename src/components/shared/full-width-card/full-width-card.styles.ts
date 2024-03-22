@@ -31,6 +31,26 @@ const FullWidthCardStyles = styled.div`
       margin-bottom: 1.2rem;
     }
   }
+  @media screen and (max-width: 1024px) {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    .card-img {
+      width: 100%;
+    }
+    .card-content {
+      width: 100%;
+      .card-title {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  @media screen and (max-width: 720px) {
+    padding: 0.8rem;
+    gap: 1.5rem;
+  }
 `;
 
 export default FullWidthCardStyles;
