@@ -6,4 +6,7 @@ export interface ButtonProps
   isUnderlined?: boolean;
   status?: ButtonStatus;
   hoverMessage?: string;
+  href?: string;
+  target?: string;
+  download?: string;
 }

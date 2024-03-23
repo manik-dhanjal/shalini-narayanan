@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 const HorizontalSliderStyles = styled.div`
+  .left {
+    margin-bottom: 3rem;
+  }
   .full-width-card {
     margin-bottom: 3rem;
     &:last-of-type {

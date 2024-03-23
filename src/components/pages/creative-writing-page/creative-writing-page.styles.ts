@@ -80,6 +80,23 @@ const CreativeWritingPageStyles = styled.div`
   .pagination {
     margin: 4.5rem 0;
   }
+  .Not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #000;
+    }
+    p {
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+  }
 `;
 
 export default CreativeWritingPageStyles;

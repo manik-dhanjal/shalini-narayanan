@@ -15,6 +15,9 @@ const FullWidthCardStyles = styled.div`
       margin-bottom: 1rem;
       color: #0c0c0c;
     }
+    .card-categories {
+      margin-bottom: 0.8rem;
+    }
     .card-category {
       background-color: #0c0c0c;
       display: inline-block;
@@ -22,7 +25,8 @@ const FullWidthCardStyles = styled.div`
       border-radius: 50px;
       padding: 0.3rem 0.8rem;
       font-size: 0.8rem;
-      margin-bottom: 1.2rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
     }
     .card-desc {
       color: #5f5f5f;
@@ -31,6 +35,7 @@ const FullWidthCardStyles = styled.div`
       margin-bottom: 1.2rem;
     }
   }
+
   @media screen and (max-width: 1024px) {
     border: 1px solid #ccc;
     border-radius: 12px;

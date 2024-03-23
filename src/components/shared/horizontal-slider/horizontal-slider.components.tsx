@@ -4,6 +4,7 @@ import { HorizontalSliderProps } from './horizontal-slider.interface';
 import FullWidthCard from '../full-width-card/full-width-card.components';
 
 const HorizontalSlider: React.FC<HorizontalSliderProps> = ({ cards }) => {
+  console.log(cards);
   return (
     <HorizontalSliderStyles>
       <div className="slider-wrapper">

@@ -29,7 +29,7 @@ export interface AllWpAcademicPapers {
   };
 }
 
-export const getAllAcademicTeachingQuery = graphql`
+export const getAllAcademicPapersQuery = graphql`
   query {
     allWpAcademicPaper {
       nodes {
@@ -64,19 +64,19 @@ export const getAllAcademicTeachingQuery = graphql`
 `;
 
 export const getAllAcademicPapers = (): AcademicPaper[] => {
-  const data = useStaticQuery<AllWpAcademicPapers>(getAllAcademicTeachingQuery);
+  const data = useStaticQuery<AllWpAcademicPapers>(getAllAcademicPapersQuery);
 
   if (!data?.allWpAcademicPaper?.nodes) return [];
 
   // update img and desc and made them required in wordpress
   return data.allWpAcademicPaper.nodes.map((academicPaper: WpAcademicPapers) => {
     let link;
+    console.log(academicPaper);
     if (academicPaper.academicPapers.isDownloable) {
       link = academicPaper.academicPapers.academicPaperPdf?.mediaItemUrl;
     } else {
       link = academicPaper.academicPapers.link?.url;
     }
-    console.log(academicPaper.academicPapers, link);
     return {
       title: academicPaper.title,
       description: academicPaper.content,

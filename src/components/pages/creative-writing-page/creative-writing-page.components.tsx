@@ -1,82 +1,82 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CreativeWritingPageStyles from './creative-writing-page.styles';
 import HorizontalSlider from '../../shared/horizontal-slider/horizontal-slider.components';
 import Dropdown, { Option } from 'react-dropdown';
 // import 'react-dropdown/style.css';
 import { FullWidthCardProps } from '../../shared/full-width-card/full-width-card.interface';
 import Pagination from '../../shared/pagination/pagination.components';
+import {
+  AllWpCategories,
+  WpCategory,
+  getAllCategories,
+} from '../../../wp-queries/categories.wp-queries';
+import { getAllCreativeWriting } from '../../../wp-queries/creative-writing.wp-queries';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { Category, CreativeWritingProps } from './creative-writing.interface';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHourglass, faHourglassStart } from '@fortawesome/free-solid-svg-icons';
 
-const cards: FullWidthCardProps[] = [
-  {
-    title: 'India Connected: Mapping the Impact of New Media (SAGE)',
-    category: 'Book',
-    desc: `A first-of-its-kind analysis of the growth of new media in Digital India from a broad communications and interdisciplinary perspective.Can new media help in bringing about development or contribute to social movements? Who is left out of the new media equation? How is the public sphere affected by it? How will it be regulated?`,
-    btnText: 'Get Now',
-    imgSrc: '../../placeholder',
-    link: '',
-  },
-  {
-    title: 'Looking for Myself ',
-    category: 'Book',
-    desc: `Delve into 'Looking for Myself,' a captivating novella crafted from the author's Facebook blogs. Starting with a brief introduction, the narrative unfolds post her early retirement from a coveted Central Civil Services Group 'A' job in India. Navigating mid-life challenges, the author, still in her 40s, embarks on a quest for identity and purpose. Through open-hearted experiments and a resilient sense of humor, she reflects on the profound realization of life's true priorities. Join her on this introspective journey within the pages of this slim volume.`,
-    btnText: 'Get Now',
-    imgSrc: '../../placeholder',
-    link: '',
-  },
-  {
-    title: 'The WhatsApp India Story: Inside the Digital Maya Sphere',
-    category: 'Book',
-    desc: `WhatsApp is used by over half a billion people in India today in all fields – in business, corporate and informal sectors, in government, for education and among friends, families and acquaintances. This book critically explores the social messaging app’s rapid expansion in India and its growing influence and looks at whether, as a form of horizontal communication, it poses a challenge to more traditional structures of communication.`,
-    btnText: 'Get Now',
-    imgSrc: '../../placeholder',
-    link: '',
-  },
-  {
-    title: 'Government Information Dissemination Structures and Processes in Disasters',
-    category: 'Book',
-    desc: `A chapter on Government Information Dissemination Structures and Processes in Disasters published in International Handbook of Disaster Research (Springer) in August, 2022.`,
-    btnText: 'Read Now',
-    imgSrc: '../../placeholder',
-    link: '',
-  },
-  {
-    title: 'The WhatsApp India Story: Inside the Digital Maya Sphere',
-    category: 'Book',
-    desc: `WhatsApp is used by over half a billion people in India today in all fields – in business, corporate and informal sectors, in government, for education and among friends, families and acquaintances. This book critically explores the social messaging app’s rapid expansion in India and its growing influence and looks at whether, as a form of horizontal communication, it poses a challenge to more traditional structures of communication.`,
-    btnText: 'Get Now',
-    imgSrc: '../../placeholder',
-    link: '',
-  },
-  {
-    title: 'Government Information Dissemination Structures and Processes in Disasters',
-    category: 'Book',
-    desc: `A chapter on Government Information Dissemination Structures and Processes in Disasters published in International Handbook of Disaster Research (Springer) in August, 2022.`,
-    btnText: 'Read Now',
-    imgSrc: '../../placeholder',
-    link: '',
-  },
-];
 const CreativeWritingPage: React.FC = () => {
-  const options = ['one', 'two', 'three'];
+  const INITIAL_CATEGORY = { label: 'All', value: 'all' };
+  const listOfContent = getAllCreativeWriting();
+  const rawCategories = getAllCategories().map((category) => {
+    return {
+      label: category.name,
+      value: category.id,
+    };
+  });
+  const categories = [INITIAL_CATEGORY, ...rawCategories];
+  const [activeCategory, setActiveCategory] = useState<Partial<Option>>(INITIAL_CATEGORY);
+
   const handleCategoryChange = (e: Option) => {
     console.log(e);
+    setActiveCategory({
+      label: e.label,
+      value: e.value,
+    });
   };
-  const handlePaginationChange = (pageNum: number) => {
-    setCurrentPage(pageNum);
+  const getfilteredList = (list: CreativeWritingProps[], catId: string): FullWidthCardProps[] => {
+    return list
+      .filter((content) => {
+        if (catId === 'all') return true;
+        return !!content.categories.find((category) => category.id === catId);
+      })
+      .map((content) => {
+        return {
+          title: content.title,
+          categories: content.categories,
+          desc: content.description,
+          btnText: 'View',
+          imgSrc: content.img as IGatsbyImageData,
+          link: content.link,
+        };
+      });
   };
-  const [currentPage, setCurrentPage] = useState(1);
+
+  const cards = getfilteredList(listOfContent, activeCategory.value as string);
+
   return (
     <CreativeWritingPageStyles>
       <h2 className="primary-title underline align-center">Creative Writing & Publications</h2>
       <div className="dropdown-cont">
         <Dropdown
-          options={options}
+          options={categories}
           onChange={handleCategoryChange}
           placeholder="Browse by Category"
           className="dropdown"
+          value="all"
         />
       </div>
-      <HorizontalSlider cards={cards} />
+      {!cards?.length ? (
+        // show this if no cards are available for following category
+        <div className="Not-found">
+          <FontAwesomeIcon icon={faHourglassStart} className="icon" />
+          <p>Content for {activeCategory.label} Category will be uploaded soon ...</p>
+        </div>
+      ) : (
+        <HorizontalSlider cards={cards} />
+      )}
+
       {/* <Pagination currentPage={currentPage} totalPages={10} handleChange={handlePaginationChange} /> */}
     </CreativeWritingPageStyles>
   );

@@ -6,16 +6,23 @@ interface ButtonStyleProps {
 }
 
 const ButtonStyles = styled.div<ButtonStyleProps>`
-  button {
+  .button {
     text-decoration: ${(props) => (props.isUnderlined ? 'underline' : 'none')};
     position: relative;
-    padding: 0.8rem 1.5rem;
     background-color: transparent;
     border: 1px solid #000;
     border-radius: none;
     font-size: 1rem;
     transition: 0.3s ease;
     cursor: pointer;
+    display: inline-block;
+    .btn-back {
+      color: #000;
+      width: 100%;
+      text-align: center;
+      display: block;
+      padding: 0.8rem 1.5rem;
+    }
     .btn-icon {
       margin-right: 0.5rem;
       font-size: 1rem;
