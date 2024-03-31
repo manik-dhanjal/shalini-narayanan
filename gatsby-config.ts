@@ -1,9 +1,47 @@
 import type { GatsbyConfig } from 'gatsby';
+const siteTitle = 'Dr. Shalini Narayanan';
+const siteDescription =
+  'Media Expert with 3 decadesexperience: Ex-Indian Information Service, Prof., Researcher';
+const siteAuthor = '@shanar68';
+const siteUrl = 'https://shalininarayanan.in';
+const siteImage = `${siteUrl}/icons/static/fc43302fb467e4b13577a246d9179bf0/d1f98/shalinis-about-page-img.webp`;
+const siteKeywords = [
+  'Dr. Shalini Narayanan',
+  'Media Academic',
+  'Author',
+  'Itti Si Kahani',
+  'The Whatsapp India Story',
+  'IIS professor',
+  'Researcher',
+  'IIS',
+  'Training Services',
+  'Academic Services',
+  'Creative Writing',
+  'Sunetra Sen Narayan',
+  'Shalini',
+  'Dr. Shalini',
+  'Shalini Naryanan',
+  'Dr. Narayanan',
+  'Narayanan',
+  'Journalism',
+  'looking for myself',
+  'pennsylvania state university',
+  'the health factor',
+  'Vyas TV',
+  'civil services',
+  'UPSC',
+  'Press',
+  'Anchor',
+];
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Shalini Narayanan`,
-    siteUrl: `https://shalininarayanan.in`,
+    title: siteTitle,
+    description: siteDescription,
+    author: siteAuthor,
+    url: siteUrl,
+    keywords: siteKeywords,
+    image: siteImage,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -15,6 +53,12 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/small-logo.png',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
