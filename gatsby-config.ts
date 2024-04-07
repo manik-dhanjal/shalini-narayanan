@@ -54,6 +54,24 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
     {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-embed-video',
+            options: {
+              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
+              loadingStrategy: 'lazy', //Optional: Enable support for lazy-load offscreen iframes. Default is disabled.
+              containerClass: 'embedVideo-container', //Optional: Custom CSS class for iframe container, for multiple classes separate them by space
+              iframeId: false, //Optional: if true, iframe's id will be set to what is provided after 'video:' (YouTube IFrame player API requires iframe id)
+              sandbox: 'allow-same-origin allow-scripts allow-presentation', // Optional: iframe sandbox options - Default: undefined
+            },
+          },
+          'gatsby-remark-responsive-iframe', //Optional: Must be loaded after gatsby-remark-embed-video
+        ],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/small-logo.png',
@@ -73,6 +91,7 @@ const config: GatsbyConfig = {
       options: {
         enableListener: true,
         preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        mode: 'async',
         web: [
           {
             name: `lora`,

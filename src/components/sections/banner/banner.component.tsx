@@ -19,7 +19,7 @@ const Banner = () => {
   return (
     <BannerStyles>
       <div className="background-text">
-        <p>Media Academic & Author</p>
+        <p>Media Academic, Author & Trainer</p>
         <h1 className="firstname">Dr. Shalini</h1>
         <h1 className="lastname">Narayanan</h1>
         <StaticImage
@@ -51,11 +51,9 @@ const Banner = () => {
         </li>
       </ul>
       <p className="title-sum">
-        Media Expert with 3 decades
-        <br />
-        experience: Ex-Indian Information
-        <br />
-        Service, Prof, Researcher
+        Media expert with three decades' experience. <br />
+        Ex-Indian Information Service officer,
+        <br /> Professor, Researcher.
       </p>
     </BannerStyles>
   );

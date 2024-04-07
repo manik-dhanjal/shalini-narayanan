@@ -87,14 +87,14 @@ const HomePage: React.FC = () => {
           <div className="about-left-wrapper">
             <h2 className="primary-title">About Me</h2>
             <p className="about-desc">
-              Shalini Narayanan, D.Phil., is a Media Academic and Trainer with nearly three decades
-              of experience in the government and non-government sectors. She was part of the Indian
-              Information Service, Group 'A', for 23 years, before taking voluntary retirement in
-              2013. During that time, she worked at the news division of the public broadcaster,
-              Prasar Bharati, both in television and radio for over a decade. She also worked at
-              DAVP, now CBC, the Central government's advertising agency and as Editor of the only
-              government-run newspaper for jobs, Employment News. As Associate Professor at the
-              Indian Institute of Mass Communication, New Delhi, she headed two departments and
+              Shalini Narayanan, D.Phil., is a Media Academic, Author and Trainer with nearly three
+              decades of experience in the government and non-government sectors. She was part of
+              the Indian Information Service, Group 'A', for 23 years, before taking voluntary
+              retirement in 2013. During that time, she worked at the news division of the public
+              broadcaster, Prasar Bharati, both in television and radio for over a decade. She also
+              worked at DAVP, now CBC, the Central government's advertising agency and as Editor of
+              the only government-run newspaper for jobs, Employment News. As Associate Professor at
+              the Indian Institute of Mass Communication, New Delhi, she headed two departments and
               conducted research.
             </p>
             <Button onClick={() => navigate('/about')}>Read More</Button>
@@ -103,7 +103,7 @@ const HomePage: React.FC = () => {
             <Card
               imgSrc={authorIcon}
               title="An Author"
-              description="Writes worlds, spins tales, captures hearts with words"
+              description="Writes worlds, spins tales, captures hearts with words."
             />
             <Card
               imgSrc={academicIcon}
@@ -112,7 +112,7 @@ const HomePage: React.FC = () => {
             />
             <Card
               imgSrc={trainerIcon}
-              title="An Trainer"
+              title="A Trainer"
               description="Guides, instructs, empowers, motivates, facilitates growth."
             />
           </div>
@@ -147,8 +147,8 @@ const HomePage: React.FC = () => {
             ></iframe>
           </div>
           <p className="description">
-            Itti si Kahani is a simple story that explores big truths about life. It captures small
-            moments and evokes various emotions like fear, thrill, romance, compassion, anger, and
+            Itti si Kahani are simple stories that explore big truths about life. They capture small
+            moments and evoke various emotions like fear, thrill, romance, compassion, anger, and
             curiosity. The stories also touch on some deep questions, leaving you with more to
             ponder.
           </p>
