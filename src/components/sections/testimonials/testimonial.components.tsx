@@ -51,6 +51,16 @@ const DEFAULT_TESTIMONIALS: TestimonialCardProps[] = [
     name: `Durganath Swarnakar, IIS (Group B) officer`,
     comment_language: Language.HINDI,
   },
+  {
+    comment: `Dr Shalini Narayanan was my Course Director when I joined the Indian Information Service, 
+    Group 'A'. An incredible person, she aced as a teacher and guide to the probationers in the service. 
+    While guiding us in understanding the Government functioning at different levels, she continued to 
+    have an extremely humane touch for all of us. Even beyond her service tenure, her command over 
+    the communication arena was excellent and I am glad that many people even beyond civil services 
+    have benefited from her knowledge. I wish her very best in life and continue to be an inspiration 
+    for many others like me.`,
+    name: `Keerti Tiwari, Indian Information Service (Group 'A') officer`,
+  },
 ];
 
 const settings: Settings = {
@@ -77,13 +87,18 @@ const Testimonials: React.FC = () => {
         <div className="testimonial-for-desktop">
           <div className="wrapper">
             <div className="left-wrapper">
-              {DEFAULT_TESTIMONIALS.slice(0, 2).map((testimonial, index) => (
-                <TestimonialCard {...testimonial} key={testimonial.name + index} />
-              ))}
+              {DEFAULT_TESTIMONIALS.slice(0, DEFAULT_TESTIMONIALS.length / 2).map(
+                (testimonial, index) => (
+                  <TestimonialCard {...testimonial} key={testimonial.name + index} />
+                )
+              )}
             </div>
             <div className="divider" />
             <div className="right-wrapper">
-              {DEFAULT_TESTIMONIALS.slice(2, 4).map((testimonial, index) => (
+              {DEFAULT_TESTIMONIALS.slice(
+                DEFAULT_TESTIMONIALS.length / 2,
+                DEFAULT_TESTIMONIALS.length
+              ).map((testimonial, index) => (
                 <TestimonialCard {...testimonial} key={testimonial.name + index} />
               ))}
             </div>

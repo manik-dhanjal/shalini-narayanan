@@ -174,15 +174,20 @@ const HomePage: React.FC = () => {
         <div className="wrapper-left">
           <h3 className="secondary-title desktop">The Health Factor</h3>
           <p className="desc">
-            The seminar on health misinformation highlighted the global concern exacerbated by
-            digital media, suggesting "pre-bunking" as a more effective strategy. The spread of
-            misinformation in smaller towns, aided by offline influencers, poses a significant
-            challenge, necessitating urgent measures. Fact-checkers struggle with the overwhelming
-            volume of misinformation, circulating six times faster than they can verify. Experts
-            recommend media houses employ medical experts, ensure real-time government responses,
-            and integrate science communication into education. The seminar, held on November 16,
-            2023, in Delhi, emphasized the critical need to address health misinformation and was
-            supported by DataLEADS, focusing on information ecosystem challenges.
+            It was my honour and privilege to organise <em>The Health Factor</em> – a seminar on
+            Health Misinformation and Media Representation, along with Prof. (Dr.) Sunetra Sen
+            Narayan in November 2023. The seminar was graced by eminent personalities from the field
+            of academics, medicine and media. The experts at the seminar were of the view that
+            “pre-bunking” of misinformation or fake news might be a better way to combat
+            misinformation in today’s world going through an “infodemic” rather than trying to
+            spread media literacy as that effort is slow-moving. They also felt that misinformation
+            on health issues could not only lead to delay in getting treatment, with sometimes fatal
+            consequences, but could also create a lack of trust in scientific approaches to tackle
+            disease. The need for fact-checking myths being perpetuated via social media about
+            psychological disorders was also strongly felt. When it comes to media representations,
+            the panellists stressed upon the need to sensitise media teams before working on any
+            health-related issues- whether on OTT, films or news. the BBC and others. The seminar
+            was supported by DataLEADS.
           </p>
         </div>
         <div className="wrapper-right">
@@ -212,7 +217,9 @@ const HomePage: React.FC = () => {
             of horizontal communication, it poses a challenge to more traditional structures of
             communication.
           </p>
-          <Button isUnderlined>Get Now</Button>
+          <Button isUnderlined onClick={() => navigate('https://amzn.in/d/hOnX4FN')}>
+            Get Now
+          </Button>
         </div>
       </div>
 
