@@ -12,6 +12,7 @@ import CardSlider from '../../shared/card-slider/card-slider.component';
 import { getAllDigitalShowcases } from '../../../wp-queries/digitalShowcase.wp-queries';
 import Testimonials from '../../sections/testimonials/testimonial.components';
 import { navigate } from 'gatsby';
+import { getDataForHomePageAboutSummary } from '../../../wp-queries/about.wp-queries';
 
 function HealthFactorSlider() {
   const settings: Settings = {
@@ -75,6 +76,7 @@ function HealthFactorSlider() {
 
 const HomePage: React.FC = () => {
   const digitalShowcases = getAllDigitalShowcases();
+  const aboutSummary = getDataForHomePageAboutSummary();
   return (
     <HomePageStyles>
       {/*Intro Banner  */}
@@ -85,18 +87,27 @@ const HomePage: React.FC = () => {
         <p className="sub-title">A Closer Look</p>
         <div className="about-wrapper">
           <div className="about-left-wrapper">
-            <h2 className="primary-title">About Me</h2>
-            <p className="about-desc">
-              Shalini Narayanan, D.Phil., is a Media Academic, Author and Trainer with nearly three
-              decades of experience in the government and non-government sectors. She was part of
-              the Indian Information Service, Group 'A', for 23 years, before taking voluntary
-              retirement in 2013. During that time, she worked at the news division of the public
-              broadcaster, Prasar Bharati, both in television and radio for over a decade. She also
-              worked at DAVP, now CBC, the Central government's advertising agency and as Editor of
-              the only government-run newspaper for jobs, Employment News. As Associate Professor at
-              the Indian Institute of Mass Communication, New Delhi, she headed two departments and
-              conducted research.
-            </p>
+            <h2 className="primary-title">
+              {aboutSummary?.title ? aboutSummary.title : 'About Me'}
+            </h2>
+            {/* if we have a summary post in backend then show that else show this fall back summary */}
+            {aboutSummary?.description ? (
+              <div
+                className="about-desc"
+                dangerouslySetInnerHTML={{ __html: aboutSummary.description }}
+              />
+            ) : (
+              <p className="about-desc">
+                Shalini Narayanan, D. Phil, straddles the worlds of academia and public service with
+                her background as a communications scholar and Indian Information service officer.
+                Since she took voluntary retirement from service in 2013, she has been engaged in
+                academic and literary writing, training, teaching and learning. She has two books,
+                academic papers and a collection of over 500 micro-stories to her name. She is the
+                co-author of The WhatsApp India Story: Inside the Maya Sphere (Routledge, 2024) and
+                the co-editor of India Connected: Mapping the Impact of New Media (2016) Sage
+                Publications.
+              </p>
+            )}
             <Button onClick={() => navigate('/about')}>Read More</Button>
           </div>
           <div className="about-right-wrapper">

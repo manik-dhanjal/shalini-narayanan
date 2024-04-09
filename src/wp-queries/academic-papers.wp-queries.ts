@@ -71,7 +71,6 @@ export const getAllAcademicPapers = (): AcademicPaper[] => {
   // update img and desc and made them required in wordpress
   return data.allWpAcademicPaper.nodes.map((academicPaper: WpAcademicPapers) => {
     let link;
-    console.log(academicPaper);
     if (academicPaper.academicPapers.isDownloable) {
       link = academicPaper.academicPapers.academicPaperPdf?.mediaItemUrl;
     } else {
