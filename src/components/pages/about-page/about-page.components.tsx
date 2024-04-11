@@ -4,7 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import Button from '../../shared/button/button.component';
 import { getDataForAboutPage } from '../../../wp-queries/about.wp-queries';
 import { AboutSectionTypes } from './about.enum';
-import { downloadFileFromUrl } from '../../../utils/download.utils';
+import { downloadFileFromUrl } from '../../../utils/links.utils';
 
 const AboutPage: React.FC = () => {
   const allAbout = getDataForAboutPage();

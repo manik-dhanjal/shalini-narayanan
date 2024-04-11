@@ -13,6 +13,7 @@ import { getAllDigitalShowcases } from '../../../wp-queries/digitalShowcase.wp-q
 import Testimonials from '../../sections/testimonials/testimonial.components';
 import { navigate } from 'gatsby';
 import { getDataForHomePageAboutSummary } from '../../../wp-queries/about.wp-queries';
+import { openLinkInNewTab } from '../../../utils/links.utils';
 
 function HealthFactorSlider() {
   const settings: Settings = {
@@ -163,7 +164,10 @@ const HomePage: React.FC = () => {
             curiosity. The stories also touch on some deep questions, leaving you with more to
             ponder.
           </p>
-          <Button isUnderlined onClick={() => navigate('https://www.youtube.com/@ittisikahani')}>
+          <Button
+            isUnderlined
+            onClick={() => openLinkInNewTab('https://www.youtube.com/@ittisikahani')}
+          >
             Visit
           </Button>
         </div>
@@ -217,7 +221,7 @@ const HomePage: React.FC = () => {
             of horizontal communication, it poses a challenge to more traditional structures of
             communication.
           </p>
-          <Button isUnderlined onClick={() => navigate('https://amzn.in/d/hOnX4FN')}>
+          <Button isUnderlined onClick={() => openLinkInNewTab('https://amzn.in/d/hOnX4FN')}>
             Get Now
           </Button>
         </div>

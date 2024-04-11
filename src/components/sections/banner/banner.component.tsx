@@ -33,19 +33,19 @@ const Banner = () => {
       </div>
       <ul className="social-links">
         <li>
-          <Link to="#">
+          <Link to="https://www.instagram.com/ittisikahani/" target="_blank">
             Instagram
             <ArrowIcon />
           </Link>
         </li>
         <li>
-          <Link to="#">
+          <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
             Facebook
             <ArrowIcon />
           </Link>
         </li>
         <li>
-          <Link to="#">
+          <Link to="https://twitter.com/shanar68?lang=en" target="_blank">
             X(Twitter) <ArrowIcon />
           </Link>
         </li>

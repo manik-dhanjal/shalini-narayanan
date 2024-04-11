@@ -236,7 +236,7 @@ export const NavStyles = styled.nav`
   @media screen and (max-width: 500px) {
     padding: 0.8rem 1rem;
     .logo {
-      max-width: 160px;
+      max-width: 200px;
     }
     .menu-btn {
       width: 30px;
