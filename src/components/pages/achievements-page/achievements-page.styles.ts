@@ -7,8 +7,19 @@ const AchievementPageStyle = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 3rem;
-    .img-cards {
-      width: 32%;
+    flex-wrap: wrap;
+
+    &.odd {
+      gap: 1rem;
+      .img-cards {
+        width: calc(33% - 1rem);
+      }
+    }
+    &.even {
+      gap: 2rem;
+      .img-cards {
+        width: calc(50% - 1rem);
+      }
     }
   }
   .other-achievements {
@@ -38,9 +49,9 @@ const AchievementPageStyle = styled.div`
       flex-direction: column;
       margin-bottom: 3rem;
       align-items: center;
-      gap: 2rem;
+      gap: 2rem !important;
       .img-cards {
-        width: 70%;
+        width: 70% !important;
       }
     }
     .other-achievements {
@@ -49,7 +60,7 @@ const AchievementPageStyle = styled.div`
   }
   @media screen and (max-width: 600px) {
     .main-achievements .img-cards {
-      width: 100%;
+      width: 100% !important;
     }
     .other-achievements {
       flex-direction: column;
