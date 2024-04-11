@@ -4,6 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import Button from '../../shared/button/button.component';
 import { getDataForAboutPage } from '../../../wp-queries/about.wp-queries';
 import { AboutSectionTypes } from './about.enum';
+import { downloadFileFromUrl } from '../../../utils/download.utils';
 
 const AboutPage: React.FC = () => {
   const allAbout = getDataForAboutPage();
@@ -34,7 +35,14 @@ const AboutPage: React.FC = () => {
           <h2 className="primary-title desktop">
             About Dr. Shalini <br /> Narayanan
           </h2>
-          <Button className="cv-btn">Curriculum Vitae (CV)</Button>
+          {primaryAbout?.resumeLink && (
+            <Button
+              className="cv-btn"
+              onClick={() => downloadFileFromUrl(primaryAbout.resumeLink as string)}
+            >
+              Curriculum Vitae (CV)
+            </Button>
+          )}
           {primaryAbout?.description && (
             <div
               className="about-primary-description"
