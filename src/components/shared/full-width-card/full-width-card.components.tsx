@@ -35,7 +35,7 @@ const FullWidthCard: React.FC<FullWidthCardProps> = ({
           ))}
         </div>
         <p className="card-desc" dangerouslySetInnerHTML={{ __html: desc }} />
-        <Button isUnderlined href={link}>
+        <Button isUnderlined href={link} target="_blank">
           {btnText}
         </Button>
       </div>

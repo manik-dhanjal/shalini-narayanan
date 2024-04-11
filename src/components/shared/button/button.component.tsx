@@ -14,6 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   hoverMessage,
   href,
   download,
+  target = '_self',
   ...otherProps
 }) => {
   const ref = useRef(null);
@@ -52,7 +53,7 @@ const Button: React.FC<ButtonProps> = ({
           </div>
         </button>
       ) : (
-        <Link to={href} download={download} className="button">
+        <Link to={href} download={download} className="button" target={target}>
           <div className="btn-hover-wrap">
             <div className="btn-front">{hoverMessage || children}</div>
           </div>

@@ -44,10 +44,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="underline-link">
-                <Link
-                  to="https://www.instagram.com/narayananshalini?utm_source=qr&igsh=bWh1NTRqenhvemp5"
-                  target="_blank"
-                >
+                <Link to="https://www.instagram.com/ittisikahani/" target="_blank">
                   Instagram
                 </Link>
               </li>
@@ -71,10 +68,7 @@ const Footer = () => {
               <Link to="https://www.linkedin.com/in/shalini-narayanan-2b665014" target="_blank">
                 <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
               </Link>
-              <Link
-                to="https://www.instagram.com/narayananshalini?utm_source=qr&igsh=bWh1NTRqenhvemp5"
-                target="_blank"
-              >
+              <Link to="https://www.instagram.com/ittisikahani/" target="_blank">
                 <FontAwesomeIcon icon={faInstagram} className="icon" />
               </Link>
               <Link to="https://www.youtube.com/@ittisikahani" target="_blank">
