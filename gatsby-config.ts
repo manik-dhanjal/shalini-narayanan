@@ -119,7 +119,6 @@ const config: GatsbyConfig = {
         pluginConfig: {
           // Puts tracking script in the head instead of the body
           head: true,
-          anonymize_ip: true,
         },
       },
     },

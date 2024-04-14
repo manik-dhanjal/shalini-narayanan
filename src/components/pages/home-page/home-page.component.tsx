@@ -14,6 +14,7 @@ import Testimonials from '../../sections/testimonials/testimonial.components';
 import { navigate } from 'gatsby';
 import { getDataForHomePageAboutSummary } from '../../../wp-queries/about.wp-queries';
 import { openLinkInNewTab } from '../../../utils/links.utils';
+import Banner2 from '../../sections/banner-2/banner-2.components';
 
 function HealthFactorSlider() {
   const settings: Settings = {
@@ -81,7 +82,7 @@ const HomePage: React.FC = () => {
   return (
     <HomePageStyles>
       {/*Intro Banner  */}
-      <Banner />
+      <Banner2 />
 
       {/* Summary About section */}
       <div className="about">
