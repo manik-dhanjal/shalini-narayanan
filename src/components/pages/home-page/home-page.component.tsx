@@ -83,7 +83,6 @@ const HomePage: React.FC = () => {
     <HomePageStyles>
       {/*Intro Banner  */}
       <Banner2 />
-
       {/* Summary About section */}
       <div className="about">
         <p className="sub-title">A Closer Look</p>
@@ -143,6 +142,7 @@ const HomePage: React.FC = () => {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
             allowFullScreen
+            loading="lazy"
           ></iframe>
         </div>
         <div className="content">
@@ -157,6 +157,7 @@ const HomePage: React.FC = () => {
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
               allowFullScreen
+              loading="lazy"
             ></iframe>
           </div>
           <p className="description">
