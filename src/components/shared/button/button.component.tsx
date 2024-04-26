@@ -1,10 +1,10 @@
 import { ButtonProps } from './button.interface';
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ButtonStyles from './button.styles';
 import { ButtonStatus } from './button.enums';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck, faCircleExclamation, faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { GatsbyLinkProps, Link } from 'gatsby';
+import { Link } from 'gatsby';
 
 const Button: React.FC<ButtonProps> = ({
   children,
@@ -21,7 +21,6 @@ const Button: React.FC<ButtonProps> = ({
   const [width, setWidth] = useState<number>(0);
 
   useEffect(() => {
-    console.log(ref?.current as any);
     setWidth((ref?.current as any)?.offsetWidth || 0);
   }, [children, hoverMessage]);
   return (

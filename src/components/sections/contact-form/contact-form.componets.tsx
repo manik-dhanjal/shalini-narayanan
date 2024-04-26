@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
       setBtnMessage('Sending Message');
       setRequestStatus(ButtonStatus.LOADING);
       try {
-        const resp = await fetch('/', {
+        await fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: encode({
@@ -38,7 +38,6 @@ const ContactForm: React.FC = () => {
             ...values,
           }),
         });
-        console.log(resp);
         setRequestStatus(ButtonStatus.SUCCESS);
         setBtnMessage('successfully sent message');
       } catch (e) {

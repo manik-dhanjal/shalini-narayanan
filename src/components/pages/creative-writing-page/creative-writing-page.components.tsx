@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import CreativeWritingPageStyles from './creative-writing-page.styles';
 import HorizontalSlider from '../../shared/horizontal-slider/horizontal-slider.components';
 import Dropdown, { Option } from 'react-dropdown';
 // import 'react-dropdown/style.css';
 import { FullWidthCardProps } from '../../shared/full-width-card/full-width-card.interface';
-import Pagination from '../../shared/pagination/pagination.components';
-import {
-  AllWpCategories,
-  WpCategory,
-  getAllCategories,
-} from '../../../wp-queries/categories.wp-queries';
+import { getAllCategories } from '../../../wp-queries/categories.wp-queries';
 import { getAllCreativeWriting } from '../../../wp-queries/creative-writing.wp-queries';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
-import { Category, CreativeWritingProps } from './creative-writing.interface';
+import { CreativeWritingProps } from './creative-writing.interface';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHourglass, faHourglassStart } from '@fortawesome/free-solid-svg-icons';
+import { faHourglassStart } from '@fortawesome/free-solid-svg-icons';
 
 const CreativeWritingPage: React.FC = () => {
   const INITIAL_CATEGORY = { label: 'All', value: 'all' };
@@ -29,7 +24,6 @@ const CreativeWritingPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<Partial<Option>>(INITIAL_CATEGORY);
 
   const handleCategoryChange = (e: Option) => {
-    console.log(e);
     setActiveCategory({
       label: e.label,
       value: e.value,

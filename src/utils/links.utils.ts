@@ -7,7 +7,6 @@ export const downloadFileFromUrl = (url: string, defaultFileName: string = 'shal
   aTag.setAttribute('target', '_blank');
   document.body.appendChild(aTag);
   aTag.click();
-  console.log(aTag);
   aTag.remove();
 };
 

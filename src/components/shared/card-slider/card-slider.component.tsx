@@ -4,10 +4,9 @@ import { Card, CardSliderProps, CardType } from './card-slider.interface';
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
-  console.log(cards);
   return (
     <CardSliderStyles className="card-slider">
       <div className="slides-wrapper">
