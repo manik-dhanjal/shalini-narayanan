@@ -35,7 +35,7 @@ const AboutPageStyles = styled.div`
   .co-training {
     .sunetra-sen-img {
       float: right;
-      max-width: 40%;
+      max-width: 28%;
       margin-left: 2.5rem;
       margin-bottom: 0.5rem;
     }
