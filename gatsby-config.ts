@@ -6,14 +6,12 @@ const siteAuthor = '@shanar68';
 const siteUrl = 'https://shalininarayanan.in';
 const siteImage = `${siteUrl}/icons/static/fc43302fb467e4b13577a246d9179bf0/d1f98/shalinis-about-page-img.webp`;
 const siteKeywords = [
+  'Shalini Narayanan',
   'Dr. Shalini Narayanan',
   'Media Academic',
   'Author',
   'Itti Si Kahani',
   'The Whatsapp India Story',
-  'IIS professor',
-  'Researcher',
-  'IIS',
   'Training Services',
   'Academic Services',
   'Creative Writing',
@@ -23,15 +21,8 @@ const siteKeywords = [
   'Shalini Naryanan',
   'Dr. Narayanan',
   'Narayanan',
-  'Journalism',
   'looking for myself',
   'pennsylvania state university',
-  'the health factor',
-  'Vyas TV',
-  'civil services',
-  'UPSC',
-  'Press',
-  'Anchor',
 ];
 
 const config: GatsbyConfig = {

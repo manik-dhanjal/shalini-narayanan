@@ -9,8 +9,10 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   comment_language = Language.ENGLISH,
 }) => {
   return (
-    <TestimonialCardStyles className="testimonial-card">
-      <p className={`desc ${comment_language === Language.HINDI && 'hini'}`}>{comment}</p>
+    <TestimonialCardStyles
+      className={`testimonial-card ${comment_language === Language.HINDI && 'hindi'}`}
+    >
+      <p className="desc">{comment}</p>
       <p className="name">- {name}</p>
     </TestimonialCardStyles>
   );
