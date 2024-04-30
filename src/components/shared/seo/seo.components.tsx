@@ -61,7 +61,7 @@ const SEO: React.FC<SEOProps> = (props) => {
     },
     {
       name: 'og:type',
-      content: 'article',
+      content: 'profile',
     },
     {
       name: 'og:title',

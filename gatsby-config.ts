@@ -47,6 +47,7 @@ const config: GatsbyConfig = {
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-preload-fonts`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
