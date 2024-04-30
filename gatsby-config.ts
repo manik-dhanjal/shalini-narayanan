@@ -1,10 +1,10 @@
 import type { GatsbyConfig } from 'gatsby';
 const siteTitle = 'Dr. Shalini Narayanan';
 const siteDescription =
-  'Media Expert with 3 decadesexperience: Ex-Indian Information Service, Prof., Researcher';
+  "Media expert with three decades' experience. Ex-Indian Information Service officer, Professor, Researcher.";
 const siteAuthor = '@shanar68';
 const siteUrl = 'https://shalininarayanan.in';
-const siteImage = `http://cms.shalininarayanan.in/wp-content/uploads/2024/04/shalinis-about-page-img1.png`;
+const siteImage = `http://cms.shalininarayanan.in/wp-content/uploads/2024/04/IMG_20190802_174030-11.png`;
 const siteKeywords = [
   'Shalini Narayanan',
   'Dr. Shalini Narayanan',
