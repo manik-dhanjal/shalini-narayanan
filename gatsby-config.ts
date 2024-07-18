@@ -4,7 +4,7 @@ const siteDescription =
   "Media expert with three decades' experience. Ex-Indian Information Service officer, Professor, Researcher.";
 const siteAuthor = '@shanar68';
 const siteUrl = 'https://shalininarayanan.in';
-const siteImage = `http://cms.shalininarayanan.in/wp-content/uploads/2024/04/IMG_20190802_174030-11.png`;
+const siteImage = `https://shalininarayanan.in/images/thumbnail.jpg`;
 const siteKeywords = [
   'Shalini Narayanan',
   'Dr. Shalini Narayanan',
