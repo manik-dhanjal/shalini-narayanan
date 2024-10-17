@@ -94,6 +94,12 @@ const HomePageStyles = styled.div`
       }
     }
   }
+  .desc-higlight {
+    color: #0c0c0c;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 0.6rem;
+  }
   // latest book/release section
   .latest-release {
     display: flex;

@@ -7,6 +7,7 @@ export interface DigitalShowcaseRaw {
   excerpt: string;
   digitalShowcases: {
     linkOfMedia: string;
+    chardType: CardType;
   };
   featuredImage: {
     node: {
@@ -31,6 +32,7 @@ export const getAllDigitalShowcasesQuery = graphql`
         excerpt
         digitalShowcases {
           linkOfMedia
+          chardType
         }
         featuredImage {
           node {
@@ -65,7 +67,7 @@ export const getAllDigitalShowcases = (): Card[] => {
         digitalShowcase.featuredImage.node.localFile.childImageSharp
       ) as IGatsbyImageData,
       link: digitalShowcase.digitalShowcases.linkOfMedia,
-      type: CardType.YOUTUBE,
+      type: digitalShowcase.digitalShowcases.chardType,
     };
   });
 };

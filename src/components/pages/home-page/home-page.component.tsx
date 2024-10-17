@@ -222,6 +222,10 @@ const HomePage: React.FC = () => {
             app’s rapid expansion in India and its growing influence and looks at whether, as a form
             of horizontal communication, it poses a challenge to more traditional structures of
             communication.
+            <div className="desc-higlight">
+              Now available in the South Asia edition, priced affordably at just ₹1000, making it
+              accessible for all keen to dive into this insightful analysis.
+            </div>
           </p>
           <Button isUnderlined onClick={() => openLinkInNewTab('https://amzn.in/d/hOnX4FN')}>
             Get Now
