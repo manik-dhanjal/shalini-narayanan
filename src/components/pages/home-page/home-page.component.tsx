@@ -143,6 +143,7 @@ const HomePage: React.FC = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
             allowFullScreen
             loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
           ></iframe>
         </div>
         <div className="content">
@@ -158,6 +159,7 @@ const HomePage: React.FC = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
               allowFullScreen
               loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
             ></iframe>
           </div>
           <p className="description">
