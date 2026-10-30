@@ -5,6 +5,8 @@ const siteDescription =
 const siteAuthor = '@shanar68';
 const siteUrl = 'https://shalininarayanan.in';
 const siteImage = `https://shalininarayanan.in/images/thumbnail.jpg`;
+// Set to `dev` by the dev deploy pipeline: blocks crawlers and disables analytics
+const isDevDeploy = process.env.GATSBY_DEPLOY_ENV === 'dev';
 const siteKeywords = [
   'Shalini Narayanan',
   'Dr. Shalini Narayanan',
@@ -24,6 +26,21 @@ const siteKeywords = [
   'looking for myself',
   'pennsylvania state university',
 ];
+
+const googleAnalyticsPlugin = {
+  resolve: `gatsby-plugin-google-gtag`,
+  options: {
+    // You can add multiple tracking ids and a pageview event will be fired for all of them.
+    trackingIds: [
+      'G-6B1QLX0VR7', // Google Analytics / GA
+    ],
+    // This object is used for configuration specific to this plugin
+    pluginConfig: {
+      // Puts tracking script in the head instead of the body
+      head: true,
+    },
+  },
+};
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -51,7 +68,7 @@ const config: GatsbyConfig = {
       options: {
         host: siteUrl,
         sitemap: `${siteUrl}/sitemap.xml`,
-        policy: [{ userAgent: '*', allow: '/' }],
+        policy: [isDevDeploy ? { userAgent: '*', disallow: '/' } : { userAgent: '*', allow: '/' }],
       },
     },
     {
@@ -100,20 +117,7 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          'G-6B1QLX0VR7', // Google Analytics / GA
-        ],
-        // This object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: true,
-        },
-      },
-    },
+    ...(isDevDeploy ? [] : [googleAnalyticsPlugin]),
   ],
 };
 
