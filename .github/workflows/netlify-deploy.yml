@@ -1,7 +1,7 @@
 # Reusable build + deploy to Netlify. Called by deploy-dev.yml and deploy-prod.yml.
-# Expects these secrets on the GitHub environment (or repository):
-#   NETLIFY_AUTH_TOKEN - Netlify personal access token
-#   NETLIFY_SITE_ID    - Project ID of the Netlify site for that environment
+# Expects on the GitHub environment (or repository):
+#   secret   NETLIFY_AUTH_TOKEN - Netlify personal access token
+#   variable NETLIFY_SITE_ID    - Project ID of the Netlify site for that environment
 name: Netlify deploy
 
 on:
@@ -59,7 +59,7 @@ jobs:
       - name: Deploy to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
         run: >
           npx --yes netlify-cli@27.16.1 deploy
           --dir=public
