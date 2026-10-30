@@ -1,15 +1,13 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image';
-
 export interface AcademicTeaching {
   title: string;
   description: string;
-  img: IGatsbyImageData | null;
+  img: string | null;
 }
 
 export interface AcademicPaper {
   title: string;
   description: string;
-  img: IGatsbyImageData | null;
+  img: string | null;
   isDownloable: boolean;
   link: string;
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "blog",
+    "name": "Blog"
+  },
+  {
+    "slug": "book",
+    "name": "Book"
+  },
+  {
+    "slug": "other",
+    "name": "Other"
+  },
+  {
+    "slug": "podcast",
+    "name": "Podcast"
+  },
+  {
+    "slug": "social-media",
+    "name": "Social Media"
+  }
+]

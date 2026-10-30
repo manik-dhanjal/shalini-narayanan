@@ -1,12 +1,10 @@
 import React from 'react';
 import AcademicTeachingPageStyles from './academic-teaching-page.styles';
-import { GatsbyImage, IGatsbyImageData, StaticImage } from 'gatsby-plugin-image';
 import CardSlider from '../../shared/card-slider/card-slider.component';
 import { CardType } from '../../shared/card-slider/card-slider.interface';
-import demoImg from '../../../images/media-spotlight-demo.png';
-import { getAllAcademicTeaching } from '../../../wp-queries/academic-teaching.wp-queries';
+import demoImg from '../../../../static/images/media-spotlight-demo.png';
 import { AcademicTeaching } from './academic-teaching.interface';
-import { getAllAcademicPapers } from '../../../wp-queries/academic-papers.wp-queries';
+import { getAllAcademicPapers, getAllAcademicTeaching } from '../../../content';
 const cards = [
   {
     title: 'Workshop at NAAA Creating Memories and Skillful Scenarios!',
@@ -44,7 +42,7 @@ const AcademicTeachingPage: React.FC = () => {
     return {
       title: academicPaper.title,
       desc: academicPaper.description,
-      img: academicPaper.img as IGatsbyImageData,
+      img: academicPaper.img,
       link: academicPaper.link,
       type: academicPaper.isDownloable ? CardType.DOWNLOADABLE : CardType.OTHER,
     };
@@ -60,15 +58,16 @@ const AcademicTeachingPage: React.FC = () => {
             key={academicTeaching.title + index}
           >
             {academicTeaching.img && (
-              <GatsbyImage
-                image={academicTeaching.img}
+              <img
+                src={academicTeaching.img}
                 alt={academicTeaching.title}
-                class="card-img"
+                className="card-img"
+                loading="lazy"
               />
             )}
             <div className="card-content">
               <h3 className="card-title secondary-title">{academicTeaching.title}</h3>
-              <p
+              <div
                 className="card-desc paragraph"
                 dangerouslySetInnerHTML={{ __html: academicTeaching.description }}
               />

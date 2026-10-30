@@ -1,8 +1,7 @@
 import React from 'react';
 import AboutStyles from './about-page.styles';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import Button from '../../shared/button/button.component';
-import { getDataForAboutPage } from '../../../wp-queries/about.wp-queries';
+import { getDataForAboutPage } from '../../../content';
 import { AboutSectionTypes } from './about.enum';
 import { downloadFileFromUrl } from '../../../utils/links.utils';
 
@@ -24,10 +23,10 @@ const AboutPage: React.FC = () => {
           About Dr. Shalini <br /> Narayanan
         </h2>
         {primaryAbout?.img && (
-          <GatsbyImage
-            image={primaryAbout.img}
+          <img
+            src={primaryAbout.img}
             alt="Shalini Narayanan's image"
-            class="card-img shalinis-img"
+            className="card-img shalinis-img"
           />
         )}
 
@@ -67,10 +66,11 @@ const AboutPage: React.FC = () => {
           <h3 className="tertiary-head">{secondaryAbout.title}</h3>
           <div className="content">
             {secondaryAbout.img && (
-              <GatsbyImage
-                image={secondaryAbout.img}
+              <img
+                src={secondaryAbout.img}
                 alt={secondaryAbout.title}
                 className="sunetra-sen-img"
+                loading="lazy"
               />
             )}
             <div

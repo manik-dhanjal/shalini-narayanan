@@ -4,9 +4,7 @@ import HorizontalSlider from '../../shared/horizontal-slider/horizontal-slider.c
 import Dropdown, { Option } from 'react-dropdown';
 // import 'react-dropdown/style.css';
 import { FullWidthCardProps } from '../../shared/full-width-card/full-width-card.interface';
-import { getAllCategories } from '../../../wp-queries/categories.wp-queries';
-import { getAllCreativeWriting } from '../../../wp-queries/creative-writing.wp-queries';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { getAllCategories, getAllCreativeWriting } from '../../../content';
 import { CreativeWritingProps } from './creative-writing.interface';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHourglassStart } from '@fortawesome/free-solid-svg-icons';
@@ -41,7 +39,7 @@ const CreativeWritingPage: React.FC = () => {
           categories: content.categories,
           desc: content.description,
           btnText: 'View',
-          imgSrc: content.img as IGatsbyImageData,
+          imgSrc: content.img,
           link: content.link,
         };
       });

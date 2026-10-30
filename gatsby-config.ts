@@ -46,8 +46,6 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-preload-fonts`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -77,16 +75,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/small-logo.png',
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        // The unique name for each instance
-        name: `images`,
-        // Path to the directory
-        path: `${__dirname}/src/images/`,
+        icon: 'static/images/favicon.png',
       },
     },
     {
@@ -123,21 +112,6 @@ const config: GatsbyConfig = {
           // Puts tracking script in the head instead of the body
           head: true,
         },
-      },
-    },
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        url: 'http://cms.shalininarayanan.in/graphql',
-        // Specify the URL of the WordPress source
-        baseUrl: `cms.shalininarayanan.in`,
-        //TODO: change protocol to HTTPS
-        protocol: `http`,
-        // Indicates if a site is hosted on WordPress.com
-        hostingWPCOM: false,
-        useACF: true,
-        // Specify which URL structures to fetch
-        includedRoutes: ['**/posts', '**/tags', '**/categories'],
       },
     },
   ],

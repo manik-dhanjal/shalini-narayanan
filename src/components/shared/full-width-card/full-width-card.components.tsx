@@ -1,7 +1,7 @@
 import React from 'react';
 import FullWidthCardStyles from './full-width-card.styles';
 import { FullWidthCardProps } from './full-width-card.interface';
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import { StaticImage } from 'gatsby-plugin-image';
 import Button from '../button/button.component';
 import { Link, navigate } from 'gatsby';
 
@@ -16,10 +16,10 @@ const FullWidthCard: React.FC<FullWidthCardProps> = ({
   return (
     <FullWidthCardStyles className="full-width-card">
       {imgSrc ? (
-        <GatsbyImage image={imgSrc} alt={title} className="card-img" />
+        <img src={imgSrc} alt={title} className="card-img" loading="lazy" />
       ) : (
         <StaticImage
-          src="../../../images/placeholder-img.png"
+          src="../../../../static/images/placeholder-img.png"
           alt={title}
           width={700}
           placeholder="blurred"
@@ -34,7 +34,7 @@ const FullWidthCard: React.FC<FullWidthCardProps> = ({
             <div className="card-category">{category.name}</div>
           ))}
         </div>
-        <p className="card-desc" dangerouslySetInnerHTML={{ __html: desc }} />
+        <div className="card-desc" dangerouslySetInnerHTML={{ __html: desc }} />
         <Button isUnderlined href={link} target="_blank">
           {btnText}
         </Button>

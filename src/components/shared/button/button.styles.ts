@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 interface ButtonStyleProps {
-  isUnderlined?: boolean;
-  width: number;
+  $isUnderlined?: boolean;
+  $width: number;
 }
 
 const ButtonStyles = styled.div<ButtonStyleProps>`
   .button {
-    text-decoration: ${(props) => (props.isUnderlined ? 'underline' : 'none')};
+    text-decoration: ${(props) => (props.$isUnderlined ? 'underline' : 'none')};
     position: relative;
     background-color: transparent;
     border: 1px solid #000;
@@ -44,10 +44,10 @@ const ButtonStyles = styled.div<ButtonStyleProps>`
       z-index: 1;
       background-color: #000;
       color: #fff;
-      padding: 0.8rem ${({ width }) => !width && '0.8rem'};
+      padding: 0.8rem ${({ $width }) => !$width && '0.8rem'};
       white-space: nowrap;
-      width: ${({ width }) => (width ? width + 'px' : '100%')};
-      text-decoration: ${(props) => (props.isUnderlined ? 'underline' : 'none')};
+      width: ${({ $width }) => ($width ? $width + 'px' : '100%')};
+      text-decoration: ${(props) => (props.$isUnderlined ? 'underline' : 'none')};
       display: flex;
       justify-content: center;
     }

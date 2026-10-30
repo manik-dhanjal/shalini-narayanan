@@ -1,12 +1,11 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import BannerStyles from './banner.styled';
 import React from 'react';
-import { Link } from 'gatsby';
 
 const ArrowIcon = () => {
   return (
     <StaticImage
-      src="../../../images/arrow-right-icon.png"
+      src="../../../../static/images/arrow-right-icon.png"
       alt="arrow-icon"
       layout="constrained"
       className="arrow-icon"
@@ -23,7 +22,7 @@ const Banner = () => {
         <h1 className="firstname">Dr. Shalini</h1>
         <h1 className="lastname">Narayanan</h1>
         <StaticImage
-          src="../../../images/banner-img.png"
+          src="../../../../static/images/banner-img.png"
           alt="Dr. Shalini Narayanan - Media Academic & Author"
           placeholder="blurred"
           layout="constrained"
@@ -33,21 +32,29 @@ const Banner = () => {
       </div>
       <ul className="social-links">
         <li>
-          <Link to="https://www.instagram.com/ittisikahani/" target="_blank">
+          <a
+            href="https://www.instagram.com/ittisikahani/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Instagram
             <ArrowIcon />
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
+          <a
+            href="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Facebook
             <ArrowIcon />
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to="https://twitter.com/shanar68?lang=en" target="_blank">
+          <a href="https://twitter.com/shanar68?lang=en" target="_blank" rel="noopener noreferrer">
             X(Twitter) <ArrowIcon />
-          </Link>
+          </a>
         </li>
       </ul>
       <p className="title-sum">

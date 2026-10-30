@@ -35,7 +35,7 @@ const Navbar = () => {
       {/* Logo */}
       <Link className="logo" to="/">
         <StaticImage
-          src="../../../images/logo-1.png"
+          src="../../../../static/images/logo-1.png"
           alt="Dr. Shalini Narayanan - Media Academic & Author"
           placeholder="blurred"
           layout="constrained"
@@ -80,24 +80,33 @@ const Navbar = () => {
         </ul>
 
         <div className="social-links">
-          <Link to="https://www.linkedin.com/in/shalini-narayanan-2b665014" target="_blank">
-            <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
-          </Link>
-          <Link
-            to="https://www.instagram.com/narayananshalini?utm_source=qr&igsh=bWh1NTRqenhvemp5"
+          <a
+            href="https://www.linkedin.com/in/shalini-narayanan-2b665014"
             target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
+          </a>
+          <a
+            href="https://www.instagram.com/narayananshalini?utm_source=qr&igsh=bWh1NTRqenhvemp5"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faInstagram} className="icon" />
-          </Link>
-          <Link to="https://www.youtube.com/@ittisikahani" target="_blank">
+          </a>
+          <a href="https://www.youtube.com/@ittisikahani" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faYoutube} className="icon" />
-          </Link>
-          <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
+          </a>
+          <a
+            href="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faFacebookF} className="icon" />
-          </Link>
-          <Link to="https://twitter.com/shanar68?lang=en" target="_blank">
+          </a>
+          <a href="https://twitter.com/shanar68?lang=en" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faXTwitter} className="icon" />
-          </Link>
+          </a>
         </div>
       </div>
       <div className={`menu-btn center ${!isClosed && 'close'}`} onClick={handleMenu}>

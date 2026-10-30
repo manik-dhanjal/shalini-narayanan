@@ -1,8 +1,7 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { Category } from '../../pages/creative-writing-page/creative-writing.interface';
 
 export interface FullWidthCardProps {
-  imgSrc: IGatsbyImageData;
+  imgSrc: string | null;
   title: string;
   desc: string;
   link: string;

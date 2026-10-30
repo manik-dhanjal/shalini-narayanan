@@ -1,7 +1,6 @@
 import React from 'react';
 import ContactPageStyle from './contact-page.styles';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebookF,
@@ -20,7 +19,7 @@ const ContactPage: React.FC = () => {
         {/* Left hand side of contact page */}
         <div className="left">
           <StaticImage
-            src="../../../images/contact-pg-img.png"
+            src="../../../../static/images/contact-pg-img.png"
             alt="Dr. Shalini Narayanan"
             placeholder="blurred"
             className="contact-img desktop"
@@ -29,31 +28,51 @@ const ContactPage: React.FC = () => {
           <h3 className="name-title">Dr. Shalini Narayanan</h3>
           <div className="email-link">
             <span className="email-label">Email Id:</span>
-            <Link to="mailto:nar.shalini@gmail.com">nar.shalini@gmail.com</Link>
+            <a href="mailto:nar.shalini@gmail.com">nar.shalini@gmail.com</a>
           </div>
           <div className="social-links">
-            <Link to="https://www.linkedin.com/in/shalini-narayanan-2b665014" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/shalini-narayanan-2b665014"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
-            </Link>
-            <Link to="https://www.instagram.com/ittisikahani/" target="_blank">
+            </a>
+            <a
+              href="https://www.instagram.com/ittisikahani/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faInstagram} className="icon" />
-            </Link>
-            <Link to="https://www.youtube.com/@ittisikahani" target="_blank">
+            </a>
+            <a
+              href="https://www.youtube.com/@ittisikahani"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faYoutube} className="icon" />
-            </Link>
-            <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
+            </a>
+            <a
+              href="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faFacebookF} className="icon" />
-            </Link>
-            <Link to="https://twitter.com/shanar68?lang=en" target="_blank">
+            </a>
+            <a
+              href="https://twitter.com/shanar68?lang=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faXTwitter} className="icon" />
-            </Link>
+            </a>
           </div>
         </div>
 
         {/* Right hand side -  Form side */}
         <div className="right">
           <StaticImage
-            src="../../../images/contact-pg-img.png"
+            src="../../../../static/images/contact-pg-img.png"
             alt="Dr. Shalini Narayanan"
             placeholder="blurred"
             className="contact-img mobile"

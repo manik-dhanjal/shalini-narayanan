@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bg from '../../../images/Group 18.svg';
+import bg from '../../../../static/images/Group 18.svg';
 const BannerStyles2 = styled.div`
   display: flex;
   gap: 2rem;

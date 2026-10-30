@@ -2,8 +2,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 // GLOBAL styles
 export const GlobalStyles = createGlobalStyle`
-@import 'node_modules/slick-carousel/slick/slick.css';
-@import "node_modules/slick-carousel/slick-theme.css";
 html{
   font-size: 18px;
 }
@@ -22,6 +20,9 @@ body{
 }
 .hindi{
   font-family: hind!important;
+}
+img{
+  max-width: 100%;
 }
 *{
   box-sizing: border-box;

@@ -1,10 +1,8 @@
 import React from 'react';
 import TrainingServicesPageStyles from './training-service-page.styles';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import CardSlider from '../../shared/card-slider/card-slider.component';
-import { getAllTrainingServices } from '../../../wp-queries/teaching-service.wp-queries';
 import { TrainingService } from './training-service.interface';
-import { getAllMediaSpotlight } from '../../../wp-queries/media-spotlight.wp-queries';
+import { getAllMediaSpotlight, getAllTrainingServices } from '../../../content';
 
 const TrainingServicesPage: React.FC = () => {
   const trainingService = getAllTrainingServices();
@@ -20,15 +18,16 @@ const TrainingServicesPage: React.FC = () => {
             key={trainingService.title + index}
           >
             {trainingService.img && (
-              <GatsbyImage
-                image={trainingService.img}
+              <img
+                src={trainingService.img}
                 alt={trainingService.title}
-                class="card-img"
+                className="card-img"
+                loading="lazy"
               />
             )}
             <div className="card-content">
               <h3 className="card-title secondary-title">{trainingService.title}</h3>
-              <p
+              <div
                 className="card-desc paragraph"
                 dangerouslySetInnerHTML={{ __html: trainingService.description }}
               />

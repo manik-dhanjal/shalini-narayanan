@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 const ArrowIcon = () => {
   return (
     <StaticImage
-      src="../../../images/arrow-right-icon.png"
+      src="../../../../static/images/arrow-right-icon.png"
       alt="arrow-icon"
       layout="constrained"
       className="arrow-icon"
@@ -26,7 +26,7 @@ const Banner2 = () => {
         </h1>
 
         <StaticImage
-          src="../../../images/banner-img.png"
+          src="../../../../static/images/banner-img.png"
           alt="Dr. Shalini Narayanan - Media Academic & Author"
           placeholder="blurred"
           layout="constrained"
@@ -42,7 +42,7 @@ const Banner2 = () => {
       </div>
       <div className="right-side lg">
         <StaticImage
-          src="../../../images/banner-img.png"
+          src="../../../../static/images/banner-img.png"
           alt="Dr. Shalini Narayanan - Media Academic & Author"
           placeholder="blurred"
           layout="constrained"

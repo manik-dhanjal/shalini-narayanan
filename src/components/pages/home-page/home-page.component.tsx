@@ -3,16 +3,15 @@ import Banner from '../../sections/banner/banner.component';
 import Button from '../../shared/button/button.component';
 import HomePageStyles from './home-page.styles';
 import Card from '../../shared/about-card/about-card.component';
-import authorIcon from '../../../images/author-icon.png';
-import academicIcon from '../../../images/academic-icon.png';
-import trainerIcon from '../../../images/trainer-icon.png';
+import authorIcon from '../../../../static/images/author-icon.png';
+import academicIcon from '../../../../static/images/academic-icon.png';
+import trainerIcon from '../../../../static/images/trainer-icon.png';
 import Slider, { Settings } from 'react-slick';
 import { StaticImage } from 'gatsby-plugin-image';
 import CardSlider from '../../shared/card-slider/card-slider.component';
-import { getAllDigitalShowcases } from '../../../wp-queries/digitalShowcase.wp-queries';
 import Testimonials from '../../sections/testimonials/testimonial.components';
 import { navigate } from 'gatsby';
-import { getDataForHomePageAboutSummary } from '../../../wp-queries/about.wp-queries';
+import { getAllDigitalShowcases, getDataForHomePageAboutSummary } from '../../../content';
 import { openLinkInNewTab } from '../../../utils/links.utils';
 import Banner2 from '../../sections/banner-2/banner-2.components';
 
@@ -50,7 +49,7 @@ function HealthFactorSlider() {
     <Slider {...settings} className="health-factor-slide">
       <div className="health-factor-slide">
         <StaticImage
-          src="../../../images/health-factor-2.png"
+          src="../../../../static/images/health-factor-2.png"
           alt="The Health Factor - summary image"
           width={800}
           placeholder="blurred"
@@ -58,7 +57,7 @@ function HealthFactorSlider() {
       </div>
       <div className="health-factor-slide">
         <StaticImage
-          src="../../../images/health-factor-1.png"
+          src="../../../../static/images/health-factor-1.png"
           alt="The Health Factor - group photo 1"
           width={800}
           placeholder="blurred"
@@ -66,7 +65,7 @@ function HealthFactorSlider() {
       </div>
       <div className="health-factor-slide">
         <StaticImage
-          src="../../../images/health-factor-3.png"
+          src="../../../../static/images/health-factor-3.png"
           alt="The Health Factor - group photo 2"
           width={800}
           placeholder="blurred"
@@ -207,7 +206,7 @@ const HomePage: React.FC = () => {
       {/* Latest Book - The WhatsApp India Story */}
       <div className="latest-release">
         <StaticImage
-          src="../../../images/the-whatsapp-india-book.png"
+          src="../../../../static/images/the-whatsapp-india-book.png"
           alt="The Whatsapp India Story - Inside the Digital Maya Sphere"
           width={600}
           placeholder="blurred"
@@ -217,7 +216,7 @@ const HomePage: React.FC = () => {
           <div className="head">
             <b>Latest Release</b> “The WhatsApp India Story: Inside the Digital Maya Sphere”
           </div>
-          <p className="desc">
+          <div className="desc">
             WhatsApp is used by over half a billion people in India today in all fields – in
             business, corporate and informal sectors, in government, for education and among
             friends, families and acquaintances. This book critically explores the social messaging
@@ -228,7 +227,7 @@ const HomePage: React.FC = () => {
               Now available in the South Asia edition, priced affordably at just ₹1000, making it
               accessible for all keen to dive into this insightful analysis.
             </div>
-          </p>
+          </div>
           <Button isUnderlined onClick={() => openLinkInNewTab('https://amzn.in/d/hOnX4FN')}>
             Get Now
           </Button>

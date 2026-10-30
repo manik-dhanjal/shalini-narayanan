@@ -1,7 +1,7 @@
 import React from 'react';
 import AchievementPageStyle from './achievements-page.styles';
 import AchievementCard from '../../shared/achievement-card/achievement-card.components';
-import { getAllAchievements } from '../../../wp-queries/achivement.wp-queries';
+import { getAllAchievements } from '../../../content';
 import { AchievementType } from '../../shared/achievement-card/achievement.enum';
 
 const AchievementsPage: React.FC = () => {

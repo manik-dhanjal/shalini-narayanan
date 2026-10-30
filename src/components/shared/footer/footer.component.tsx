@@ -1,7 +1,6 @@
 import React from 'react';
 import FooterStyles from './footer.styles';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
 import {
   faFacebookF,
   faInstagram,
@@ -13,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const BgImg = () => (
   <StaticImage
-    src="../../../images/footer-bg.png"
+    src="../../../../static/images/footer-bg.png"
     alt="background footer image"
     layout="fullWidth"
     className="footer-bg"
@@ -39,56 +38,101 @@ const Footer = () => {
           <div className="right-wrapper">
             <ul className="social-links">
               <li className="underline-link">
-                <Link to="https://www.linkedin.com/in/shalini-narayanan-2b665014" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/shalini-narayanan-2b665014"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   LinkedIn
-                </Link>
+                </a>
               </li>
               <li className="underline-link">
-                <Link to="https://www.instagram.com/ittisikahani/" target="_blank">
+                <a
+                  href="https://www.instagram.com/ittisikahani/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Instagram
-                </Link>
+                </a>
               </li>
               <li className="underline-link">
-                <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
+                <a
+                  href="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Facebook
-                </Link>
+                </a>
               </li>
               <li className="underline-link">
-                <Link to="https://twitter.com/shanar68?lang=en" target="_blank">
+                <a
+                  href="https://twitter.com/shanar68?lang=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   X (Twitter)
-                </Link>
+                </a>
               </li>
               <li className="underline-link">
-                <Link to="https://www.youtube.com/@ittisikahani" target="_blank">
+                <a
+                  href="https://www.youtube.com/@ittisikahani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Youtube
-                </Link>
+                </a>
               </li>
             </ul>
             <div className="social-link-icons">
-              <Link to="https://www.linkedin.com/in/shalini-narayanan-2b665014" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/shalini-narayanan-2b665014"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
-              </Link>
-              <Link to="https://www.instagram.com/ittisikahani/" target="_blank">
+              </a>
+              <a
+                href="https://www.instagram.com/ittisikahani/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faInstagram} className="icon" />
-              </Link>
-              <Link to="https://www.youtube.com/@ittisikahani" target="_blank">
+              </a>
+              <a
+                href="https://www.youtube.com/@ittisikahani"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faYoutube} className="icon" />
-              </Link>
-              <Link to="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc" target="_blank">
+              </a>
+              <a
+                href="https://www.facebook.com/AuthorShaNar?mibextid=2JQ9oc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faFacebookF} className="icon" />
-              </Link>
-              <Link to="https://twitter.com/shanar68?lang=en" target="_blank">
+              </a>
+              <a
+                href="https://twitter.com/shanar68?lang=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faXTwitter} className="icon" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
         <div className="lower-wrapper">
           <div className="copyright">© 2024 by Dr. Shalini Narayanan</div>
           <div className="developby">
-            <Link to="https://manikdhanjal.com" className="manik-link" target="_blank">
+            <a
+              href="https://manikdhanjal.com"
+              className="manik-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Built by <u>Manik Dhanjal</u>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

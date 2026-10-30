@@ -1,6 +1,7 @@
 import * as React from 'react';
-import type { PageProps } from 'gatsby';
+import type { HeadFC, PageProps } from 'gatsby';
 import Layout from '../components/layout/layout.component';
+import { SEO } from '../components/shared/seo/seo.components';
 import Homepage from '../components/pages/home-page/home-page.component';
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -13,4 +14,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Dr. Shalini Narayanan - Media Academic & Author</title>;
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Dr. Shalini Narayanan - Media Academic & Author" pathname={location.pathname} />
+);

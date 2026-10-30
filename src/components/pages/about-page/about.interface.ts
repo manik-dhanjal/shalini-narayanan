@@ -1,10 +1,9 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image';
 import { AboutSectionTypes } from './about.enum';
 
 export interface About {
   title: string;
   description: string;
-  img: IGatsbyImageData | null;
+  img: string | null;
   sectionType: AboutSectionTypes;
   resumeLink: string | null;
 }
