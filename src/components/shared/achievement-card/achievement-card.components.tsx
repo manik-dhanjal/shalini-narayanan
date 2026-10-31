@@ -2,6 +2,7 @@ import React from 'react';
 import AchievementCardStyles from './achievement-card.styles';
 import { AchievementCardProps } from './achievement-card.interface';
 import { AchievementType } from './achievement.enum';
+import ContentImage from '../content-image/content-image.component';
 
 const AchievementCard: React.FC<AchievementCardProps> = ({
   title,
@@ -12,7 +13,7 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
 }) => {
   return (
     <AchievementCardStyles className={`achievement-card ${className}`}>
-      {img && <img src={img} alt={title} loading="lazy" />}
+      {img && <ContentImage src={img} alt={title} />}
       <div className="card-content">
         <p className="card-title">{title}</p>
         {type === AchievementType.PRIMARY && description && (

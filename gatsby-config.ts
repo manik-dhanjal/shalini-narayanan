@@ -62,6 +62,14 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
+    {
+      // content images referenced from src/content/*.json, served as GatsbyImage
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `contentImages`,
+        path: `${__dirname}/static/images/content`,
+      },
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: 'gatsby-plugin-robots-txt',

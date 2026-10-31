@@ -5,6 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 import VideoModal from '../video-modal/video-modal.component';
+import ContentImage from '../content-image/content-image.component';
 
 const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
   const [activeVideo, setActiveVideo] = useState<Card | null>(null);
@@ -28,7 +29,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
               }}
             >
               <div className="card-img">
-                {card.img && <img src={card.img} alt={card.title} loading="lazy" />}
+                {card.img && <ContentImage src={card.img} alt={card.title} />}
                 {card.type === CardType.YOUTUBE && (
                   <StaticImage
                     src="../../../../static/images/youtube-logo.png"

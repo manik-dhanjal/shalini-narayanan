@@ -99,10 +99,12 @@ function AnalogGenerationVideo() {
       aria-label="Play The Analog Generation podcast"
       onClick={() => setIsPlaying(true)}
     >
-      <img
-        src="/images/analog-generation-thumbnail.jpg"
+      <StaticImage
+        src="../../../../static/images/analog-generation-thumbnail.jpg"
         alt="Dr. Shalini Narayanan in conversation on The Analog Generation"
-        loading="lazy"
+        width={1120}
+        placeholder="blurred"
+        className="thumbnail-img"
       />
       <StaticImage
         src="../../../../static/images/youtube-logo.png"

@@ -4,6 +4,7 @@ import { FullWidthCardProps } from './full-width-card.interface';
 import { StaticImage } from 'gatsby-plugin-image';
 import Button from '../button/button.component';
 import { Link, navigate } from 'gatsby';
+import ContentImage from '../content-image/content-image.component';
 
 const FullWidthCard: React.FC<FullWidthCardProps> = ({
   imgSrc,
@@ -16,7 +17,7 @@ const FullWidthCard: React.FC<FullWidthCardProps> = ({
   return (
     <FullWidthCardStyles className="full-width-card">
       {imgSrc ? (
-        <img src={imgSrc} alt={title} className="card-img" loading="lazy" />
+        <ContentImage src={imgSrc} alt={title} className="card-img" />
       ) : (
         <StaticImage
           src="../../../../static/images/placeholder-img.png"

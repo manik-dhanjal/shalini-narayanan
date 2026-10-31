@@ -4,6 +4,7 @@ import Button from '../../shared/button/button.component';
 import { getDataForAboutPage } from '../../../content';
 import { AboutSectionTypes } from './about.enum';
 import { downloadFileFromUrl } from '../../../utils/links.utils';
+import ContentImage from '../../shared/content-image/content-image.component';
 
 const AboutPage: React.FC = () => {
   const allAbout = getDataForAboutPage();
@@ -23,7 +24,7 @@ const AboutPage: React.FC = () => {
           About Dr. Shalini <br /> Narayanan
         </h2>
         {primaryAbout?.img && (
-          <img
+          <ContentImage
             src={primaryAbout.img}
             alt="Shalini Narayanan's image"
             className="card-img shalinis-img"
@@ -66,11 +67,10 @@ const AboutPage: React.FC = () => {
           <h3 className="tertiary-head">{secondaryAbout.title}</h3>
           <div className="content">
             {secondaryAbout.img && (
-              <img
+              <ContentImage
                 src={secondaryAbout.img}
                 alt={secondaryAbout.title}
                 className="sunetra-sen-img"
-                loading="lazy"
               />
             )}
             <div

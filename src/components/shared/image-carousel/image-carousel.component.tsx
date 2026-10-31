@@ -2,12 +2,13 @@ import React from 'react';
 import Slider, { Settings } from 'react-slick';
 import ImageCarouselStyles from './image-carousel.styles';
 import { CaptionedImage, ImageCarouselProps } from './image-carousel.interface';
+import ContentImage from '../content-image/content-image.component';
 
 // a single image, or a captioned carousel when there are several
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title }) => {
   const renderImage = (image: CaptionedImage) => (
     <figure className="carousel-figure" key={image.src}>
-      <img src={image.src} alt={image.caption || title} loading="lazy" />
+      <ContentImage src={image.src} alt={image.caption || title} />
       {image.caption && <figcaption className="carousel-caption">{image.caption}</figcaption>}
     </figure>
   );
