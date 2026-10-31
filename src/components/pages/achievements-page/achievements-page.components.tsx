@@ -14,7 +14,7 @@ const AchievementsPage: React.FC = () => {
   );
   return (
     <AchievementPageStyle>
-      <h2 className="primary-title underline align-center">Achievements</h2>
+      <h1 className="primary-title underline align-center">Achievements</h1>
       <div className={`main-achievements ${primaryAchievements.length % 2 === 0 ? 'even' : 'odd'}`}>
         {primaryAchievements.map((achievement, index) => (
           <AchievementCard className="img-cards" {...achievement} key={achievement.title + index} />

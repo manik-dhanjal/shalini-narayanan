@@ -29,7 +29,7 @@ const FullWidthCard: React.FC<FullWidthCardProps> = ({
         />
       )}
       <div className="card-content">
-        <h3 className="card-title">{title}</h3>
+        <h2 className="card-title">{title}</h2>
         <div className="card-categories">
           {categories.map((category) => (
             <div className="card-category">{category.name}</div>

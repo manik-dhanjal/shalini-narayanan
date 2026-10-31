@@ -11,7 +11,7 @@ const TrainingServicesPage: React.FC = () => {
   const mediaSpotlight = getAllMediaSpotlight();
   return (
     <TrainingServicesPageStyles>
-      <h2 className="primary-title underline align-center">Training Services</h2>
+      <h1 className="primary-title underline align-center">Training Services</h1>
       <div className="content">
         {trainingService.map((trainingService: TrainingService, index) => (
           // reverse card horizontal orienation if card number is odd
@@ -25,7 +25,7 @@ const TrainingServicesPage: React.FC = () => {
               </div>
             )}
             <div className="card-content">
-              <h3 className="card-title secondary-title">{trainingService.title}</h3>
+              <h2 className="card-title secondary-title">{trainingService.title}</h2>
               <div
                 className="card-desc paragraph"
                 dangerouslySetInnerHTML={{ __html: trainingService.description }}
@@ -60,7 +60,7 @@ const TrainingServicesPage: React.FC = () => {
 
       {/* Media Spotlight cards carosel */}
       <div className="media-spotlight">
-        <h3 className="primary-title">Media Spotlight</h3>
+        <h2 className="primary-title">Media Spotlight</h2>
         <CardSlider cards={mediaSpotlight} />
       </div>
     </TrainingServicesPageStyles>

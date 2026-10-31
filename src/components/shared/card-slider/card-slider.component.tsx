@@ -45,7 +45,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
                   </div>
                 )}
               </div>
-              <h4 className="card-title">{card.title}</h4>
+              <h3 className="card-title">{card.title}</h3>
               <div className="card-desc" dangerouslySetInnerHTML={{ __html: card.desc }} />
             </a>
           </div>

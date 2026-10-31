@@ -248,7 +248,7 @@ const HomePage: React.FC = () => {
       {/* The Health Factor */}
       <div className="health-factor">
         <div className="wrapper-left">
-          <h3 className="secondary-title desktop">The Health Factor</h3>
+          <h2 className="secondary-title">The Health Factor</h2>
           <p className="desc">
             It was my honour and privilege to organise <em>The Health Factor</em> – a seminar on
             Health Misinformation and Media Representation, along with Prof. (Dr.) Sunetra Sen
@@ -269,7 +269,6 @@ const HomePage: React.FC = () => {
         <div className="wrapper-right">
           <HealthFactorSlider />
         </div>
-        <h3 className="secondary-title mobile">The Health Factor</h3>
       </div>
 
       {/* Latest Book - Health Communication in India */}

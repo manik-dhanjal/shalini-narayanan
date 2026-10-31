@@ -20,9 +20,9 @@ const AboutPage: React.FC = () => {
   return (
     <AboutStyles>
       <div className="summary">
-        <h2 className="primary-title tablet">
+        <h1 className="primary-title tablet">
           About Dr. Shalini <br /> Narayanan
-        </h2>
+        </h1>
         {primaryAbout?.img && (
           <ContentImage
             src={primaryAbout.img}
@@ -32,9 +32,9 @@ const AboutPage: React.FC = () => {
         )}
 
         <div className="content">
-          <h2 className="primary-title desktop">
+          <h1 className="primary-title desktop">
             About Dr. Shalini <br /> Narayanan
-          </h2>
+          </h1>
           {primaryAbout?.resumeLink && (
             <Button
               className="cv-btn"
@@ -54,7 +54,7 @@ const AboutPage: React.FC = () => {
       {subPrimaryAboutList?.length &&
         subPrimaryAboutList.map((subPrimaryAbout, index) => (
           <div className="service" key={subPrimaryAbout.title + index}>
-            <h3 className="tertiary-head">{subPrimaryAbout.title}</h3>
+            <h2 className="tertiary-head">{subPrimaryAbout.title}</h2>
             <div
               className="sub-primary-description paragraph"
               dangerouslySetInnerHTML={{ __html: subPrimaryAbout.description }}
@@ -64,7 +64,7 @@ const AboutPage: React.FC = () => {
 
       {secondaryAbout && (
         <div className="co-training">
-          <h3 className="tertiary-head">{secondaryAbout.title}</h3>
+          <h2 className="tertiary-head">{secondaryAbout.title}</h2>
           <div className="content">
             {secondaryAbout.img && (
               <ContentImage

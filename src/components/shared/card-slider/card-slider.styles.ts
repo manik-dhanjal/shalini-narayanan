@@ -4,6 +4,8 @@ const CardSliderStyles = styled.div`
   max-width: 100%;
   padding-bottom: 1rem;
   overflow-x: auto;
+  // cards snap into place instead of stopping halfway between two
+  scroll-snap-type: x mandatory;
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {
     display: none;
@@ -19,6 +21,7 @@ const CardSliderStyles = styled.div`
       text-decoration: none;
     }
     min-width: 30rem;
+    scroll-snap-align: start;
     .card-img {
       width: 100%;
       margin-bottom: 1.1rem;

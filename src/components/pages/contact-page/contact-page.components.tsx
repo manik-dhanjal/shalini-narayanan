@@ -14,7 +14,7 @@ import ContactForm from '../../sections/contact-form/contact-form.componets';
 const ContactPage: React.FC = () => {
   return (
     <ContactPageStyle>
-      <h2 className="primary-title align-center underline"> Contact </h2>
+      <h1 className="primary-title align-center underline"> Contact </h1>
       <div className="wrapper">
         {/* Left hand side of contact page */}
         <div className="left">
@@ -25,7 +25,7 @@ const ContactPage: React.FC = () => {
             className="contact-img desktop"
             width={900}
           />
-          <h3 className="name-title">Dr. Shalini Narayanan</h3>
+          <h2 className="name-title">Dr. Shalini Narayanan</h2>
           <div className="email-link">
             <span className="email-label">Email Id:</span>
             <a href="mailto:nar.shalini@gmail.com">nar.shalini@gmail.com</a>

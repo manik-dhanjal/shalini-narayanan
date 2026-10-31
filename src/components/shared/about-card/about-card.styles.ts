@@ -18,7 +18,7 @@ const AboutCardStyles = styled.div`
     width: calc(100% - 4.5rem);
     font-size: 1rem;
     font-family: lato;
-    h4 {
+    h3 {
       font-size: 1.1rem;
       font-weight: 400;
       color: #000;

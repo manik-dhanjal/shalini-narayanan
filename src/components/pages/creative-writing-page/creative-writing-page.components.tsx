@@ -49,7 +49,7 @@ const CreativeWritingPage: React.FC = () => {
 
   return (
     <CreativeWritingPageStyles>
-      <h2 className="primary-title underline align-center">Creative Writing & Publications</h2>
+      <h1 className="primary-title underline align-center">Creative Writing & Publications</h1>
       <div className="dropdown-cont">
         <Dropdown
           options={categories}

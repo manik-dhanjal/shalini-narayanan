@@ -51,7 +51,7 @@ const AcademicTeachingPage: React.FC = () => {
   });
   return (
     <AcademicTeachingPageStyles>
-      <h2 className="primary-title underline align-center">Academic Teaching</h2>
+      <h1 className="primary-title underline align-center">Academic Teaching</h1>
       <div className="content">
         {academicTeaching.map((academicTeaching: AcademicTeaching, index) => (
           // reverse card horizontal orienation if card number is odd
@@ -65,7 +65,7 @@ const AcademicTeachingPage: React.FC = () => {
               </div>
             )}
             <div className="card-content">
-              <h3 className="card-title secondary-title">{academicTeaching.title}</h3>
+              <h2 className="card-title secondary-title">{academicTeaching.title}</h2>
               <div
                 className="card-desc paragraph"
                 dangerouslySetInnerHTML={{ __html: academicTeaching.description }}
@@ -96,7 +96,7 @@ const AcademicTeachingPage: React.FC = () => {
         ></iframe>
       </div>
       <div className="media-spotlight">
-        <h3 className="primary-title">Academic Papers</h3>
+        <h2 className="primary-title">Academic Papers</h2>
         <CardSlider cards={academicPapersForCards} />
       </div>
     </AcademicTeachingPageStyles>
