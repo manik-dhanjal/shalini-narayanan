@@ -138,14 +138,14 @@ const HomePage: React.FC = () => {
               />
             ) : (
               <p className="about-desc">
-                Shalini Narayanan, D. Phil, straddles the worlds of academia and public service with
-                her background as a communications scholar and Indian Information service officer.
-                Since she took voluntary retirement from service in 2013, she has been engaged in
-                academic and literary writing, training, teaching and learning. She has two books,
-                academic papers and a collection of over 500 micro-stories to her name. She is the
-                co-author of The WhatsApp India Story: Inside the Maya Sphere (Routledge, 2024) and
-                the co-editor of India Connected: Mapping the Impact of New Media (2016) Sage
-                Publications.
+                I am Shalini Narayanan, D. Phil, and I straddle the worlds of academia and public
+                service with my background as a communications scholar and Indian Information
+                service officer. Since I took voluntary retirement from service in 2013, I have been
+                engaged in academic and literary writing, training, teaching and learning. I have
+                two books, academic papers and a collection of over 500 micro-stories to my name. I
+                am the co-author of The WhatsApp India Story: Inside the Maya Sphere (Routledge,
+                2024) and the co-editor of India Connected: Mapping the Impact of New Media (2016)
+                Sage Publications.
               </p>
             )}
             <Button onClick={() => navigate('/about')}>Read More</Button>
