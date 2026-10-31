@@ -145,5 +145,12 @@
     "image": null,
     "type": "secondary",
     "priority": 22
+  },
+  {
+    "title": "Jury Member for Fashion Communication at NIFT Kangra",
+    "description": "<p>Alka Rawat was kind enough to invite me to NIFT Kangra for the Fashion Communication jury, a fun outing with my fellow jury members Anoop, Saransh, Astuti, Krattika and Anupam. The student projects kept us glued to our chairs the whole day. But the evenings were our own 🙂</p>\n",
+    "image": "/images/content/achievements/nift-kangra-jury.jpg",
+    "type": "primary",
+    "priority": 5
   }
 ]
