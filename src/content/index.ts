@@ -52,7 +52,7 @@ export const getAllAcademicTeaching = (): AcademicTeaching[] =>
   academicTeachingJson.map((academicTeaching) => ({
     title: academicTeaching.title,
     description: academicTeaching.description,
-    img: academicTeaching.image,
+    images: academicTeaching.images,
   }));
 
 export const getAllAchievements = (): Achievement[] =>

@@ -1,9 +1,10 @@
 import React from 'react';
+import Slider, { Settings } from 'react-slick';
 import AcademicTeachingPageStyles from './academic-teaching-page.styles';
 import CardSlider from '../../shared/card-slider/card-slider.component';
 import { CardType } from '../../shared/card-slider/card-slider.interface';
 import demoImg from '../../../../static/images/media-spotlight-demo.png';
-import { AcademicTeaching } from './academic-teaching.interface';
+import { AcademicTeaching, AcademicTeachingImage } from './academic-teaching.interface';
 import { getAllAcademicPapers, getAllAcademicTeaching } from '../../../content';
 const cards = [
   {
@@ -35,6 +36,35 @@ const cards = [
     type: CardType.OTHER,
   },
 ];
+// a single image, or a captioned carousel when a card has several
+function CardImages({ images, title }: { images: AcademicTeachingImage[]; title: string }) {
+  const renderImage = (image: AcademicTeachingImage) => (
+    <figure className="card-figure" key={image.src}>
+      <img src={image.src} alt={image.caption || title} loading="lazy" />
+      {image.caption && <figcaption className="card-caption">{image.caption}</figcaption>}
+    </figure>
+  );
+  if (images.length === 1) return renderImage(images[0]);
+  const settings: Settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    adaptiveHeight: true,
+    appendDots: (dots) => <ul className="slick-pagination"> {dots} </ul>,
+    customPaging: () => <div className="slick-pag-item"></div>,
+    arrows: false,
+  };
+  return (
+    <Slider {...settings} className="card-slider">
+      {images.map(renderImage)}
+    </Slider>
+  );
+}
+
 const AcademicTeachingPage: React.FC = () => {
   const academicTeaching = getAllAcademicTeaching();
   const academicPapers = getAllAcademicPapers();
@@ -57,13 +87,10 @@ const AcademicTeachingPage: React.FC = () => {
             className={`service-card ${index % 2 === 0 && 'reverse'}`}
             key={academicTeaching.title + index}
           >
-            {academicTeaching.img && (
-              <img
-                src={academicTeaching.img}
-                alt={academicTeaching.title}
-                className="card-img"
-                loading="lazy"
-              />
+            {academicTeaching.images.length > 0 && (
+              <div className="card-img">
+                <CardImages images={academicTeaching.images} title={academicTeaching.title} />
+              </div>
             )}
             <div className="card-content">
               <h3 className="card-title secondary-title">{academicTeaching.title}</h3>

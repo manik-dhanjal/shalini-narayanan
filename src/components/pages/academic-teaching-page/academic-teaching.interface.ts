@@ -1,7 +1,12 @@
+export interface AcademicTeachingImage {
+  src: string;
+  caption: string | null;
+}
+
 export interface AcademicTeaching {
   title: string;
   description: string;
-  img: string | null;
+  images: AcademicTeachingImage[];
 }
 
 export interface AcademicPaper {
