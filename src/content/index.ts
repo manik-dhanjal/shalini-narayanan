@@ -53,6 +53,7 @@ export const getAllAcademicTeaching = (): AcademicTeaching[] =>
     title: academicTeaching.title,
     description: academicTeaching.description,
     images: academicTeaching.images,
+    link: academicTeaching.link,
   }));
 
 export const getAllAchievements = (): Achievement[] =>
@@ -63,6 +64,7 @@ export const getAllAchievements = (): Achievement[] =>
       description: achievement.description || null,
       img: achievement.image,
       type: achievement.type as AchievementType,
+      link: achievement.link,
     }));
 
 export const getAllCategories = (): Category[] =>
@@ -106,4 +108,5 @@ export const getAllTrainingServices = (): TrainingService[] =>
     title: trainingService.title,
     description: trainingService.description,
     images: trainingService.images,
+    link: trainingService.link,
   }));

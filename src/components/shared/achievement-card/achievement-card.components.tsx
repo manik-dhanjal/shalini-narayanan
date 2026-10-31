@@ -9,6 +9,7 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
   img,
   type,
   description,
+  link,
   className,
 }) => {
   return (
@@ -18,6 +19,11 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
         <p className="card-title">{title}</p>
         {type === AchievementType.PRIMARY && description && (
           <div className="card-desc" dangerouslySetInnerHTML={{ __html: description }} />
+        )}
+        {type === AchievementType.PRIMARY && link && (
+          <a className="card-link" href={link} target="_blank" rel="noopener noreferrer">
+            View post
+          </a>
         )}
       </div>
     </AchievementCardStyles>

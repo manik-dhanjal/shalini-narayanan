@@ -5,4 +5,5 @@ export interface Achievement {
   type: AchievementType;
   description: string | null;
   img: string | null;
+  link: string | null;
 }

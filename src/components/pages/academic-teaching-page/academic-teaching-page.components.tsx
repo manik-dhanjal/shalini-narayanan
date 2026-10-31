@@ -6,6 +6,7 @@ import demoImg from '../../../../static/images/media-spotlight-demo.png';
 import { AcademicTeaching } from './academic-teaching.interface';
 import ImageCarousel from '../../shared/image-carousel/image-carousel.component';
 import { getAllAcademicPapers, getAllAcademicTeaching } from '../../../content';
+import Button from '../../shared/button/button.component';
 const cards = [
   {
     title: 'Workshop at NAAA Creating Memories and Skillful Scenarios!',
@@ -69,6 +70,16 @@ const AcademicTeachingPage: React.FC = () => {
                 className="card-desc paragraph"
                 dangerouslySetInnerHTML={{ __html: academicTeaching.description }}
               />
+              {academicTeaching.link && (
+                <Button
+                  isUnderlined
+                  href={academicTeaching.link}
+                  target="_blank"
+                  className="card-link"
+                >
+                  View Post
+                </Button>
+              )}
             </div>
           </div>
         ))}

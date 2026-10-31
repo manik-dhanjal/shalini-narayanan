@@ -4,6 +4,7 @@ import CardSlider from '../../shared/card-slider/card-slider.component';
 import { TrainingService } from './training-service.interface';
 import ImageCarousel from '../../shared/image-carousel/image-carousel.component';
 import { getAllMediaSpotlight, getAllTrainingServices } from '../../../content';
+import Button from '../../shared/button/button.component';
 
 const TrainingServicesPage: React.FC = () => {
   const trainingService = getAllTrainingServices();
@@ -29,6 +30,16 @@ const TrainingServicesPage: React.FC = () => {
                 className="card-desc paragraph"
                 dangerouslySetInnerHTML={{ __html: trainingService.description }}
               />
+              {trainingService.link && (
+                <Button
+                  isUnderlined
+                  href={trainingService.link}
+                  target="_blank"
+                  className="card-link"
+                >
+                  View Post
+                </Button>
+              )}
             </div>
           </div>
         ))}

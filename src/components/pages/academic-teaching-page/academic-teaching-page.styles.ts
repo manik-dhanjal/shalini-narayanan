@@ -25,6 +25,9 @@ const AcademicTeachingPageStyles = styled.div`
         .card-desc p + p {
           margin-top: 1rem;
         }
+        .card-link {
+          margin-top: 1.2rem;
+        }
       }
     }
   }

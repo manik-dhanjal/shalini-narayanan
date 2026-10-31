@@ -20,6 +20,13 @@ const AchievementCardStyles = styled.div<AchievementStyleProps>`
       font-weight: 400;
       color: #49454f;
     }
+    .card-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      color: #0c0c0c;
+      text-decoration: underline;
+    }
   }
 `;
 
