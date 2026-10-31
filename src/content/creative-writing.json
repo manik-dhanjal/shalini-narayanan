@@ -1,5 +1,45 @@
 [
   {
+    "title": "The Analog Generation: A Podcast",
+    "description": "<p>A podcast I conceived and host, interviewing people nearing 90 years of age to understand how India used to be in the 1940s. Seen. Lived. Now told – history from the heart through the homes, memories, traditions and struggles of the people who lived it, recorded before these stories disappear.</p>\n",
+    "image": "/images/content/creative-writing/the-analog-generation.png",
+    "isDownloable": false,
+    "link": "https://www.youtube.com/@analoggeneration",
+    "categoryIds": [
+      "podcast"
+    ]
+  },
+  {
+    "title": "The 2024 General Elections in India: A ‘YouTube Election’?",
+    "description": "<p>A chapter in De Gruyter’s <i>Handbook of Digital Political Communication</i>, edited by Mark Wheeler and Petros Iosifidis. In 2014 India had its ‘Facebook election’ and in 2019 its ‘WhatsApp election’; in 2024, the general election seemed to be fought on YouTube. With public trust in mainstream media at an all-time low, the chapter examines the role of YouTube in the 2024 elections and asks whether the platform helps level the playing field for alternative voices.</p>\n",
+    "image": "/images/content/creative-writing/handbook-of-digital-political-communication.png",
+    "isDownloable": false,
+    "link": "https://www.degruyterbrill.com/document/doi/10.1515/9783111386034-019/html",
+    "categoryIds": [
+      "book"
+    ]
+  },
+  {
+    "title": "Health Communication in India: Strategies and Digital Innovations",
+    "description": "<p>India accounts for 20% of the global disease burden despite having only 17% of the world’s population. Edited by Shalini Narayanan and Sunetra Sen Narayan (Routledge), this volume explores how India tackles health communication across its linguistic, cultural and socio-economic diversity – from theoretical foundations and campaigns on cancer, tuberculosis, leprosy and COVID-19 to mHealth, artificial intelligence and the challenge of health misinformation.</p>\n",
+    "image": "/images/content/creative-writing/health-communication-in-india.png",
+    "isDownloable": false,
+    "link": "https://www.routledge.com/Health-Communication-in-India-Strategies-and-Digital-Innovations/Narayanan-Narayan/p/book/9781041318385",
+    "categoryIds": [
+      "book"
+    ]
+  },
+  {
+    "title": "The WhatsApp India Story: Inside the Digital Maya Sphere",
+    "description": "<p>WhatsApp is used by over half a billion people in India today – in business, government, education and among friends and families. Co-authored with Sunetra Sen Narayan (Routledge), this book critically explores the messaging app’s rapid expansion in India and asks whether, as a form of horizontal communication, it challenges more traditional structures of communication. Now available in the South Asia edition at ₹1000.</p>\n",
+    "image": "/images/content/creative-writing/the-whatsapp-india-story.png",
+    "isDownloable": false,
+    "link": "https://amzn.in/d/hOnX4FN",
+    "categoryIds": [
+      "book"
+    ]
+  },
+  {
     "title": "Ek dopahar station ki",
     "description": "<p>A story in 3 parts on raagdelhi.com about two boys and their adventures in a railway station.</p>\n",
     "image": "/images/content/creative-writing/Group-22-1.png",

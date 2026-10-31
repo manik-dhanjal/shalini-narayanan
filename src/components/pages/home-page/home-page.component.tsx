@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Banner from '../../sections/banner/banner.component';
 import Button from '../../shared/button/button.component';
 import HomePageStyles from './home-page.styles';
@@ -75,6 +75,46 @@ function HealthFactorSlider() {
   );
 }
 
+// Shows a custom thumbnail and only loads the YouTube player once clicked
+function AnalogGenerationVideo() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  if (isPlaying) {
+    return (
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/9f_Z_qRIMUU?autoplay=1"
+        title="The Analog Generation podcast"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
+        allowFullScreen
+        referrerPolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    );
+  }
+  return (
+    <button
+      type="button"
+      className="video-thumbnail"
+      aria-label="Play The Analog Generation podcast"
+      onClick={() => setIsPlaying(true)}
+    >
+      <img
+        src="/images/analog-generation-thumbnail.jpg"
+        alt="Dr. Shalini Narayanan in conversation on The Analog Generation"
+        loading="lazy"
+      />
+      <StaticImage
+        src="../../../../static/images/youtube-logo.png"
+        alt=""
+        width={100}
+        placeholder="blurred"
+        className="play-icon"
+      />
+    </button>
+  );
+}
+
 const HomePage: React.FC = () => {
   const digitalShowcases = getAllDigitalShowcases();
   const aboutSummary = getDataForHomePageAboutSummary();
@@ -127,6 +167,33 @@ const HomePage: React.FC = () => {
               description="Guides, instructs, empowers, motivates, facilitates growth."
             />
           </div>
+        </div>
+      </div>
+
+      {/* The Analog Generation Podcast */}
+      <div className="itti-si-kahani analog-generation">
+        <div className="content">
+          <p className="sub-title">Seen. Lived. Now Told.</p>
+          <h2 className="primary-title">The Analog Generation</h2>
+          <div className="intro-video mobile">
+            <AnalogGenerationVideo />
+          </div>
+          <p className="description">
+            The Analog Generation is a podcast that brings history to life through the people who
+            lived it. I interview people nearing 90 years of age to understand how India used to be
+            in the 1940s – their homes, memories, traditions and struggles, and the stories that
+            never made it into textbooks. Honest conversations, lived experiences and wonderfully
+            human stories, recorded before they disappear.
+          </p>
+          <Button
+            isUnderlined
+            onClick={() => openLinkInNewTab('https://www.youtube.com/@analoggeneration')}
+          >
+            Listen Now
+          </Button>
+        </div>
+        <div className="intro-video desktop">
+          <AnalogGenerationVideo />
         </div>
       </div>
 
@@ -203,32 +270,40 @@ const HomePage: React.FC = () => {
         <h3 className="secondary-title mobile">The Health Factor</h3>
       </div>
 
-      {/* Latest Book - The WhatsApp India Story */}
+      {/* Latest Book - Health Communication in India */}
       <div className="latest-release">
         <StaticImage
-          src="../../../../static/images/the-whatsapp-india-book.png"
-          alt="The Whatsapp India Story - Inside the Digital Maya Sphere"
+          src="../../../../static/images/health-communication-in-india-book.png"
+          alt="Health Communication in India - Strategies and Digital Innovations"
           width={600}
           placeholder="blurred"
           className="book-img"
         />
         <div className="content">
           <div className="head">
-            <b>Latest Release</b> “The WhatsApp India Story: Inside the Digital Maya Sphere”
+            <b>Latest Release</b> “Health Communication in India: Strategies and Digital
+            Innovations”
           </div>
           <div className="desc">
-            WhatsApp is used by over half a billion people in India today in all fields – in
-            business, corporate and informal sectors, in government, for education and among
-            friends, families and acquaintances. This book critically explores the social messaging
-            app’s rapid expansion in India and its growing influence and looks at whether, as a form
-            of horizontal communication, it poses a challenge to more traditional structures of
-            communication.
+            India accounts for 20% of the global disease burden despite having only 17% of the
+            world’s population, underscoring the critical need for effective health communication.
+            This volume delves into how the world’s most populous democracy addresses health
+            communication challenges across its vast linguistic, cultural, and socio-economic
+            diversity, offering vital insights for global health practitioners.
             <div className="desc-higlight">
-              Now available in the South Asia edition, priced affordably at just ₹1000, making it
-              accessible for all keen to dive into this insightful analysis.
+              From theoretical foundations to campaigns on cancer, tuberculosis, leprosy and
+              COVID-19, and digital advances such as mHealth, artificial intelligence and the fight
+              against health misinformation.
             </div>
           </div>
-          <Button isUnderlined onClick={() => openLinkInNewTab('https://amzn.in/d/hOnX4FN')}>
+          <Button
+            isUnderlined
+            onClick={() =>
+              openLinkInNewTab(
+                'https://www.routledge.com/Health-Communication-in-India-Strategies-and-Digital-Innovations/Narayanan-Narayan/p/book/9781041318385'
+              )
+            }
+          >
             Get Now
           </Button>
         </div>

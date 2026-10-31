@@ -33,6 +33,30 @@ const HomePageStyles = styled.div`
     gap: 3rem;
     margin: 4.5rem 0;
 
+    .video-thumbnail {
+      position: relative;
+      display: block;
+      width: 560px;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4rem;
+      }
+    }
+
     .content {
       .intro-video.mobile {
         display: none;
@@ -168,7 +192,8 @@ const HomePageStyles = styled.div`
         display: block !important;
         width: 100%;
         margin-bottom: 1rem;
-        iframe {
+        iframe,
+        .video-thumbnail {
           width: 100%;
         }
       }
