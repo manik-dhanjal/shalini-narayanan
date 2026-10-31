@@ -14,4 +14,5 @@ export enum CardType {
   YOUTUBE = 'youtube',
   OTHER = 'other',
   DOWNLOADABLE = 'downloadable',
+  VIDEO = 'video',
 }

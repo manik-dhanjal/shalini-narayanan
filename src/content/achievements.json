@@ -138,5 +138,12 @@
     "image": "/images/content/achievements/0-51.png",
     "type": "primary",
     "priority": 1
+  },
+  {
+    "title": "Hosted a baithak on “Kajri” for Sanchaari – The Delhi Chapter.",
+    "description": null,
+    "image": null,
+    "type": "secondary",
+    "priority": 22
   }
 ]

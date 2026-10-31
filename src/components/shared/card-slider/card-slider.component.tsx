@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import CardSliderStyles from './card-slider.styles';
 import { Card, CardSliderProps, CardType } from './card-slider.interface';
 import { StaticImage } from 'gatsby-plugin-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faCirclePlay, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
+import VideoModal from '../video-modal/video-modal.component';
 
 const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
+  const [activeVideo, setActiveVideo] = useState<Card | null>(null);
+  const closeVideo = useCallback(() => setActiveVideo(null), []);
   return (
     <CardSliderStyles className="card-slider">
       <div className="slides-wrapper">
@@ -16,6 +19,13 @@ const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
               target="_blank"
               rel="noopener noreferrer"
               download={card.type === CardType.DOWNLOADABLE ? card.title : undefined}
+              onClick={(event) => {
+                // self-hosted videos play in a popup instead of a new tab
+                if (card.type === CardType.VIDEO) {
+                  event.preventDefault();
+                  setActiveVideo(card);
+                }
+              }}
             >
               <div className="card-img">
                 {card.img && <img src={card.img} alt={card.title} loading="lazy" />}
@@ -27,6 +37,9 @@ const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
                     placeholder="blurred"
                     className="youtube-logo"
                   />
+                )}
+                {card.type === CardType.VIDEO && (
+                  <FontAwesomeIcon icon={faCirclePlay} className="play-icon" />
                 )}
                 {card.type === CardType.DOWNLOADABLE && (
                   <div className="download-icon">
@@ -40,6 +53,9 @@ const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
           </div>
         ))}
       </div>
+      {activeVideo && (
+        <VideoModal src={activeVideo.link} title={activeVideo.title} onClose={closeVideo} />
+      )}
     </CardSliderStyles>
   );
 };
