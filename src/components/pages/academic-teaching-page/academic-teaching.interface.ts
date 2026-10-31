@@ -1,12 +1,9 @@
-export interface AcademicTeachingImage {
-  src: string;
-  caption: string | null;
-}
+import { CaptionedImage } from '../../shared/image-carousel/image-carousel.interface';
 
 export interface AcademicTeaching {
   title: string;
   description: string;
-  images: AcademicTeachingImage[];
+  images: CaptionedImage[];
 }
 
 export interface AcademicPaper {

@@ -27,45 +27,6 @@ const AcademicTeachingPageStyles = styled.div`
         }
       }
     }
-    .card-figure {
-      img {
-        display: block;
-        width: 100%;
-      }
-    }
-    .card-caption {
-      margin-top: 0.8rem;
-      color: #5f5f5f;
-      font-size: 0.85rem;
-      font-style: italic;
-      text-align: center;
-    }
-    .card-slider {
-      .slick-dots {
-        position: static;
-        margin-top: 0.8rem;
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        li {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .slick-pag-item {
-          width: 10px;
-          height: 10px;
-          background: #5f5f5f;
-          border-radius: 100px;
-          transition: 0.3s ease;
-        }
-        .slick-active {
-          .slick-pag-item {
-            width: 20px;
-          }
-        }
-      }
-    }
   }
   .youtube-video {
     display: flex;

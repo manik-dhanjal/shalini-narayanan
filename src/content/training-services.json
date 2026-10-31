@@ -1,17 +1,50 @@
 [
   {
+    "title": "Training IOFS Officers at IIMC",
+    "description": "<p>The Indian Ordnance Factory Service (IOFS) has its induction through the Civil Services exam, and its officers go on to manage the indigenous factories manufacturing munitions. One part of teaching is making connections with diverse groups of people, and at IIMC I had an opportunity to connect with IOFS officer trainees, along with two trainees from the Bureau of Indian Standards, in a session on how to write effectively for social media platforms.</p>\n<p>Fun fact about the Ordnance Factories: the first ordnance factory in India was set up in 1802! Thanks are due to Professor Sunetra Sen Narayan for the interaction 🙏</p>\n",
+    "images": [
+      {
+        "src": "/images/content/training-services/iofs-iimc-session.webp",
+        "caption": "Taking a session on writing effectively for social media platforms for IOFS officer trainees at IIMC"
+      },
+      {
+        "src": "/images/content/training-services/iofs-iimc-session-2.webp",
+        "caption": "IOFS and Bureau of Indian Standards trainees during the session at IIMC"
+      },
+      {
+        "src": "/images/content/training-services/iofs-iimc-questions.webp",
+        "caption": "Answering questions from the officer trainees"
+      }
+    ]
+  },
+  {
     "title": "Health Fact-Checking Expertise",
     "description": "<p>In 2020, I reached a significant milestone by becoming a certified Health Fact Checker. This certification reflects my dedication to ensuring accuracy not only in media and governance but also in the critical realm of health information.</p>\n",
-    "image": "/images/content/training-services/Training-in-Health-Fact-check-12.png"
+    "images": [
+      {
+        "src": "/images/content/training-services/Training-in-Health-Fact-check-12.png",
+        "caption": null
+      }
+    ]
   },
   {
     "title": "National Speaker and Academic Recognition",
     "description": "<p>Beyond my training role, I have gained national recognition as a speaker and academician. I have recently been invited to prestigious institutions like the National Academy of Audit and Accounts (NAAA) in Shimla, Lal Bahadur Shastri National Academy of Administration (LBSNAA) in Mussoorie, and the National Police Academy (NPA) in Hyderabad to deliver lectures on new media and governance.</p>\n",
-    "image": "/images/content/training-services/national-speaker-training.png"
+    "images": [
+      {
+        "src": "/images/content/training-services/national-speaker-training.png",
+        "caption": null
+      }
+    ]
   },
   {
     "title": "Training Excellence at IIMC",
     "description": "<p>Over my career I have trained Officer Trainees, senior armed forces personnel, government officials, and PSU executives at the Indian Institute of Mass Communication (IIMC). Specializing in new media, governance, and fact-checking, I served as the Course Director for Indian Information Service officers, both Group &#8216;A&#8217; and Group &#8216;B,&#8217; during my five-year tenure.</p>\n",
-    "image": "/images/content/training-services/With-Officer-Trainees-to-meet-President-1.png"
+    "images": [
+      {
+        "src": "/images/content/training-services/With-Officer-Trainees-to-meet-President-1.png",
+        "caption": null
+      }
+    ]
   }
 ]

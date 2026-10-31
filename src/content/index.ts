@@ -105,5 +105,5 @@ export const getAllTrainingServices = (): TrainingService[] =>
   trainingServicesJson.map((trainingService) => ({
     title: trainingService.title,
     description: trainingService.description,
-    img: trainingService.image,
+    images: trainingService.images,
   }));

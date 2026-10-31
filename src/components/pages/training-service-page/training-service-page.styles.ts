@@ -22,6 +22,9 @@ const TrainingServicesPageStyles = styled.div`
       }
       .card-content {
         width: 50%;
+        .card-desc p + p {
+          margin-top: 1rem;
+        }
       }
     }
   }

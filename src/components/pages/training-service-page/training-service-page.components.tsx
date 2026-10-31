@@ -2,6 +2,7 @@ import React from 'react';
 import TrainingServicesPageStyles from './training-service-page.styles';
 import CardSlider from '../../shared/card-slider/card-slider.component';
 import { TrainingService } from './training-service.interface';
+import ImageCarousel from '../../shared/image-carousel/image-carousel.component';
 import { getAllMediaSpotlight, getAllTrainingServices } from '../../../content';
 
 const TrainingServicesPage: React.FC = () => {
@@ -17,13 +18,10 @@ const TrainingServicesPage: React.FC = () => {
             className={`service-card ${index % 2 === 0 && 'reverse'}`}
             key={trainingService.title + index}
           >
-            {trainingService.img && (
-              <img
-                src={trainingService.img}
-                alt={trainingService.title}
-                className="card-img"
-                loading="lazy"
-              />
+            {trainingService.images.length > 0 && (
+              <div className="card-img">
+                <ImageCarousel images={trainingService.images} title={trainingService.title} />
+              </div>
             )}
             <div className="card-content">
               <h3 className="card-title secondary-title">{trainingService.title}</h3>
