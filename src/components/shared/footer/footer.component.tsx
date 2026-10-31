@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const BgImg = () => (
   <StaticImage
-    src="../../../../static/images/footer-bg.png"
+    src="../../../../static/images/footer-bg.webp"
     alt="background footer image"
     layout="fullWidth"
     className="footer-bg"

@@ -3,9 +3,9 @@ import Banner from '../../sections/banner/banner.component';
 import Button from '../../shared/button/button.component';
 import HomePageStyles from './home-page.styles';
 import Card from '../../shared/about-card/about-card.component';
-import authorIcon from '../../../../static/images/author-icon.png';
-import academicIcon from '../../../../static/images/academic-icon.png';
-import trainerIcon from '../../../../static/images/trainer-icon.png';
+import authorIcon from '../../../../static/images/author-icon.webp';
+import academicIcon from '../../../../static/images/academic-icon.webp';
+import trainerIcon from '../../../../static/images/trainer-icon.webp';
 import Slider, { Settings } from 'react-slick';
 import { StaticImage } from 'gatsby-plugin-image';
 import CardSlider from '../../shared/card-slider/card-slider.component';
@@ -49,7 +49,7 @@ function HealthFactorSlider() {
     <Slider {...settings} className="health-factor-slide">
       <div className="health-factor-slide">
         <StaticImage
-          src="../../../../static/images/health-factor-2.png"
+          src="../../../../static/images/health-factor-2.webp"
           alt="The Health Factor - summary image"
           width={800}
           placeholder="blurred"
@@ -57,7 +57,7 @@ function HealthFactorSlider() {
       </div>
       <div className="health-factor-slide">
         <StaticImage
-          src="../../../../static/images/health-factor-1.png"
+          src="../../../../static/images/health-factor-1.webp"
           alt="The Health Factor - group photo 1"
           width={800}
           placeholder="blurred"
@@ -65,7 +65,7 @@ function HealthFactorSlider() {
       </div>
       <div className="health-factor-slide">
         <StaticImage
-          src="../../../../static/images/health-factor-3.png"
+          src="../../../../static/images/health-factor-3.webp"
           alt="The Health Factor - group photo 2"
           width={800}
           placeholder="blurred"
@@ -100,14 +100,14 @@ function AnalogGenerationVideo() {
       onClick={() => setIsPlaying(true)}
     >
       <StaticImage
-        src="../../../../static/images/analog-generation-thumbnail.jpg"
+        src="../../../../static/images/analog-generation-thumbnail.webp"
         alt="Dr. Shalini Narayanan in conversation on The Analog Generation"
         width={1120}
         placeholder="blurred"
         className="thumbnail-img"
       />
       <StaticImage
-        src="../../../../static/images/youtube-logo.png"
+        src="../../../../static/images/youtube-logo.webp"
         alt=""
         width={100}
         placeholder="blurred"
@@ -275,7 +275,7 @@ const HomePage: React.FC = () => {
       {/* Latest Book - Health Communication in India */}
       <div className="latest-release">
         <StaticImage
-          src="../../../../static/images/health-communication-in-india-book.png"
+          src="../../../../static/images/health-communication-in-india-book.webp"
           alt="Health Communication in India - Strategies and Digital Innovations"
           width={600}
           placeholder="blurred"

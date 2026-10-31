@@ -32,7 +32,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ cards }) => {
                 {card.img && <ContentImage src={card.img} alt={card.title} />}
                 {card.type === CardType.YOUTUBE && (
                   <StaticImage
-                    src="../../../../static/images/youtube-logo.png"
+                    src="../../../../static/images/youtube-logo.webp"
                     alt="youtube logo"
                     width={100}
                     placeholder="blurred"

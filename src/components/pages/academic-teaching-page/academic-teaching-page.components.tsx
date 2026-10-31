@@ -2,7 +2,7 @@ import React from 'react';
 import AcademicTeachingPageStyles from './academic-teaching-page.styles';
 import CardSlider from '../../shared/card-slider/card-slider.component';
 import { CardType } from '../../shared/card-slider/card-slider.interface';
-import demoImg from '../../../../static/images/media-spotlight-demo.png';
+import demoImg from '../../../../static/images/media-spotlight-demo.webp';
 import { AcademicTeaching } from './academic-teaching.interface';
 import ImageCarousel from '../../shared/image-carousel/image-carousel.component';
 import { getAllAcademicPapers, getAllAcademicTeaching } from '../../../content';

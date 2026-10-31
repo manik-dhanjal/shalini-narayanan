@@ -19,7 +19,7 @@ const ContactPage: React.FC = () => {
         {/* Left hand side of contact page */}
         <div className="left">
           <StaticImage
-            src="../../../../static/images/contact-pg-img.png"
+            src="../../../../static/images/contact-pg-img.webp"
             alt="Dr. Shalini Narayanan"
             placeholder="blurred"
             className="contact-img desktop"
@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
         {/* Right hand side -  Form side */}
         <div className="right">
           <StaticImage
-            src="../../../../static/images/contact-pg-img.png"
+            src="../../../../static/images/contact-pg-img.webp"
             alt="Dr. Shalini Narayanan"
             placeholder="blurred"
             className="contact-img mobile"

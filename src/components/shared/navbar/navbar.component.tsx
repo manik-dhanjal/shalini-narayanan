@@ -35,7 +35,7 @@ const Navbar = () => {
       {/* Logo */}
       <Link className="logo" to="/">
         <StaticImage
-          src="../../../../static/images/logo-1.png"
+          src="../../../../static/images/logo-1.webp"
           alt="Dr. Shalini Narayanan - Media Academic & Author"
           placeholder="blurred"
           layout="constrained"

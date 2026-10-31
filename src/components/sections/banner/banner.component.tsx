@@ -5,7 +5,7 @@ import React from 'react';
 const ArrowIcon = () => {
   return (
     <StaticImage
-      src="../../../../static/images/arrow-right-icon.png"
+      src="../../../../static/images/arrow-right-icon.webp"
       alt="arrow-icon"
       layout="constrained"
       className="arrow-icon"
@@ -22,7 +22,7 @@ const Banner = () => {
         <h1 className="firstname">Dr. Shalini</h1>
         <h1 className="lastname">Narayanan</h1>
         <StaticImage
-          src="../../../../static/images/banner-img.png"
+          src="../../../../static/images/banner-img.webp"
           alt="Dr. Shalini Narayanan - Media Academic & Author"
           placeholder="blurred"
           layout="constrained"
