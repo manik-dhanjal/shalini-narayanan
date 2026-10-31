@@ -5,6 +5,7 @@ const FullWidthCardStyles = styled.div`
   gap: 3rem;
   .card-img {
     width: 45%;
+    min-width: 0;
   }
   .card-content {
     width: 55%;

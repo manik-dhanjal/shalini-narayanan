@@ -18,6 +18,7 @@ const AcademicTeachingPageStyles = styled.div`
       margin-bottom: 4.5rem;
       .card-img {
         width: 50%;
+        min-width: 0;
       }
       .card-content {
         width: 50%;
