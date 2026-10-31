@@ -2,6 +2,11 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 // GLOBAL styles
 export const GlobalStyles = createGlobalStyle`
+:root{
+  // one corner radius for photos, cards and videos; a smaller one for form controls
+  --radius: 1rem;
+  --radius-sm: 0.4rem;
+}
 html{
   font-size: 18px;
 }

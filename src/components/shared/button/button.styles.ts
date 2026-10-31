@@ -8,6 +8,8 @@ interface ButtonStyleProps {
 const ButtonStyles = styled.div<ButtonStyleProps>`
   .button {
     text-decoration: ${(props) => (props.$isUnderlined ? 'underline' : 'none')};
+    // link buttons render as <a>, whose default blue would colour the underline
+    color: #000;
     position: relative;
     background-color: transparent;
     border: 1px solid #000;

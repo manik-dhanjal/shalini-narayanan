@@ -36,6 +36,7 @@ const AcademicTeachingPageStyles = styled.div`
     justify-content: center;
     align-items: center;
     iframe {
+      border-radius: var(--radius);
       max-width: 822px;
       height: 462px;
       width: 100%;

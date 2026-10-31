@@ -22,7 +22,7 @@ const CardSliderStyles = styled.div`
     .card-img {
       width: 100%;
       margin-bottom: 1.1rem;
-      border-radius: 1rem;
+      border-radius: var(--radius);
       overflow: hidden;
       position: relative;
       .youtube-logo {
@@ -32,16 +32,6 @@ const CardSliderStyles = styled.div`
         z-index: 1;
         transform: translate(-50%, -50%);
         width: 4rem;
-      }
-      .play-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 1;
-        transform: translate(-50%, -50%);
-        font-size: 4rem;
-        color: #fff;
-        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
       }
       img {
         width: 100%;

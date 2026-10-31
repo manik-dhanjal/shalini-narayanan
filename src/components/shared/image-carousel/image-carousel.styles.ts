@@ -2,9 +2,13 @@ import styled from 'styled-components';
 
 const ImageCarouselStyles = styled.div`
   .carousel-figure {
-    img {
+    .gatsby-image-wrapper,
+    > img {
       display: block;
       width: 100%;
+      border-radius: var(--radius);
+      overflow: hidden;
+      isolation: isolate;
     }
   }
   .carousel-caption {

@@ -3,7 +3,7 @@ import { AchievementStyleProps } from './achievement-card.interface';
 
 const AchievementCardStyles = styled.div<AchievementStyleProps>`
   border: 1px solid #cac4d0;
-  border-radius: 0.5rem;
+  border-radius: var(--radius);
   overflow: hidden;
   .card-content {
     padding: 0.8rem 1rem;

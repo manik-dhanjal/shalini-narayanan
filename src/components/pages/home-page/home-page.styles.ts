@@ -33,6 +33,13 @@ const HomePageStyles = styled.div`
     gap: 3rem;
     margin: 4.5rem 0;
 
+    // rounded corners like the site's cards, for both the video and its thumbnail
+    .intro-video iframe,
+    .video-thumbnail {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
     .video-thumbnail {
       position: relative;
       display: block;
@@ -92,6 +99,11 @@ const HomePageStyles = styled.div`
       width: 40%;
       .health-factor-slide {
         position: relative;
+        .gatsby-image-wrapper {
+          border-radius: var(--radius);
+          overflow: hidden;
+          isolation: isolate;
+        }
         .slick-dots {
           display: flex;
           justify-content: center;

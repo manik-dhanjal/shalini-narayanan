@@ -18,7 +18,7 @@ const VideoModalStyles = styled.div`
       display: block;
       width: 100%;
       max-height: 80vh;
-      border-radius: 0.5rem;
+      border-radius: var(--radius);
       background-color: #000;
     }
   }

@@ -35,7 +35,7 @@ const CreativeWritingPageStyles = styled.div`
       display: flex;
       flex-direction: column;
       padding: 0.5rem 0;
-      border-radius: 0.4rem;
+      border-radius: var(--radius-sm);
       box-shadow: 0px 2px 6px 2px #00000026;
       min-width: 13rem;
       position: absolute;

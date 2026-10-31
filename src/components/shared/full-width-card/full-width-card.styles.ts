@@ -4,6 +4,9 @@ const FullWidthCardStyles = styled.div`
   display: flex;
   gap: 3rem;
   .card-img {
+    border-radius: var(--radius);
+    overflow: hidden;
+    isolation: isolate;
     width: 45%;
     min-width: 0;
   }
@@ -39,7 +42,7 @@ const FullWidthCardStyles = styled.div`
 
   @media screen and (max-width: 1024px) {
     border: 1px solid #ccc;
-    border-radius: 12px;
+    border-radius: var(--radius);
     padding: 1.5rem 1rem;
     flex-direction: column;
     gap: 1.5rem;
