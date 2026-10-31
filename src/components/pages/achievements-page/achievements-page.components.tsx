@@ -16,8 +16,8 @@ const AchievementsPage: React.FC = () => {
     <AchievementPageStyle>
       <h2 className="primary-title underline align-center">Achievements</h2>
       <div className={`main-achievements ${primaryAchievements.length % 2 === 0 ? 'even' : 'odd'}`}>
-        {primaryAchievements.map((achievement) => (
-          <AchievementCard className="img-cards" {...achievement} />
+        {primaryAchievements.map((achievement, index) => (
+          <AchievementCard className="img-cards" {...achievement} key={achievement.title + index} />
         ))}
       </div>
       <div className="other-achievements">
