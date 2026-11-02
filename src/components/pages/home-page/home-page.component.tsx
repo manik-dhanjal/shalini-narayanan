@@ -11,7 +11,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import CardSlider from '../../shared/card-slider/card-slider.component';
 import Testimonials from '../../sections/testimonials/testimonial.components';
 import { navigate } from 'gatsby';
-import { getAllDigitalShowcases, getDataForHomePageAboutSummary } from '../../../content';
+import { getAllDigitalShowcases } from '../../../content';
 import { openLinkInNewTab } from '../../../utils/links.utils';
 import Banner2 from '../../sections/banner-2/banner-2.components';
 
@@ -119,7 +119,6 @@ function AnalogGenerationVideo() {
 
 const HomePage: React.FC = () => {
   const digitalShowcases = getAllDigitalShowcases();
-  const aboutSummary = getDataForHomePageAboutSummary();
   return (
     <HomePageStyles>
       {/*Intro Banner  */}
@@ -129,27 +128,21 @@ const HomePage: React.FC = () => {
         <p className="sub-title">A Closer Look</p>
         <div className="about-wrapper">
           <div className="about-left-wrapper">
-            <h2 className="primary-title">
-              {aboutSummary?.title ? aboutSummary.title : 'About Me'}
-            </h2>
-            {/* if we have a summary post in backend then show that else show this fall back summary */}
-            {aboutSummary?.description ? (
-              <div
-                className="about-desc"
-                dangerouslySetInnerHTML={{ __html: aboutSummary.description }}
-              />
-            ) : (
-              <p className="about-desc">
-                I am Shalini Narayanan, D. Phil, and I straddle the worlds of academia and public
-                service with my background as a communications scholar and Indian Information
-                service officer. Since I took voluntary retirement from service in 2013, I have been
-                engaged in academic and literary writing, training, teaching and learning. I have
-                two books, academic papers and a collection of over 500 micro-stories to my name. I
-                am the co-author of The WhatsApp India Story: Inside the Maya Sphere (Routledge,
-                2024) and the co-editor of India Connected: Mapping the Impact of New Media (2016)
-                Sage Publications.
+            <h2 className="primary-title">About Me</h2>
+            <p className="about-desc">
+                I have been straddling the worlds of academia, public service, and creativity,
+                leveraging my background as a communications scholar and Indian Information Service
+                (IIS) officer. Since taking early retirement from the service, I have been actively
+                engaged in academic and literary writing, training, teaching, and learning.
+                Recently, I anchored The Analog Generation (2026), a podcast that seeks to recreate
+                India as she was in the 1940s through interviews with those who lived through and
+                witnessed that decade. As part of my academic journey, I have co-edited and
+                co-authored works such as Health Communication in India: Strategies and Digital
+                Innovations (Routledge, 2027), The WhatsApp India Story: Inside the Maya Sphere
+                (Routledge, 2024), and India Connected: Mapping the Impact of New Media (Sage
+                Publications, 2016). I also have numerous academic papers and a collection of over
+                700 micro-stories to my name.
               </p>
-            )}
             <Button onClick={() => navigate('/about')}>Read More</Button>
           </div>
           <div className="about-right-wrapper">
@@ -301,7 +294,7 @@ const HomePage: React.FC = () => {
             isUnderlined
             onClick={() =>
               openLinkInNewTab(
-                'https://www.routledge.com/Health-Communication-in-India-Strategies-and-Digital-Innovations/Narayanan-Narayan/p/book/9781041318385'
+                'https://www.routledge.com/Health-Communication-in-India-Strategies-and-Digital-Innovations/Narayanan-Narayan/p/book/9781041318385',
               )
             }
           >

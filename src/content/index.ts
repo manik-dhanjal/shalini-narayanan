@@ -1,6 +1,5 @@
 // Site content lives in the JSON files next to this module. Images referenced by `image`
 // are served from static/images/content and downloadable files from static/files.
-import aboutJson from './about.json';
 import academicPapersJson from './academic-papers.json';
 import academicTeachingJson from './academic-teaching.json';
 import achievementsJson from './achievements.json';
@@ -9,8 +8,6 @@ import creativeWritingJson from './creative-writing.json';
 import digitalShowcasesJson from './digital-showcases.json';
 import mediaSpotlightsJson from './media-spotlights.json';
 import trainingServicesJson from './training-services.json';
-import { AboutSectionTypes } from '../components/pages/about-page/about.enum';
-import { About } from '../components/pages/about-page/about.interface';
 import {
   AcademicPaper,
   AcademicTeaching,
@@ -23,21 +20,6 @@ import {
 } from '../components/pages/creative-writing-page/creative-writing.interface';
 import { Card, CardType } from '../components/shared/card-slider/card-slider.interface';
 import { TrainingService } from '../components/pages/training-service-page/training-service.interface';
-
-export const getAllAbout = (): About[] =>
-  aboutJson.map((about) => ({
-    title: about.title,
-    description: about.description,
-    img: about.image,
-    sectionType: about.sectionType as AboutSectionTypes,
-    resumeLink: about.resumeLink,
-  }));
-
-export const getDataForAboutPage = (): About[] =>
-  getAllAbout().filter((about) => about.sectionType !== AboutSectionTypes.HOME_SUMMARY);
-
-export const getDataForHomePageAboutSummary = (): About | null =>
-  getAllAbout().find((about) => about.sectionType === AboutSectionTypes.HOME_SUMMARY) || null;
 
 export const getAllAcademicPapers = (): AcademicPaper[] =>
   academicPapersJson.map((academicPaper) => ({
