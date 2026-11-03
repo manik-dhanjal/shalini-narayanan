@@ -5,9 +5,7 @@
     "image": "/images/content/creative-writing/the-analog-generation.webp",
     "isDownloable": false,
     "link": "https://www.youtube.com/@analoggeneration",
-    "categoryIds": [
-      "podcast"
-    ]
+    "categoryIds": ["podcast"]
   },
   {
     "title": "The 2024 General Elections in India: A ‘YouTube Election’?",
@@ -15,9 +13,7 @@
     "image": "/images/content/creative-writing/handbook-of-digital-political-communication.webp",
     "isDownloable": false,
     "link": "https://www.degruyterbrill.com/document/doi/10.1515/9783111386034-019/html",
-    "categoryIds": [
-      "book"
-    ]
+    "categoryIds": ["book"]
   },
   {
     "title": "Health Communication in India: Strategies and Digital Innovations",
@@ -25,9 +21,7 @@
     "image": "/images/content/creative-writing/health-communication-in-india.webp",
     "isDownloable": false,
     "link": "https://www.routledge.com/Health-Communication-in-India-Strategies-and-Digital-Innovations/Narayanan-Narayan/p/book/9781041318385",
-    "categoryIds": [
-      "book"
-    ]
+    "categoryIds": ["book"]
   },
   {
     "title": "The WhatsApp India Story: Inside the Digital Maya Sphere",
@@ -35,9 +29,7 @@
     "image": "/images/content/creative-writing/the-whatsapp-india-story.webp",
     "isDownloable": false,
     "link": "https://amzn.in/d/hOnX4FN",
-    "categoryIds": [
-      "book"
-    ]
+    "categoryIds": ["book"]
   },
   {
     "title": "Ek dopahar station ki",
@@ -45,9 +37,7 @@
     "image": "/images/content/creative-writing/Group-22-1.webp",
     "isDownloable": false,
     "link": "https://www.raagdelhi.com/hindi-short-stories-by-shalini-narayanan/",
-    "categoryIds": [
-      "social-media"
-    ]
+    "categoryIds": ["social-media"]
   },
   {
     "title": "Ittisikahani",
@@ -55,9 +45,7 @@
     "image": "/images/content/creative-writing/Group-23.webp",
     "isDownloable": false,
     "link": "https://www.instagram.com/ittisikahani?igsh=MTNmMnpjdGlpeHFvaw==",
-    "categoryIds": [
-      "social-media"
-    ]
+    "categoryIds": ["social-media"]
   },
   {
     "title": "#सूक्ष्मकथाएं",
@@ -65,9 +53,7 @@
     "image": "/images/content/creative-writing/Group-24.webp",
     "isDownloable": false,
     "link": "https://www.facebook.com/AuthorShaNar?mibextid=ZbWKwL",
-    "categoryIds": [
-      "social-media"
-    ]
+    "categoryIds": ["social-media"]
   },
   {
     "title": "Identity:  A short story accepted by the University of Baltimore’s literary journal called Welter.",
@@ -75,9 +61,7 @@
     "image": "/images/content/creative-writing/screenshot-2024-04-09.webp",
     "isDownloable": false,
     "link": "https://blogs.ubalt.edu/welter/fiction-2/identity/",
-    "categoryIds": [
-      "blog"
-    ]
+    "categoryIds": ["blog"]
   },
   {
     "title": "Kissa: A Story Podcast",
@@ -85,9 +69,7 @@
     "image": "/images/content/creative-writing/Frame-614.webp",
     "isDownloable": false,
     "link": "https://podcasters.spotify.com/pod/show/jawahara-saidullah/episodes/Contributing-Writer-Series-Part-1-e1uhab0/a-a99qjtv",
-    "categoryIds": [
-      "podcast"
-    ]
+    "categoryIds": ["podcast"]
   },
   {
     "title": "Looking for Myself",
@@ -95,8 +77,6 @@
     "image": "/images/content/creative-writing/Frame-602.webp",
     "isDownloable": false,
     "link": "https://amzn.eu/d/jab6x9P",
-    "categoryIds": [
-      "book"
-    ]
+    "categoryIds": ["book"]
   }
 ]

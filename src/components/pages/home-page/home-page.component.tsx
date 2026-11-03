@@ -130,19 +130,18 @@ const HomePage: React.FC = () => {
           <div className="about-left-wrapper">
             <h2 className="primary-title">About Me</h2>
             <p className="about-desc">
-                I have been straddling the worlds of academia, public service, and creativity,
-                leveraging my background as a communications scholar and Indian Information Service
-                (IIS) officer. Since taking early retirement from the service, I have been actively
-                engaged in academic and literary writing, training, teaching, and learning.
-                Recently, I anchored The Analog Generation (2026), a podcast that seeks to recreate
-                India as she was in the 1940s through interviews with those who lived through and
-                witnessed that decade. As part of my academic journey, I have co-edited and
-                co-authored works such as Health Communication in India: Strategies and Digital
-                Innovations (Routledge, 2027), The WhatsApp India Story: Inside the Maya Sphere
-                (Routledge, 2024), and India Connected: Mapping the Impact of New Media (Sage
-                Publications, 2016). I also have numerous academic papers and a collection of over
-                700 micro-stories to my name.
-              </p>
+              I have been straddling the worlds of academia, public service, and creativity,
+              leveraging my background as a communications scholar and Indian Information Service
+              (IIS) officer. Since taking early retirement from the service, I have been actively
+              engaged in academic and literary writing, training, teaching, and learning. Recently,
+              I anchored The Analog Generation (2026), a podcast that seeks to recreate India as she
+              was in the 1940s through interviews with those who lived through and witnessed that
+              decade. As part of my academic journey, I have co-edited and co-authored works such as
+              Health Communication in India: Strategies and Digital Innovations (Routledge, 2027),
+              The WhatsApp India Story: Inside the Digital Maya Sphere (Routledge, 2024), and India
+              Connected: Mapping the Impact of New Media (Sage Publications, 2016). I also have
+              numerous academic papers and a collection of over 700 micro-stories to my name.
+            </p>
             <Button onClick={() => navigate('/about')}>Read More</Button>
           </div>
           <div className="about-right-wrapper">

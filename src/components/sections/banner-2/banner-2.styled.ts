@@ -30,16 +30,18 @@ const BannerStyles2 = styled.div`
     .description {
       font-family: lato;
       font-size: 1.3rem;
+      span {
+        white-space: nowrap;
+      }
     }
   }
   .right-side {
     width: 40%;
+    margin-bottom: 2rem;
     .banner-img {
       width: 100%;
-      margin-bottom: 2rem;
     }
   }
-
   @media screen and (max-width: 1024px) {
     height: auto;
     padding: 2rem 0;

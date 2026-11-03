@@ -58,9 +58,8 @@ const Banner = () => {
         </li>
       </ul>
       <p className="title-sum">
-        Media expert with three decades' experience. <br />
-        Ex-Indian Information Service officer,
-        <br /> Professor, Researcher.
+        Veteran Media Expert | Ex-Indian Information Service Officer | Educator & Researcher (30+
+        Yrs Exp)
       </p>
     </BannerStyles>
   );

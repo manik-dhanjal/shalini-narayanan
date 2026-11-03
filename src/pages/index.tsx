@@ -23,7 +23,7 @@ const personSchema = {
   image: 'https://shalininarayanan.in/images/thumbnail.jpg',
   jobTitle: 'Media Academic, Author & Trainer',
   description:
-    'Media expert with three decades of experience. Former Indian Information Service officer, professor and researcher.',
+    'Veteran Media Expert | Ex-Indian Information Service Officer | Educator & Researcher (30+ Yrs Exp)',
   sameAs: [
     'https://www.linkedin.com/in/shalini-narayanan-2b665014',
     'https://www.facebook.com/AuthorShaNar',

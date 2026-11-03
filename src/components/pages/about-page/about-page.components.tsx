@@ -4,7 +4,7 @@ import Button from '../../shared/button/button.component';
 import { downloadFileFromUrl } from '../../../utils/links.utils';
 import ContentImage from '../../shared/content-image/content-image.component';
 
-const PROFILE_IMG = '/images/content/about/shalinis-about-page-img.webp';
+const PROFILE_IMG = '/images/content/about/shalinis-about-page-img-2.webp';
 const RESUME_LINK = '/files/Shalini-Naryanans-CV-Sept-2023.pdf';
 const CO_TRAINING_IMG = '/images/content/about/Shalini-and-Sunetra-3.webp';
 const CO_TRAINING_TITLE =

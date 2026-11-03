@@ -1,19 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import BannerStyles2 from './banner-2.styled';
 import React from 'react';
-import { Link } from 'gatsby';
-
-const ArrowIcon = () => {
-  return (
-    <StaticImage
-      src="../../../../static/images/arrow-right-icon.webp"
-      alt="arrow-icon"
-      layout="constrained"
-      className="arrow-icon"
-      height={100}
-    />
-  );
-};
 
 const Banner2 = () => {
   return (
@@ -26,7 +13,7 @@ const Banner2 = () => {
         </h1>
 
         <StaticImage
-          src="../../../../static/images/banner-img.webp"
+          src="../../../../static/images/banner-img-2.webp"
           alt="Dr. Shalini Narayanan - Media Academic & Author"
           placeholder="blurred"
           layout="constrained"
@@ -35,14 +22,13 @@ const Banner2 = () => {
         />
 
         <p className="description">
-          Media expert with three decades' experience. <br />
-          Ex-Indian Information Service officer,
-          <br /> Professor, Researcher.
+          <span>Veteran Media Expert |</span> <span>Ex-Indian Information Service Officer |</span>
+          <span>Educator & Researcher (30+ Yrs Exp)</span>
         </p>
       </div>
-      <div className="right-side lg">
+      <div className="right-side lg r">
         <StaticImage
-          src="../../../../static/images/banner-img.webp"
+          src="../../../../static/images/banner-img-2.webp"
           alt="Dr. Shalini Narayanan - Media Academic & Author"
           placeholder="blurred"
           layout="constrained"
