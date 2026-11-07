@@ -134,13 +134,26 @@ const HomePage: React.FC = () => {
               leveraging my background as a communications scholar and Indian Information Service
               (IIS) officer. Since taking early retirement from the service, I have been actively
               engaged in academic and literary writing, training, teaching, and learning. Recently,
-              I anchored The Analog Generation (2026), a podcast that seeks to recreate India as she
-              was in the 1940s through interviews with those who lived through and witnessed that
-              decade. As part of my academic journey, I have co-edited and co-authored works such as
-              Health Communication in India: Strategies and Digital Innovations (Routledge, 2027),
-              The WhatsApp India Story: Inside the Digital Maya Sphere (Routledge, 2024), and India
-              Connected: Mapping the Impact of New Media (Sage Publications, 2016). I also have
-              numerous academic papers and a collection of over 700 micro-stories to my name.
+              I anchored <b style={{ color: '#454545' }}> The Analog Generation </b> (2026), a
+              podcast that seeks to recreate India as she was in the 1940s through interviews with
+              those who lived through and witnessed that decade. As part of my academic journey, I
+              have co-edited and co-authored works such as
+              <b style={{ color: '#454545' }}>
+                {' '}
+                Health Communication in India: Strategies and Digital Innovations{' '}
+              </b>{' '}
+              (Routledge, 2027),{' '}
+              <b style={{ color: '#454545' }}>
+                {' '}
+                The WhatsApp India Story: Inside the Digital Maya Sphere{' '}
+              </b>{' '}
+              (Routledge, 2024), and{' '}
+              <b style={{ color: '#454545' }}>
+                {' '}
+                India Connected: Mapping the Impact of New Media{' '}
+              </b>{' '}
+              (Sage Publications, 2016). I also have numerous academic papers and a collection of
+              over 700 micro-stories to my name.
             </p>
             <Button onClick={() => navigate('/about')}>Read More</Button>
           </div>
