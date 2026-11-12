@@ -1,0 +1,19 @@
+name: Deploy dev
+
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-dev
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/netlify-deploy.yml
+    with:
+      environment: DEV
+      deploy-env: dev
+      url: https://dev.shalininarayanan.in
+    secrets: inherit

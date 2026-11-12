@@ -18,9 +18,16 @@ const AcademicTeachingPageStyles = styled.div`
       margin-bottom: 4.5rem;
       .card-img {
         width: 50%;
+        min-width: 0;
       }
       .card-content {
         width: 50%;
+        .card-desc p + p {
+          margin-top: 1rem;
+        }
+        .card-link {
+          margin-top: 1.2rem;
+        }
       }
     }
   }
@@ -29,6 +36,7 @@ const AcademicTeachingPageStyles = styled.div`
     justify-content: center;
     align-items: center;
     iframe {
+      border-radius: var(--radius);
       max-width: 822px;
       height: 462px;
       width: 100%;
@@ -49,7 +57,7 @@ const AcademicTeachingPageStyles = styled.div`
       }
       .card-content {
         width: 100%;
-        h3 {
+        h2 {
           font-size: 1.3rem;
           margin-bottom: 1rem;
         }

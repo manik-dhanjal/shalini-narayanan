@@ -1,9 +1,10 @@
 import React from 'react';
 import FullWidthCardStyles from './full-width-card.styles';
 import { FullWidthCardProps } from './full-width-card.interface';
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import { StaticImage } from 'gatsby-plugin-image';
 import Button from '../button/button.component';
 import { Link, navigate } from 'gatsby';
+import ContentImage from '../content-image/content-image.component';
 
 const FullWidthCard: React.FC<FullWidthCardProps> = ({
   imgSrc,
@@ -16,10 +17,10 @@ const FullWidthCard: React.FC<FullWidthCardProps> = ({
   return (
     <FullWidthCardStyles className="full-width-card">
       {imgSrc ? (
-        <GatsbyImage image={imgSrc} alt={title} className="card-img" />
+        <ContentImage src={imgSrc} alt={title} className="card-img" />
       ) : (
         <StaticImage
-          src="../../../images/placeholder-img.png"
+          src="../../../../static/images/placeholder-img.webp"
           alt={title}
           width={700}
           placeholder="blurred"
@@ -28,13 +29,13 @@ const FullWidthCard: React.FC<FullWidthCardProps> = ({
         />
       )}
       <div className="card-content">
-        <h3 className="card-title">{title}</h3>
+        <h2 className="card-title">{title}</h2>
         <div className="card-categories">
           {categories.map((category) => (
             <div className="card-category">{category.name}</div>
           ))}
         </div>
-        <p className="card-desc" dangerouslySetInnerHTML={{ __html: desc }} />
+        <div className="card-desc" dangerouslySetInnerHTML={{ __html: desc }} />
         <Button isUnderlined href={link} target="_blank">
           {btnText}
         </Button>

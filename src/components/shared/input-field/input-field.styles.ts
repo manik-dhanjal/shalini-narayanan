@@ -12,7 +12,7 @@ const InputFieldStyles = styled.div`
   }
   input {
     border: 1px solid #79747e;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     padding: 0.8rem 1rem;
     font-size: 1rem;
     font-family: lato;
@@ -21,7 +21,7 @@ const InputFieldStyles = styled.div`
   }
   textarea {
     border: 1px solid #79747e;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     padding: 0.8rem 1rem;
     font-size: 1rem;
     font-family: lato;

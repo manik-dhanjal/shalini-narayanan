@@ -1,17 +1,17 @@
 import React from 'react';
 import TrainingServicesPageStyles from './training-service-page.styles';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import CardSlider from '../../shared/card-slider/card-slider.component';
-import { getAllTrainingServices } from '../../../wp-queries/teaching-service.wp-queries';
 import { TrainingService } from './training-service.interface';
-import { getAllMediaSpotlight } from '../../../wp-queries/media-spotlight.wp-queries';
+import ImageCarousel from '../../shared/image-carousel/image-carousel.component';
+import { getAllMediaSpotlight, getAllTrainingServices } from '../../../content';
+import Button from '../../shared/button/button.component';
 
 const TrainingServicesPage: React.FC = () => {
   const trainingService = getAllTrainingServices();
   const mediaSpotlight = getAllMediaSpotlight();
   return (
     <TrainingServicesPageStyles>
-      <h2 className="primary-title underline align-center">Training Services</h2>
+      <h1 className="primary-title underline align-center">Training Services</h1>
       <div className="content">
         {trainingService.map((trainingService: TrainingService, index) => (
           // reverse card horizontal orienation if card number is odd
@@ -19,19 +19,27 @@ const TrainingServicesPage: React.FC = () => {
             className={`service-card ${index % 2 === 0 && 'reverse'}`}
             key={trainingService.title + index}
           >
-            {trainingService.img && (
-              <GatsbyImage
-                image={trainingService.img}
-                alt={trainingService.title}
-                class="card-img"
-              />
+            {trainingService.images.length > 0 && (
+              <div className="card-img">
+                <ImageCarousel images={trainingService.images} title={trainingService.title} />
+              </div>
             )}
             <div className="card-content">
-              <h3 className="card-title secondary-title">{trainingService.title}</h3>
-              <p
+              <h2 className="card-title secondary-title">{trainingService.title}</h2>
+              <div
                 className="card-desc paragraph"
                 dangerouslySetInnerHTML={{ __html: trainingService.description }}
               />
+              {trainingService.link && (
+                <Button
+                  isUnderlined
+                  href={trainingService.link}
+                  target="_blank"
+                  className="card-link"
+                >
+                  View Post
+                </Button>
+              )}
             </div>
           </div>
         ))}
@@ -52,7 +60,7 @@ const TrainingServicesPage: React.FC = () => {
 
       {/* Media Spotlight cards carosel */}
       <div className="media-spotlight">
-        <h3 className="primary-title">Media Spotlight</h3>
+        <h2 className="primary-title">Media Spotlight</h2>
         <CardSlider cards={mediaSpotlight} />
       </div>
     </TrainingServicesPageStyles>

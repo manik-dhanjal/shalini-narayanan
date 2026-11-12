@@ -1,49 +1,39 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Dr. Shalini Narayanan
 
-## 🚀 Quick start
+Portfolio website of Dr. Shalini Narayanan, media academic, author and trainer. Built with Gatsby and deployed on Netlify.
 
-1.  **Create a Gatsby site.**
+![Home page](docs/screenshot.jpg)
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+| Environment | URL | Branch |
+| --- | --- | --- |
+| Production | https://shalininarayanan.in | `master` |
+| Dev (not indexed) | https://dev.shalininarayanan.in | `develop` |
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+## Development
 
-2.  **Start developing.**
+Requires Node 22.
 
-    Navigate into your new site’s directory and start it up.
+```shell
+npm install
+npm start        # http://localhost:8000
+npm run build    # production build in public/
+```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Content
 
-3.  **Open the code and start customizing!**
+All content is local; there is no CMS.
 
-    Your site is now running at http://localhost:8000!
+- `src/content/*.json` holds the text for each section (about, achievements, services, etc.)
+- `static/images/` holds images; content images live in `static/images/content/`
+- `static/files/` holds downloadable PDFs, served at `/files/...`
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+To add or edit an item, change the matching JSON file and put any new image next to the existing ones.
 
-4.  **Learn more**
+## Deployment
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+GitHub Actions builds the site and deploys it to Netlify on every push:
 
-## 🚀 Quick start (Netlify)
+- `develop` deploys to dev, which is built with `GATSBY_DEPLOY_ENV=dev` to block search engines and disable analytics
+- `master` deploys to production
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+Each GitHub environment (`DEV`, `PROD`) needs the variable `NETLIFY_SITE_ID`, and the repository needs the secret `NETLIFY_AUTH_TOKEN`.

@@ -12,6 +12,9 @@ const ContactPageStyle = styled.div`
     }
     .left {
       .contact-img {
+        border-radius: var(--radius);
+        overflow: hidden;
+        isolation: isolate;
         margin-bottom: 3rem;
       }
       .name-title {

@@ -14,7 +14,7 @@ const AboutCard: React.FC<AboutCardProps> = ({ imgSrc, title, description }) => 
         <img src={imgSrc} alt={title} className="about-card-icon-img" />
       </div>
       <div className="card-content">
-        <h4>{title}</h4>
+        <h3>{title}</h3>
         <p>{description}</p>
       </div>
     </AboutCardStyles>

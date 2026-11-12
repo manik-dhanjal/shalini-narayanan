@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 const ArrowIcon = () => {
   return (
     <StaticImage
-      src="../../../images/arrow-right-icon.png"
+      src="../../../../static/images/arrow-right-icon.webp"
       alt="arrow-icon"
       layout="constrained"
       className="arrow-icon"
@@ -26,7 +26,7 @@ const Banner2 = () => {
         </h1>
 
         <StaticImage
-          src="../../../images/banner-img.png"
+          src="../../../../static/images/banner-img-2.webp"
           alt="Dr. Shalini Narayanan - Media Academic & Author"
           placeholder="blurred"
           layout="constrained"
@@ -35,14 +35,15 @@ const Banner2 = () => {
         />
 
         <p className="description">
-          Media expert with three decades' experience. <br />
-          Ex-Indian Information Service officer,
-          <br /> Professor, Researcher.
+          Educator & Researcher with 30+ years experience
+          <br />
+          Ex-Indian Information Service Officer <br />
+          Veteran Media Expert <br />
         </p>
       </div>
       <div className="right-side lg">
         <StaticImage
-          src="../../../images/banner-img.png"
+          src="../../../../static/images/banner-img-2.webp"
           alt="Dr. Shalini Narayanan - Media Academic & Author"
           placeholder="blurred"
           layout="constrained"

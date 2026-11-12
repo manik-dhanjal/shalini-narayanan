@@ -11,6 +11,8 @@ const AchievementPageStyle = styled.div`
 
     &.odd {
       gap: 1rem;
+      // centre a partly filled last row instead of pushing cards to the edges
+      justify-content: center;
       .img-cards {
         width: calc(33% - 1rem);
       }

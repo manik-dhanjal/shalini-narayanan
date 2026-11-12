@@ -3,7 +3,7 @@ import { AchievementStyleProps } from './achievement-card.interface';
 
 const AchievementCardStyles = styled.div<AchievementStyleProps>`
   border: 1px solid #cac4d0;
-  border-radius: 0.5rem;
+  border-radius: var(--radius);
   overflow: hidden;
   .card-content {
     padding: 0.8rem 1rem;
@@ -19,6 +19,13 @@ const AchievementCardStyles = styled.div<AchievementStyleProps>`
       font-size: 0.8rem;
       font-weight: 400;
       color: #49454f;
+    }
+    .card-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      color: #0c0c0c;
+      text-decoration: underline;
     }
   }
 `;

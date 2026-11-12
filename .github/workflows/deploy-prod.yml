@@ -1,0 +1,20 @@
+name: Deploy prod
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+# Never cancel a production deploy halfway; queue the next one instead
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/netlify-deploy.yml
+    with:
+      environment: PROD
+      deploy-env: prod
+      url: https://shalininarayanan.in
+    secrets: inherit

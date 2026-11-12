@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Banner from '../../sections/banner/banner.component';
 import Button from '../../shared/button/button.component';
 import HomePageStyles from './home-page.styles';
 import Card from '../../shared/about-card/about-card.component';
-import authorIcon from '../../../images/author-icon.png';
-import academicIcon from '../../../images/academic-icon.png';
-import trainerIcon from '../../../images/trainer-icon.png';
+import authorIcon from '../../../../static/images/author-icon.webp';
+import academicIcon from '../../../../static/images/academic-icon.webp';
+import trainerIcon from '../../../../static/images/trainer-icon.webp';
 import Slider, { Settings } from 'react-slick';
 import { StaticImage } from 'gatsby-plugin-image';
 import CardSlider from '../../shared/card-slider/card-slider.component';
-import { getAllDigitalShowcases } from '../../../wp-queries/digitalShowcase.wp-queries';
 import Testimonials from '../../sections/testimonials/testimonial.components';
 import { navigate } from 'gatsby';
-import { getDataForHomePageAboutSummary } from '../../../wp-queries/about.wp-queries';
+import { getAllDigitalShowcases } from '../../../content';
 import { openLinkInNewTab } from '../../../utils/links.utils';
 import Banner2 from '../../sections/banner-2/banner-2.components';
 
@@ -50,7 +49,7 @@ function HealthFactorSlider() {
     <Slider {...settings} className="health-factor-slide">
       <div className="health-factor-slide">
         <StaticImage
-          src="../../../images/health-factor-2.png"
+          src="../../../../static/images/health-factor-2.webp"
           alt="The Health Factor - summary image"
           width={800}
           placeholder="blurred"
@@ -58,7 +57,7 @@ function HealthFactorSlider() {
       </div>
       <div className="health-factor-slide">
         <StaticImage
-          src="../../../images/health-factor-1.png"
+          src="../../../../static/images/health-factor-1.webp"
           alt="The Health Factor - group photo 1"
           width={800}
           placeholder="blurred"
@@ -66,7 +65,7 @@ function HealthFactorSlider() {
       </div>
       <div className="health-factor-slide">
         <StaticImage
-          src="../../../images/health-factor-3.png"
+          src="../../../../static/images/health-factor-3.webp"
           alt="The Health Factor - group photo 2"
           width={800}
           placeholder="blurred"
@@ -76,9 +75,50 @@ function HealthFactorSlider() {
   );
 }
 
+// Shows a custom thumbnail and only loads the YouTube player once clicked
+function AnalogGenerationVideo() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  if (isPlaying) {
+    return (
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/9f_Z_qRIMUU?autoplay=1"
+        title="The Analog Generation podcast"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
+        allowFullScreen
+        referrerPolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    );
+  }
+  return (
+    <button
+      type="button"
+      className="video-thumbnail"
+      aria-label="Play The Analog Generation podcast"
+      onClick={() => setIsPlaying(true)}
+    >
+      <StaticImage
+        src="../../../../static/images/analog-generation-thumbnail.webp"
+        alt="Dr. Shalini Narayanan in conversation on The Analog Generation"
+        width={1120}
+        placeholder="blurred"
+        className="thumbnail-img"
+      />
+      <StaticImage
+        src="../../../../static/images/youtube-logo.webp"
+        alt=""
+        width={100}
+        placeholder="blurred"
+        className="play-icon"
+      />
+    </button>
+  );
+}
+
 const HomePage: React.FC = () => {
   const digitalShowcases = getAllDigitalShowcases();
-  const aboutSummary = getDataForHomePageAboutSummary();
   return (
     <HomePageStyles>
       {/*Intro Banner  */}
@@ -88,27 +128,33 @@ const HomePage: React.FC = () => {
         <p className="sub-title">A Closer Look</p>
         <div className="about-wrapper">
           <div className="about-left-wrapper">
-            <h2 className="primary-title">
-              {aboutSummary?.title ? aboutSummary.title : 'About Me'}
-            </h2>
-            {/* if we have a summary post in backend then show that else show this fall back summary */}
-            {aboutSummary?.description ? (
-              <div
-                className="about-desc"
-                dangerouslySetInnerHTML={{ __html: aboutSummary.description }}
-              />
-            ) : (
-              <p className="about-desc">
-                Shalini Narayanan, D. Phil, straddles the worlds of academia and public service with
-                her background as a communications scholar and Indian Information service officer.
-                Since she took voluntary retirement from service in 2013, she has been engaged in
-                academic and literary writing, training, teaching and learning. She has two books,
-                academic papers and a collection of over 500 micro-stories to her name. She is the
-                co-author of The WhatsApp India Story: Inside the Maya Sphere (Routledge, 2024) and
-                the co-editor of India Connected: Mapping the Impact of New Media (2016) Sage
-                Publications.
-              </p>
-            )}
+            <h2 className="primary-title">About Me</h2>
+            <p className="about-desc">
+              I have been straddling the worlds of academia, public service, and creativity,
+              leveraging my background as a communications scholar and Indian Information Service
+              (IIS) officer. Since taking early retirement from the service, I have been actively
+              engaged in academic and literary writing, training, teaching, and learning. Recently,
+              I anchored <b style={{ color: '#454545' }}> The Analog Generation </b> (2026), a
+              podcast that seeks to recreate India as she was in the 1940s through interviews with
+              those who lived through and witnessed that decade. As part of my academic journey, I
+              have co-edited and co-authored works such as
+              <b style={{ color: '#454545' }}>
+                {' '}
+                Health Communication in India: Strategies and Digital Innovations{' '}
+              </b>{' '}
+              (Routledge, 2027),{' '}
+              <b style={{ color: '#454545' }}>
+                {' '}
+                The WhatsApp India Story: Inside the Digital Maya Sphere{' '}
+              </b>{' '}
+              (Routledge, 2024), and{' '}
+              <b style={{ color: '#454545' }}>
+                {' '}
+                India Connected: Mapping the Impact of New Media{' '}
+              </b>{' '}
+              (Sage Publications, 2016). I also have numerous academic papers and a collection of
+              over 700 micro-stories to my name.
+            </p>
             <Button onClick={() => navigate('/about')}>Read More</Button>
           </div>
           <div className="about-right-wrapper">
@@ -128,6 +174,33 @@ const HomePage: React.FC = () => {
               description="Guides, instructs, empowers, motivates, facilitates growth."
             />
           </div>
+        </div>
+      </div>
+
+      {/* The Analog Generation Podcast */}
+      <div className="itti-si-kahani analog-generation">
+        <div className="content">
+          <p className="sub-title">Seen. Lived. Now Told.</p>
+          <h2 className="primary-title">The Analog Generation</h2>
+          <div className="intro-video mobile">
+            <AnalogGenerationVideo />
+          </div>
+          <p className="description">
+            The Analog Generation is a podcast that brings history to life through the people who
+            lived it. I interview people nearing 90 years of age to understand how India used to be
+            in the 1940s – their homes, memories, traditions and struggles, and the stories that
+            never made it into textbooks. Honest conversations, lived experiences and wonderfully
+            human stories, recorded before they disappear.
+          </p>
+          <Button
+            isUnderlined
+            onClick={() => openLinkInNewTab('https://www.youtube.com/@analoggeneration')}
+          >
+            Listen Now
+          </Button>
+        </div>
+        <div className="intro-video desktop">
+          <AnalogGenerationVideo />
         </div>
       </div>
 
@@ -180,7 +253,7 @@ const HomePage: React.FC = () => {
       {/* The Health Factor */}
       <div className="health-factor">
         <div className="wrapper-left">
-          <h3 className="secondary-title desktop">The Health Factor</h3>
+          <h2 className="secondary-title">The Health Factor</h2>
           <p className="desc">
             It was my honour and privilege to organise <em>The Health Factor</em> – a seminar on
             Health Misinformation and Media Representation, along with Prof. (Dr.) Sunetra Sen
@@ -201,35 +274,42 @@ const HomePage: React.FC = () => {
         <div className="wrapper-right">
           <HealthFactorSlider />
         </div>
-        <h3 className="secondary-title mobile">The Health Factor</h3>
       </div>
 
-      {/* Latest Book - The WhatsApp India Story */}
+      {/* Latest Book - Health Communication in India */}
       <div className="latest-release">
         <StaticImage
-          src="../../../images/the-whatsapp-india-book.png"
-          alt="The Whatsapp India Story - Inside the Digital Maya Sphere"
+          src="../../../../static/images/health-communication-in-india-book.webp"
+          alt="Health Communication in India - Strategies and Digital Innovations"
           width={600}
           placeholder="blurred"
           className="book-img"
         />
         <div className="content">
           <div className="head">
-            <b>Latest Release</b> “The WhatsApp India Story: Inside the Digital Maya Sphere”
+            <b>Latest Release</b> “Health Communication in India: Strategies and Digital
+            Innovations”
           </div>
-          <p className="desc">
-            WhatsApp is used by over half a billion people in India today in all fields – in
-            business, corporate and informal sectors, in government, for education and among
-            friends, families and acquaintances. This book critically explores the social messaging
-            app’s rapid expansion in India and its growing influence and looks at whether, as a form
-            of horizontal communication, it poses a challenge to more traditional structures of
-            communication.
+          <div className="desc">
+            India accounts for 20% of the global disease burden despite having only 17% of the
+            world’s population, underscoring the critical need for effective health communication.
+            This volume delves into how the world’s most populous democracy addresses health
+            communication challenges across its vast linguistic, cultural, and socio-economic
+            diversity, offering vital insights for global health practitioners.
             <div className="desc-higlight">
-              Now available in the South Asia edition, priced affordably at just ₹1000, making it
-              accessible for all keen to dive into this insightful analysis.
+              From theoretical foundations to campaigns on cancer, tuberculosis, leprosy and
+              COVID-19, and digital advances such as mHealth, artificial intelligence and the fight
+              against health misinformation.
             </div>
-          </p>
-          <Button isUnderlined onClick={() => openLinkInNewTab('https://amzn.in/d/hOnX4FN')}>
+          </div>
+          <Button
+            isUnderlined
+            onClick={() =>
+              openLinkInNewTab(
+                'https://www.routledge.com/Health-Communication-in-India-Strategies-and-Digital-Innovations/Narayanan-Narayan/p/book/9781041318385',
+              )
+            }
+          >
             Get Now
           </Button>
         </div>

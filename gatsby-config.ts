@@ -1,10 +1,12 @@
 import type { GatsbyConfig } from 'gatsby';
 const siteTitle = 'Dr. Shalini Narayanan';
 const siteDescription =
-  "Media expert with three decades' experience. Ex-Indian Information Service officer, Professor, Researcher.";
+  'Veteran Media Expert | Ex-Indian Information Service Officer | Educator & Researcher (30+ Yrs Exp)';
 const siteAuthor = '@shanar68';
 const siteUrl = 'https://shalininarayanan.in';
 const siteImage = `https://shalininarayanan.in/images/thumbnail.jpg`;
+// Set to `dev` by the dev deploy pipeline: blocks crawlers and disables analytics
+const isDevDeploy = process.env.GATSBY_DEPLOY_ENV === 'dev';
 const siteKeywords = [
   'Shalini Narayanan',
   'Dr. Shalini Narayanan',
@@ -24,6 +26,21 @@ const siteKeywords = [
   'looking for myself',
   'pennsylvania state university',
 ];
+
+const googleAnalyticsPlugin = {
+  resolve: `gatsby-plugin-google-gtag`,
+  options: {
+    // You can add multiple tracking ids and a pageview event will be fired for all of them.
+    trackingIds: [
+      'G-6B1QLX0VR7', // Google Analytics / GA
+    ],
+    // This object is used for configuration specific to this plugin
+    pluginConfig: {
+      // Puts tracking script in the head instead of the body
+      head: true,
+    },
+  },
+};
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -45,15 +62,21 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
+    {
+      // content images referenced from src/content/*.json, served as GatsbyImage
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `contentImages`,
+        path: `${__dirname}/static/images/content`,
+      },
+    },
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-preload-fonts`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: siteUrl,
         sitemap: `${siteUrl}/sitemap.xml`,
-        policy: [{ userAgent: '*', allow: '/' }],
+        policy: [isDevDeploy ? { userAgent: '*', disallow: '/' } : { userAgent: '*', allow: '/' }],
       },
     },
     {
@@ -77,16 +100,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/small-logo.png',
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        // The unique name for each instance
-        name: `images`,
-        // Path to the directory
-        path: `${__dirname}/src/images/`,
+        icon: 'static/images/favicon.png',
       },
     },
     {
@@ -111,35 +125,7 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          'G-6B1QLX0VR7', // Google Analytics / GA
-        ],
-        // This object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: true,
-        },
-      },
-    },
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        url: 'http://cms.shalininarayanan.in/graphql',
-        // Specify the URL of the WordPress source
-        baseUrl: `cms.shalininarayanan.in`,
-        //TODO: change protocol to HTTPS
-        protocol: `http`,
-        // Indicates if a site is hosted on WordPress.com
-        hostingWPCOM: false,
-        useACF: true,
-        // Specify which URL structures to fetch
-        includedRoutes: ['**/posts', '**/tags', '**/categories'],
-      },
-    },
+    ...(isDevDeploy ? [] : [googleAnalyticsPlugin]),
   ],
 };
 

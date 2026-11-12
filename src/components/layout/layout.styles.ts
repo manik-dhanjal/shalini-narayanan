@@ -2,8 +2,11 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 // GLOBAL styles
 export const GlobalStyles = createGlobalStyle`
-@import 'node_modules/slick-carousel/slick/slick.css';
-@import "node_modules/slick-carousel/slick-theme.css";
+:root{
+  // one corner radius for photos, cards and videos; a smaller one for form controls
+  --radius: 1rem;
+  --radius-sm: 0.4rem;
+}
 html{
   font-size: 18px;
 }
@@ -22,6 +25,9 @@ body{
 }
 .hindi{
   font-family: hind!important;
+}
+img{
+  max-width: 100%;
 }
 *{
   box-sizing: border-box;

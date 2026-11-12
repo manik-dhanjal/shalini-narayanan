@@ -5,6 +5,9 @@ declare module '*.jpg' {
 declare module '*.png' {
   export default '' as string;
 }
+declare module '*.webp' {
+  export default '' as string;
+}
 
 // fix typescript error of not being able to import svgs has react components
 declare module '*.svg' {

@@ -1,6 +1,7 @@
-import type { PageProps } from 'gatsby';
+import type { HeadFC, PageProps } from 'gatsby';
 import * as React from 'react';
 import Layout from '../components/layout/layout.component';
+import { SEO } from '../components/shared/seo/seo.components';
 import AchievementsPage from '../components/pages/achievements-page/achievements-page.components';
 
 const Achievements: React.FC<PageProps> = () => {
@@ -11,6 +12,8 @@ const Achievements: React.FC<PageProps> = () => {
   );
 };
 
-export const Head = () => <title>Achievements</title>;
+export const Head: HeadFC = ({ location }) => (
+  <SEO title="Achievements | Dr. Shalini Narayanan" pathname={location.pathname} />
+);
 
 export default Achievements;

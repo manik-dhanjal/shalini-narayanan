@@ -1,4 +1,3 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image';
 export interface Category {
   name: string;
   id: string;
@@ -8,6 +7,6 @@ export interface CreativeWritingProps {
   description: string;
   link: string;
   isDownloable: boolean;
-  img: IGatsbyImageData | null;
+  img: string | null;
   categories: Category[];
 }

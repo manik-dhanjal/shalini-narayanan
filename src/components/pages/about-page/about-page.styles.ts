@@ -26,6 +26,9 @@ const AboutPageStyles = styled.div`
       margin-bottom: 1.5rem;
     }
     .shalinis-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      isolation: isolate;
       float: left;
       max-width: 41%;
       margin-right: 2.5rem;
@@ -34,6 +37,9 @@ const AboutPageStyles = styled.div`
   }
   .co-training {
     .sunetra-sen-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      isolation: isolate;
       float: right;
       max-width: 28%;
       margin-left: 2.5rem;

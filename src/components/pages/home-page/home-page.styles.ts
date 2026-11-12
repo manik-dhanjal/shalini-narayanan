@@ -33,6 +33,36 @@ const HomePageStyles = styled.div`
     gap: 3rem;
     margin: 4.5rem 0;
 
+    // rounded corners like the site's cards, for both the video and its thumbnail
+    .intro-video iframe,
+    .video-thumbnail {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .video-thumbnail {
+      position: relative;
+      display: block;
+      width: 560px;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+      .thumbnail-img {
+        width: 100%;
+        height: 100%;
+      }
+      .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4rem;
+      }
+    }
+
     .content {
       .intro-video.mobile {
         display: none;
@@ -49,12 +79,6 @@ const HomePageStyles = styled.div`
     display: flex;
     margin: 4.5rem 0;
     gap: 4rem;
-    .mobile {
-      display: none;
-    }
-    .desktop {
-      display: block;
-    }
     /* for content section of health factor */
     .wrapper-left {
       width: 60%;
@@ -69,6 +93,11 @@ const HomePageStyles = styled.div`
       width: 40%;
       .health-factor-slide {
         position: relative;
+        .gatsby-image-wrapper {
+          border-radius: var(--radius);
+          overflow: hidden;
+          isolation: isolate;
+        }
         .slick-dots {
           display: flex;
           justify-content: center;
@@ -168,29 +197,30 @@ const HomePageStyles = styled.div`
         display: block !important;
         width: 100%;
         margin-bottom: 1rem;
-        iframe {
+        iframe,
+        .video-thumbnail {
           width: 100%;
         }
       }
     }
+    // heading, then slider, then text: unwrap the left column so its children can be reordered
     .health-factor {
-      flex-direction: column-reverse;
+      flex-direction: column;
       gap: 0;
-      h3 {
+      .wrapper-left {
+        display: contents;
+      }
+      h2 {
+        order: 0;
         margin-bottom: 1.5rem;
       }
-      .wrapper-left,
       .wrapper-right {
+        order: 1;
         width: 100%;
-      }
-      .wrapper-right {
         margin-bottom: 2rem;
       }
-      .mobile {
-        display: block;
-      }
-      .desktop {
-        display: none;
+      .desc {
+        order: 2;
       }
       .health-factor-slide {
         padding: 0 0.5rem;
