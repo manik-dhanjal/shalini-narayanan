@@ -114,7 +114,8 @@ const BannerStyles2 = styled.div`
         margin-bottom: 1.5rem;
       }
       .description {
-        font-size: 1rem;
+        // scales with the screen so each credential fits on one line on phones
+        font-size: clamp(0.8rem, 4vw, 1.05rem);
         line-height: 1.6;
         color: #5f5f5f;
         // keeps a wrapped credential from leaving one word on its own line
