@@ -44,7 +44,7 @@ const BannerStyles2 = styled.div`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1050px) {
     height: auto;
     padding: 2rem 0;
     padding-top: 4rem;
@@ -90,6 +90,8 @@ const BannerStyles2 = styled.div`
   }
 
   @media screen and (max-width: 650px) {
+    // no bottom padding: the gap below comes from the next section's margin, like elsewhere
+    padding: 1.5rem 0 0;
     .lg {
       display: none;
     }
@@ -100,25 +102,30 @@ const BannerStyles2 = styled.div`
       width: 100%;
       justify-content: center;
       align-items: center;
-      h1 {
-        font-size: clamp(60px, 14vw, 120px);
-        margin-bottom: 4rem;
-      }
+      text-align: center;
       .sub-title {
-        font-size: clamp(1rem, 4vw, 120px);
-        margin-bottom: 1rem;
-        text-align: center;
+        font-size: clamp(1rem, 3.6vw, 1.2rem);
+        line-height: 1.4;
+        margin-bottom: 0.75rem;
+      }
+      h1 {
+        font-size: clamp(2.5rem, 11vw, 3.75rem);
+        line-height: 1.05;
+        margin-bottom: 1.5rem;
       }
       .description {
-        font-size: 0.9rem;
-        text-align: center;
-        font-size: clamp(0.9rem, 4vw, 120px);
+        // scales with the screen so each credential fits on one line on phones
+        font-size: clamp(0.8rem, 4vw, 1.05rem);
+        line-height: 1.6;
+        color: #5f5f5f;
+        // keeps a wrapped credential from leaving one word on its own line
+        text-wrap: balance;
       }
     }
+    // full column width, so the photo's black frame lines up with the page edges
     .banner-img {
-      margin: 0rem 2rem;
-      margin-bottom: 4rem;
-      width: clamp(180px, 60vw, 400px);
+      width: 100%;
+      margin: 0 0 1.5rem;
     }
   }
 `;
