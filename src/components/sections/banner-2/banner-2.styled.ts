@@ -44,7 +44,7 @@ const BannerStyles2 = styled.div`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1050px) {
     height: auto;
     padding: 2rem 0;
     padding-top: 4rem;
@@ -90,6 +90,7 @@ const BannerStyles2 = styled.div`
   }
 
   @media screen and (max-width: 650px) {
+    padding: 1.5rem 0;
     .lg {
       display: none;
     }
@@ -101,8 +102,8 @@ const BannerStyles2 = styled.div`
       justify-content: center;
       align-items: center;
       h1 {
-        font-size: clamp(60px, 14vw, 120px);
-        margin-bottom: 4rem;
+        font-size: clamp(2.5rem, 16vw, 8rem);
+        margin-bottom: 1rem;
       }
       .sub-title {
         font-size: clamp(1rem, 4vw, 120px);
@@ -116,9 +117,9 @@ const BannerStyles2 = styled.div`
       }
     }
     .banner-img {
-      margin: 0rem 2rem;
+      margin: 2rem 2rem;
       margin-bottom: 4rem;
-      width: clamp(180px, 60vw, 400px);
+      width: 100%;
     }
   }
 `;
